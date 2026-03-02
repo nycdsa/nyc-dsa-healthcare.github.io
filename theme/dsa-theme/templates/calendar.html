@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% block title %}Calendar — {{ SITENAME }}{% endblock %}
+
+{% block extra_head %}
+<style>
+  /* ── Hero ── */
+  .cal-hero {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+  .cal-hero h1 { margin: 0 0 0.5rem; font-size: 2.5rem; }
+  .cal-hero p  { margin: 0; opacity: 0.9; font-size: 1.1rem; }
+
+  /* ── Month-jump nav ── */
+  .cal-jump {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding: 0.6rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .cal-jump ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    justify-content: center;
+  }
+  .cal-jump a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  .cal-jump a:hover { text-decoration: underline; }
+
+  /* ── Calendar section ── */
+  .cal-section { padding: 2.5rem 0 3rem; }
+
+  .cal-month { margin-bottom: 3.5rem; }
+  .cal-month h2 {
+    font-size: 1.4rem;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  /* ── Grid ── */
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+
+  .cal-day-header {
+    background: #f0f0f0;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .cal-cell {
+    min-height: 5.5rem;
+    padding: 0.3rem 0.4rem;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    vertical-align: top;
+  }
+  .cal-cell.out-of-month {
+    background: #f9f9f9;
+  }
+  .cal-cell.today {
+    background: #fff8f8;
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
+  }
+
+  .cal-day-num {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.25rem;
+  }
+  .cal-cell.today .cal-day-num {
+    color: var(--color-primary);
+  }
+
+  /* ── Event pills ── */
+  .cal-event-pill {
+    display: block;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 0.15rem 0.35rem;
+    border-radius: 3px;
+    margin-bottom: 0.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cal-event-pill:hover { background: var(--color-highlight); color: #fff; }
+
+  /* ── Empty state ── */
+  .no-events {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #555;
+  }
+  .no-events p { font-size: 1.1rem; margin-bottom: 1rem; }
+
+  /* ── Responsive: collapse grid on small screens ── */
+  @media (max-width: 640px) {
+    .cal-grid { grid-template-columns: repeat(7, minmax(2.5rem, 1fr)); }
+    .cal-cell { min-height: 3.5rem; padding: 0.2rem; }
+    .cal-day-header { font-size: 0.65rem; padding: 0.3rem 0; }
+    .cal-event-pill { font-size: 0.6rem; padding: 0.1rem 0.2rem; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="cal-hero">
+  <div class="container">
+    <h1>Event Calendar</h1>
+    <p>NYC DSA Healthcare Working Group — upcoming phonebanks, canvasses, teach-ins, and more.</p>
+  </div>
+</div>
+
+{% if ACTION_NETWORK_CALENDAR %}
+
+<nav class="cal-jump" aria-label="Jump to month">
+  <div class="container">
+    <ul>
+      {% for month in ACTION_NETWORK_CALENDAR %}
+      <li><a href="#{{ month.month_year }}">{{ month.month_label }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+<section class="cal-section">
+  <div class="container">
+
+    {% for month in ACTION_NETWORK_CALENDAR %}
+    <div class="cal-month" id="{{ month.month_year }}">
+      <h2>{{ month.month_label }}</h2>
+
+      <div class="cal-grid" role="grid" aria-label="{{ month.month_label }}">
+
+        <!-- Day-of-week headers -->
+        <div class="cal-day-header" role="columnheader">Sun</div>
+        <div class="cal-day-header" role="columnheader">Mon</div>
+        <div class="cal-day-header" role="columnheader">Tue</div>
+        <div class="cal-day-header" role="columnheader">Wed</div>
+        <div class="cal-day-header" role="columnheader">Thu</div>
+        <div class="cal-day-header" role="columnheader">Fri</div>
+        <div class="cal-day-header" role="columnheader">Sat</div>
+
+        <!-- Week rows -->
+        {% for week in month.weeks %}
+          {% for cell in week %}
+            {% if cell.in_month %}
+              <div class="cal-cell{% if cell.is_today %} today{% endif %}" role="gridcell">
+                <div class="cal-day-num">{{ cell.day }}</div>
+                {% for event in cell.events %}
+                  <a class="cal-event-pill"
+                     href="{{ event.signup_url }}"
+                     title="{{ event.name }}"
+                     target="_blank"
+                     rel="noopener">{{ event.name }}</a>
+                {% endfor %}
+              </div>
+            {% else %}
+              <div class="cal-cell out-of-month" role="gridcell" aria-hidden="true"></div>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+
+      </div>{# /.cal-grid #}
+    </div>{# /.cal-month #}
+    {% endfor %}
+
+  </div>
+</section>
+
+{% else %}
+
+<section class="cal-section">
+  <div class="container">
+    <div class="no-events">
+      <p>No upcoming events at the moment.</p>
+      <p>Follow us on social media or check back soon.</p>
+      <ul style="list-style:none;padding:0;display:flex;gap:1rem;justify-content:center;">
+        <li><a href="https://actionnetwork.org/groups/nyc-dsa-healthcare-working-group" target="_blank" rel="noopener">Action Network</a></li>
+        {% for name, url in SOCIAL %}<li><a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a></li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endif %}
+{% endblock %}

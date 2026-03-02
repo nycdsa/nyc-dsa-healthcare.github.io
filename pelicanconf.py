@@ -35,6 +35,10 @@ DEFAULT_PAGINATION = 10
 # Theme
 THEME = "theme/dsa-theme"
 
+# Plugins
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = ["action_network"]
+
 # Donate link — used in nav and index page donate strip
 DONATE_URL = "https://chuffed.org/project/nyc-dsa-healthcare"
 

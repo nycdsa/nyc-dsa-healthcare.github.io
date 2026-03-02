@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}Events — {{ SITENAME }}{% endblock %}
+
+{% block extra_head %}
+<style>
+  .events-hero {
+    background: var(--dsa-red);
+    color: #fff;
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+  .events-hero h1 { margin: 0 0 0.5rem; font-size: 2.5rem; }
+  .events-hero p  { margin: 0; opacity: 0.9; font-size: 1.1rem; }
+
+  .events-section { padding: 3rem 0; }
+
+  .month-group { margin-bottom: 3rem; }
+  .month-group h2 {
+    font-size: 1.4rem;
+    border-bottom: 3px solid var(--dsa-red);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--dsa-red);
+  }
+
+  .event-cards { display: grid; gap: 1.25rem; }
+
+  .event-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem 1.5rem;
+    align-items: start;
+  }
+  .event-card:hover { border-color: var(--dsa-red); }
+
+  .event-meta { display: flex; flex-direction: column; gap: 0.25rem; }
+  .event-name { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.35rem; }
+  .event-detail {
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+  }
+  .event-detail svg { flex-shrink: 0; }
+
+  .event-description {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 0.6rem;
+    line-height: 1.5;
+    /* truncate long descriptions */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .event-action { text-align: right; white-space: nowrap; }
+  .btn-signup {
+    display: inline-block;
+    background: var(--dsa-red);
+    color: #fff;
+    padding: 0.5rem 1.1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .btn-signup:hover { background: #b71c1c; color: #fff; }
+
+  .btn-details {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--dsa-red);
+    text-decoration: underline;
+  }
+
+  .no-events {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #555;
+  }
+  .no-events p { font-size: 1.1rem; margin-bottom: 1rem; }
+
+  @media (max-width: 600px) {
+    .event-card { grid-template-columns: 1fr; }
+    .event-action { text-align: left; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="events-hero">
+  <div class="container">
+    <h1>Upcoming Events</h1>
+    <p>Join NYC DSA Healthcare Working Group — phonebanks, canvasses, teach-ins, and more.</p>
+  </div>
+</div>
+
+<section class="events-section">
+  <div class="container">
+
+    {% if ACTION_NETWORK_EVENTS %}
+
+      {% for month_key, month_events in ACTION_NETWORK_EVENTS | groupby("month_year") %}
+      <div class="month-group">
+        <h2>{{ month_events | first | attr("month_label") }}</h2>
+        <div class="event-cards">
+          {% for event in month_events %}
+          <div class="event-card">
+            <div class="event-meta">
+              <h3 class="event-name">{{ event.name }}</h3>
+
+              <div class="event-detail">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                {{ event.date_formatted }}
+              </div>
+
+              {% if event.location %}
+              <div class="event-detail">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                {{ event.location }}{% if event.borough %}, {{ event.borough }}{% endif %}
+              </div>
+              {% endif %}
+
+              {% if event.description %}
+              <p class="event-description">{{ event.description | striptags }}</p>
+              {% endif %}
+            </div>
+
+            <div class="event-action">
+              <a class="btn-signup" href="{{ event.signup_url }}" target="_blank" rel="noopener">RSVP</a>
+              {% if event.browser_url and event.browser_url != event.signup_url %}
+              <br><a class="btn-details" href="{{ event.browser_url }}" target="_blank" rel="noopener">Details &rarr;</a>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+
+    {% else %}
+
+      <div class="no-events">
+        <p>No upcoming events at the moment.</p>
+        <p>Follow us on social media or check back soon.</p>
+        <ul style="list-style:none;padding:0;display:flex;gap:1rem;justify-content:center;">
+          <li><a href="https://actionnetwork.org/groups/nyc-dsa-healthcare-working-group" target="_blank" rel="noopener">Action Network</a></li>
+          {% for name, url in SOCIAL %}<li><a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a></li>{% endfor %}
+        </ul>
+      </div>
+
+    {% endif %}
+
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,42 @@
+@startuml c4_context_diagram
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+title C4 Context Diagram — NYC DSA Healthcare Working Group Website
+
+' ── Actors ──────────────────────────────────────────────
+Person(visitor, "Site Visitor", "Community member or\npotential supporter who\nviews events, articles,\nand signs up for actions.")
+
+Person(editor, "Content Editor", "Working-group member who\nauthors Markdown content\nand pushes to the GitHub repo.")
+
+' ── System Under Design ─────────────────────────────────
+System(website, "NYC DSA Healthcare Website", "Pelican-generated static site\nhosted on GitHub Pages.\nDisplays articles, events,\nand donation links.")
+
+' ── External Systems ────────────────────────────────────
+System_Ext(github, "GitHub / GitHub Pages", "Source-code repository and\nstatic-site hosting.\nServes the built HTML/CSS/JS\nto visitors.")
+
+System_Ext(ghactions, "GitHub Actions", "CI/CD pipeline.\nBuilds the Pelican site on push,\nmanual dispatch, or every 4 hours\n(cron schedule).")
+
+System_Ext(actionnetwork, "Action Network", "Event management & organizing\nplatform. Provides events via\nOSDI REST API and hosts RSVP /\nsign-up forms for visitors.")
+
+System_Ext(chuffed, "Chuffed", "Crowdfunding / donation\nplatform linked from the\nsite's donate button.")
+
+' ── Relationships ───────────────────────────────────────
+
+' Visitor interactions
+Rel(visitor, website, "Browses articles, events,\nand about pages", "HTTPS")
+Rel(visitor, actionnetwork, "RSVPs / signs up for events", "HTTPS (browser redirect)")
+Rel(visitor, chuffed, "Makes donations", "HTTPS (browser redirect)")
+
+' Editor workflow
+Rel(editor, github, "Pushes Markdown content\nand config changes", "Git / HTTPS")
+
+' Build & deploy pipeline
+Rel(github, ghactions, "Triggers build on push,\nschedule, or manual dispatch", "Webhook")
+Rel(ghactions, actionnetwork, "Fetches upcoming events\nat build time", "Action Network\nOSDI REST API")
+Rel(ghactions, github, "Deploys built static site\nto GitHub Pages", "GitHub Pages\nDeploy Action")
+
+' Serving
+Rel(github, website, "Serves static HTML/CSS\nvia GitHub Pages CDN", "HTTPS")
+
+@enduml
