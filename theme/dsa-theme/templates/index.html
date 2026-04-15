@@ -4,60 +4,132 @@
 
 {% block content %}
 
-  <!-- ===== Hero / Splash ===== -->
-  <section class="site-hero">
-    <div class="container">
-      <div class="site-hero__wordmark">
-        NYC DSA
-        <span>Healthcare</span>
-        <span style="color: var(--color-muted); font-size: 0.45em; letter-spacing: -0.02em; font-weight: 600; display:block; margin-top: 0.5rem;">
-          Working Group
-        </span>
+  <!-- ===== MASTHEAD ===== -->
+  <header class="masthead">
+    <p class="masthead-eyebrow fade-up fade-up-1">NYC-DSA Healthcare Working Group</p>
+    <h1 class="masthead-title fade-up fade-up-2">Let's Build a Health System<br>for Our Time.</h1>
+    <div class="masthead-rule fade-up fade-up-3"></div>
+  </header>
+
+  <!-- ===== MISSION / VISION ===== -->
+  <section class="vision-band">
+    <div class="vision-inner vision-inner--centered">
+      <div class="vision-left fade-up fade-up-1">
+        <p class="vision-kicker">Our Mission</p>
+        <h2 class="vision-title">A Democratic Socialist Vision for Healthcare in New York</h2>
+        <p class="vision-body">We, the members of the DSA-NYC Healthcare working group, are building a mass movement to transform the New York Healthcare System to one that puts workers and patients first. We are building to pass the NY Health Act, the nations first single-payer system, rebuilding and deprivatizing public hospitals, empowering workers, and to put patients over profits. Healthcare is not a commodity. It is a public good. It is a human right.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== Articles ===== -->
+  <!-- ===== EVENTS ===== -->
+  <section class="events-section">
+    <div class="events-inner">
+
+      <div class="events-header">
+        <div class="events-header-left">
+          <div class="events-section-label">Upcoming</div>
+          <div class="events-section-title">Events & Actions</div>
+        </div>
+        <a class="events-all-link" href="{{ SITEURL }}/pages/calendar.html">View all Events on the HCWG Calendar</a>
+      </div>
+
+      <div class="events-grid">
+        {% for event in ACTION_NETWORK_EVENTS[:3] %}
+        <a class="event-card {% if loop.first %}featured{% endif %}" href="{{ event.signup_url }}" target="_blank">
+          <div class="event-date-block">
+            <div class="event-cal">
+              <span class="event-cal-month">{{ event.date[5:7] }}</span>
+              <span class="event-cal-day">{{ event.date[8:10] }}</span>
+            </div>
+            <div class="event-time-place">
+              <div class="event-time">{{ event.date_formatted.split(',')[0] if event.date_formatted else '' }}</div>
+              <div class="event-place">{{ event.location if event.location else 'Virtual Event' }}</div>
+            </div>
+          </div>
+          <div class="event-title">{{ event.name }}</div>
+          {% if event.description %}
+          <div class="event-desc">{{ event.description | striptags | truncate(120) }}</div>
+          {% endif %}
+          <span class="event-rsvp">RSVP</span>
+        </a>
+        {% else %}
+        <p class="events-empty">No upcoming events scheduled. Check back soon!</p>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== BLOG / NEWS ===== -->
   {% if articles_page.object_list %}
-  <section>
-    <div class="container">
-      <h2 class="section-title">Latest Updates</h2>
-      <div class="article-grid">
-        {% for article in articles_page.object_list %}
-        <a class="article-card" href="{{ SITEURL }}/{{ article.url }}">
-          <h2>{{ article.title }}</h2>
-          <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-          <p>{{ article.summary }}</p>
+  <section class="news-section">
+    <div class="news-inner">
+
+      <div class="news-header">
+        <div class="news-header-left">
+          <div class="news-section-label">The HCWG Blog</div>
+          <div class="news-section-title">Beyond Diagnosis</div>
+          <p class="news-section-desc">A blog for sharing socialist perspectives on healthcare policy and responding to news and events shaping the system.</p>
+        </div>
+        <a class="news-all-link" href="{{ SITEURL }}/blog.html">All posts →</a>
+      </div>
+
+      <div class="news-grid">
+        {% for article in articles_page.object_list[:3] %}
+        <a class="news-card {% if loop.first %}primary{% endif %}" href="{{ SITEURL }}/{{ article.url }}">
+          {% if article.category %}
+          <div class="news-card-category">{{ article.category }}</div>
+          {% endif %}
+          <div class="news-card-hed">{{ article.title }}</div>
+          {% if loop.first %}
+          <div class="news-card-dek">{{ article.summary | striptags | truncate(200) }}</div>
+          {% endif %}
+          <div class="news-card-foot">
+            <span class="news-card-date">{{ article.locale_date }}</span>
+            <span class="news-card-read">Read</span>
+          </div>
         </a>
         {% endfor %}
       </div>
 
-      {% if articles_paginator.num_pages > 1 %}
-      <nav class="pagination">
-        {% if articles_page.has_previous() %}
-        <a href="{{ SITEURL }}/index{{ articles_page.previous_page_number() }}.html">&larr; Newer</a>
-        {% endif %}
-        <span style="color: var(--color-muted); font-size: 0.9rem;">
-          Page {{ articles_page.number }} of {{ articles_paginator.num_pages }}
-        </span>
-        {% if articles_page.has_next() %}
-        <a href="{{ SITEURL }}/index{{ articles_page.next_page_number() }}.html">Older &rarr;</a>
-        {% endif %}
-      </nav>
-      {% endif %}
     </div>
   </section>
   {% endif %}
 
-  <!-- ===== Donate Strip ===== -->
-  {% if DONATE_URL is defined %}
-  <section class="donate-strip">
-    <div class="container">
-      <h2>Support Our Work</h2>
-      <p>Help us fight for universal healthcare in New York. Every contribution makes a difference.</p>
-      <a href="{{ DONATE_URL }}" class="btn-donate">Donate Now</a>
+  <!-- ===== SUBSTACK NEWSLETTER ===== -->
+  <section class="substack-section">
+    <div class="substack-inner">
+
+      <div class="substack-left fade-up fade-up-1">
+        <p class="substack-kicker">Healthcare Working Group Newsletter</p>
+        <h2 class="substack-title">Do Not Resuscitate</h2>
+        <p class="substack-byline">By Tim Frasca · Published twice weekly</p>
+        <p class="substack-desc">A weekly annotated digest of healthcare news — breaking down all the ways the lack of a single-payer system produces waste, enriches insurance executives, and fails patients. Written by HCWG member Tim Frasca, it's essential reading for anyone following the fight for healthcare justice in New York and beyond.</p>
+      </div>
+
+      <div class="substack-right fade-up fade-up-2">
+        <div class="substack-embed-wrapper">
+          <p class="substack-embed-label">Free · Twice a week · No paywall</p>
+          <p class="substack-cta-headline">Get healthcare news in your inbox</p>
+<a class="substack-cta-btn" href="https://timfrasca.substack.com/" target="_blank">Read the latest issue →</a>
+        </div>
+      </div>
+
     </div>
   </section>
-  {% endif %}
+
+  <!-- ===== JOIN CTA ===== -->
+  <section class="join-section">
+    <div class="join-inner fade-up fade-up-1">
+      <p class="join-kicker">Get Involved</p>
+      <h2 class="join-title">The movement needs you.</h2>
+      <p class="join-body">Whether you're a healthcare worker, a patient who's been wronged by the system, a union member, or someone who believes healthcare is a human right — there's a place for you here. We meet monthly, organize year-round, and fight to win.</p>
+      <div class="join-btns">
+        <a class="btn btn-red" href="https://actionnetwork.org/surveys/membership-form" target="_blank">Join the Working Group</a>
+        <a class="btn btn-cream" href="{{ SITEURL }}/pages/calendar.html">See Upcoming Events</a>
+      </div>
+    </div>
+  </section>
 
 {% endblock %}

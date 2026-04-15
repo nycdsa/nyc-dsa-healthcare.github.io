@@ -28,11 +28,7 @@ def _event_to_dict(raw):
         location = addr[0] if addr else "Virtual Event"
         borough = raw["location"].get("locality", "")
 
-    links = raw.get("_links", {})
-    signup_url = (
-        links.get("osdi:record_attendance_helper", {}).get("href")
-        or raw.get("browser_url", "")
-    )
+    signup_url = raw.get("browser_url", "")
 
     date_str = raw.get("start_date", "")
     date_formatted = ""

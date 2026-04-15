@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+
+{% block title %}The New York Health Act — NYC-DSA Healthcare Working Group{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/nyha.css">
+{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-label fade-up fade-up-1">New York Health Act</div>
+      <h1 class="hero-h1 fade-up fade-up-2">
+        Healthcare is a<br>
+        <em>human right.</em><br>
+        New York can<br>lead the way.
+      </h1>
+      <p class="hero-deck fade-up fade-up-3">
+        The New York Health Act would make New York the first state in the nation with universal, single-payer healthcare. No more premiums. No more copays. No more prior-authorizations. Paid for by all New Yorkers, for all New Yorkers.
+      </p>
+      <div class="hero-cta-row fade-up fade-up-4">
+        <p style="font-family:var(--body-serif); font-size:16px; font-style:italic; color:var(--ink-light); display:flex; align-items:center; gap:10px;">
+          <span style="display:inline-block; width:24px; height:1px; background:var(--ink-light); flex-shrink:0;"></span>
+        </p>
+      </div>
+    </div>
+    <div class="hero-right fade-up fade-up-3">
+      <figure style="max-width: 480px; margin: 0;">
+      <div style="border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); overflow: hidden;">
+        <img src="{{ SITEURL }}/theme/images/nyha_image_1.jpeg" alt="Rally at the New York State Senate in support of the NY Health Act" style="display:block; width:100%; height:auto;">
+      </div>
+      <figcaption style="border: 3px solid var(--ink); border-top: none; padding: 10px 14px; background: var(--cream); box-shadow: 6px 6px 0 var(--ink);">
+        <div style="font-family:var(--sans); font-size:12px; font-weight:700; color:var(--ink); margin-bottom:2px;">2026 New York Health Act Lobby Day</div>
+        <div style="font-family:var(--sans); font-size:11px; color:var(--ink-light);">Photo: Physicians for a National Health Program — New York Metro Chapter (PNHP NY Metro)</div>
+      </figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div style="background: var(--white); border-top: 2px solid var(--ink); padding: 48px 40px 18px;">
+  <div style="max-width: 1100px; margin: 0 auto; text-align: left;">
+    <div style="display:inline-flex; align-items:center; gap:8px; font-family:var(--sans); font-size:13px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--red); margin-bottom:16px;">
+      <span style="display:block; width:24px; height:2px; background:var(--red);"></span>
+      The Facts
+    </div>
+    <h2 style="font-family:var(--serif); font-size:clamp(28px, 3.5vw, 46px); font-weight:900; line-height:1.1; color:var(--ink); letter-spacing:-0.01em;">The current system is <em style="font-style:italic; color:var(--red);">broken and unsustainable.</em></h2>
+  </div>
+</div>
+<div class="stats-band">
+  <div class="stats-band-inner">
+    <div class="stat-cell">
+      <div class="stat-big">$27,000</div>
+      <div class="stat-label">2025 National Average Employer Sponsored Premium for a Family of 4</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-big">1,000,000+</div>
+      <div class="stat-label">New Yorkers who are uninsured</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-big">#45</div>
+      <div class="stat-label">US ranking in life expectancy</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-big">#1</div>
+      <div class="stat-label">Cause of personal bankruptcy in the US: medical debt</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT IS IT -->
+<section class="section" id="what-is-it">
+  <div class="section-label">What is the New York Health Act?</div>
+  <h2 class="section-h2">One System. Paid for by Every New Yorker.<br><em>All Care. Any Doctor. Any Hospital.<br>No Exceptions.</em></h2>
+  <p class="section-lead">The NY Health Act replaces the current patchwork of private insurance with a single public program that covers every resident.</p>
+  <div class="what-grid">
+    <div class="what-cell">
+      <div class="what-cell-title">Universal Coverage — For Every New Yorker</div>
+      <p class="what-cell-body">Every New York resident is automatically enrolled — no applications, no gaps. Full coverage for medical, mental health, dental, vision, prescriptions, reproductive health, and long-term care. No copays, no prior authorization, no surprise bills.</p>
+    </div>
+    <div class="what-cell">
+      <div class="what-cell-title">No More Medical Debt. No More Profits Over People.</div>
+      <p class="what-cell-body">Under the current system, medical debt is the leading cause of personal bankruptcy in the US. Meanwhile, billions of dollars that should go toward care are siphoned off by insurance company CEOs, shareholders, and corporate profits. The NY Health Act eliminates that waste entirely — every dollar goes toward actual healthcare for actual New Yorkers.</p>
+    </div>
+    <div class="what-cell">
+
+      <div class="what-cell-title">Funded Progressively</div>
+      <p class="what-cell-body">Financed through a graduated payroll tax and investment income tax, so that the vast majority of households pay less than they do today in combined premiums and taxes. In fact, it is estimated that, collectively, the yearly savings will range between $11 billion and $16 billion per year.</p>
+    </div>
+    <div class="what-cell">
+
+      <div class="what-cell-title">Your Doctor, Your Choice</div>
+      <p class="what-cell-body">No networks. See any participating provider in New York. Doctors and hospitals are paid directly — freeing them from insurance bureaucracy so they can focus on care.</p>
+    </div>
+  </div>
+  <div style="margin-top: 28px; border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); background: var(--white);">
+    <a href="https://www.youtube.com/watch?v=e0bthHQ7uAQ" target="_blank" style="display:block; position:relative; overflow:hidden; border-bottom: 2px solid var(--ink);">
+      <img src="https://img.youtube.com/vi/e0bthHQ7uAQ/maxresdefault.jpg" alt="Zohran Mamdani and Jabari Brisport on the NY Health Act" style="width:100%; display:block; aspect-ratio:16/9; object-fit:cover;">
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25);">
+        <div style="width:64px; height:64px; border-radius:50%; background:rgba(200,16,46,0.9); display:flex; align-items:center; justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><polygon points="8,6 20,12 8,18"/></svg>
+        </div>
+      </div>
+    </a>
+    <div style="padding: 20px 24px;">
+      <div style="font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:8px;">Watch on YouTube</div>
+      <p style="font-family:var(--body-serif); font-size:15px; color:var(--ink-mid); line-height:1.65; margin-bottom:14px;">Watch this video of former assembly member (now Mayor of NYC) Zohran Mamdani and State Senator Jabari Brisport break down why our current for-profit healthcare system is not just broken, but absurd.</p>
+      <a href="https://www.youtube.com/watch?v=e0bthHQ7uAQ" target="_blank" style="display:inline-flex; align-items:center; gap:8px; font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--red); text-decoration:none;">Watch the video →</a>
+    </div>
+  </div>
+  <div style="margin-top: 28px; padding: 20px 28px; background: var(--white); border: 2px solid var(--ink); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+    <p style="font-family: var(--body-serif); font-size: 15px; line-height: 1.6; color: var(--ink-mid); margin: 0;">
+      Want to dive deeper? The Physicians for a National Health Program NY Metro Chapter has put together a comprehensive resource page covering all the details of the New York Health Act — from coverage and financing to FAQs and research.
+    </p>
+    <a href="https://www.pnhpnymetro.org/nyha_resources" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:var(--red); color:#fff; font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:12px 22px; text-decoration:none; white-space:nowrap; border:2px solid var(--red); box-shadow:3px 3px 0 var(--ink); flex-shrink:0;">
+      PNHP-NYC Metro NYHA Resources →
+    </a>
+  </div>
+</section>
+
+<!-- HOW CLOSE -->
+<section class="timeline-section">
+  <div class="timeline-inner">
+    <div class="section-label">How Close Are We?</div>
+    <h2 class="section-h2">The Senate has the votes —<br><em>but leadership won't act.</em></h2>
+    <p class="section-lead" style="margin-bottom: 36px;">Current bill numbers: <strong style="color:rgba(255,255,255,0.9);">S3425</strong> (Senate) and <strong style="color:rgba(255,255,255,0.9);">A1466</strong> (Assembly) — 2025–2026 session.</p>
+
+    <!-- HOW A BILL BECOMES LAW EXPLAINER -->
+    <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); padding:28px 32px; margin-bottom:40px;">
+      <div style="font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:16px;">How a Bill Becomes Law in New York</div>
+      <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:0; position:relative;" class="bill-process-grid">
+        <!-- connector line -->
+        <div style="position:absolute; top:20px; left:10%; right:10%; height:2px; background:rgba(255,255,255,0.15); z-index:0;" class="bill-process-line"></div>
+        <div style="text-align:center; position:relative; z-index:1; padding:0 8px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:#C8102E; margin:0 auto 10px; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:16px; font-weight:900; color:#fff;">1</div>
+          <div style="font-family:var(--sans); font-size:11px; font-weight:700; color:#fff; margin-bottom:4px;">Committee Vote</div>
+          <div style="font-family:var(--body-serif); font-size:11px; color:rgba(255,255,255,0.55); line-height:1.4;">Bill is referred to a committee. If a majority of committee members vote yes, it advances.</div>
+        </div>
+        <div style="text-align:center; position:relative; z-index:1; padding:0 8px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:#C8102E; margin:0 auto 10px; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:16px; font-weight:900; color:#fff;">2</div>
+          <div style="font-family:var(--sans); font-size:11px; font-weight:700; color:#fff; margin-bottom:4px;">Calendar</div>
+          <div style="font-family:var(--body-serif); font-size:11px; color:rgba(255,255,255,0.55); line-height:1.4;">Leadership must schedule the bill for a floor vote. This is entirely at the Majority Leader's discretion.</div>
+        </div>
+        <div style="text-align:center; position:relative; z-index:1; padding:0 8px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:#C8102E; margin:0 auto 10px; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:16px; font-weight:900; color:#fff;">3</div>
+          <div style="font-family:var(--sans); font-size:11px; font-weight:700; color:#fff; margin-bottom:4px;">Floor Vote</div>
+          <div style="font-family:var(--body-serif); font-size:11px; color:rgba(255,255,255,0.55); line-height:1.4;">The full chamber votes. A simple majority (32 of 63 in Senate; 76 of 150 in Assembly) is required to pass.</div>
+        </div>
+        <div style="text-align:center; position:relative; z-index:1; padding:0 8px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:#C8102E; margin:0 auto 10px; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:16px; font-weight:900; color:#fff;">4</div>
+          <div style="font-family:var(--sans); font-size:11px; font-weight:700; color:#fff; margin-bottom:4px;">Both Chambers</div>
+          <div style="font-family:var(--body-serif); font-size:11px; color:rgba(255,255,255,0.55); line-height:1.4;">The identical bill must pass both the Senate AND the Assembly before going to the Governor.</div>
+        </div>
+        <div style="text-align:center; position:relative; z-index:1; padding:0 8px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:#C8102E; margin:0 auto 10px; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:16px; font-weight:900; color:#fff;">5</div>
+          <div style="font-family:var(--sans); font-size:11px; font-weight:700; color:#fff; margin-bottom:4px;">Governor Signs</div>
+          <div style="font-family:var(--body-serif); font-size:11px; color:rgba(255,255,255,0.55); line-height:1.4;">The Governor has 10 days to sign or veto. If signed — or if no action is taken — it becomes law.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SENATE PROGRESS -->
+    <div style="margin-bottom: 36px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+        <div>
+          <span style="font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.7);">NY Senate (S3425)</span>
+          <span style="font-family:var(--body-serif); font-size:13px; font-style:italic; color:rgba(255,255,255,0.45); margin-left:10px;">63 total seats · 32 needed for majority</span>
+        </div>
+        <span style="font-family:var(--serif); font-size:15px; font-weight:700; color:#4caf50;">✓ 33 co-sponsors — majority secured</span>
+      </div>
+      <div style="position:relative; background:rgba(255,255,255,0.1); height:16px; border:1px solid rgba(255,255,255,0.2);">
+        <!-- fill: 33/63 = 52.4% -->
+        <div style="background:#4caf50; height:100%; width:52.4%; position:relative;">
+          <span style="position:absolute; right:6px; top:50%; transform:translateY(-50%); font-family:var(--sans); font-size:10px; font-weight:700; color:#fff; white-space:nowrap;">33</span>
+        </div>
+        <!-- majority threshold line: 32/63 = 50.8% -->
+        <div style="position:absolute; top:0; bottom:0; left:50.8%; width:2px; background:#fff; z-index:2;"></div>
+        <div style="position:absolute; top:-20px; left:50.8%; transform:translateX(-50%); font-family:var(--sans); font-size:9px; font-weight:700; color:rgba(255,255,255,0.7); white-space:nowrap;">MAJORITY (32)</div>
+      </div>
+      <div style="margin-top:10px; padding:14px 16px; background:rgba(200,16,46,0.2); border-left:3px solid #C8102E;">
+        <span style="font-family:var(--sans); font-size:12px; font-weight:700; color:#ff8a8e; text-transform:uppercase; letter-spacing:0.06em;">⚠ The Obstacle:</span>
+        <span style="font-family:var(--body-serif); font-size:13px; color:rgba(255,255,255,0.8); margin-left:8px;">Senate Majority Leader Andrea Stewart-Cousins controls the floor calendar. Despite having majority co-sponsors, she has refused to schedule a floor vote. There is no legislative mechanism to force her hand — only sustained public pressure.</span>
+      </div>
+    </div>
+
+    <!-- ASSEMBLY PROGRESS -->
+    <div style="margin-bottom: 40px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+        <div>
+          <span style="font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.7);">NY Assembly (A1466)</span>
+          <span style="font-family:var(--body-serif); font-size:13px; font-style:italic; color:rgba(255,255,255,0.45); margin-left:10px;">150 total seats · 76 needed for majority</span>
+        </div>
+        <span style="font-family:var(--serif); font-size:15px; font-weight:700; color:#ffb300;">75 co-sponsors — needs 1 more</span>
+      </div>
+      <div style="position:relative; background:rgba(255,255,255,0.1); height:16px; border:1px solid rgba(255,255,255,0.2);">
+        <!-- fill: 75/150 = 50% -->
+        <div style="background:#ffb300; height:100%; width:50%; position:relative;">
+          <span style="position:absolute; right:6px; top:50%; transform:translateY(-50%); font-family:var(--sans); font-size:10px; font-weight:700; color:#fff; white-space:nowrap;">75</span>
+        </div>
+        <!-- majority threshold: 76/150 = 50.7% -->
+        <div style="position:absolute; top:0; bottom:0; left:50.7%; width:2px; background:#fff; z-index:2;"></div>
+        <div style="position:absolute; top:-20px; left:50.7%; transform:translateX(-50%); font-family:var(--sans); font-size:9px; font-weight:700; color:rgba(255,255,255,0.7); white-space:nowrap;">MAJORITY (76)</div>
+      </div>
+      <div style="margin-top:10px; padding:14px 16px; background:rgba(255,179,0,0.15); border-left:3px solid #ffb300;">
+        <span style="font-family:var(--sans); font-size:12px; font-weight:700; color:#ffcc55; text-transform:uppercase; letter-spacing:0.06em;">In Progress:</span>
+        <span style="font-family:var(--body-serif); font-size:13px; color:rgba(255,255,255,0.8); margin-left:8px;">The Assembly needs just 1 more co-sponsor to reach a majority. Speaker Carl Heastie has not co-sponsored the bill and controls whether it reaches a floor vote.</span>
+      </div>
+    </div>
+
+    <div class="timeline-events" style="margin-top:12px;">
+      <div class="timeline-event">
+        <div class="timeline-year">1992</div>
+        <div class="timeline-event-title">Bill First Introduced</div>
+        <p class="timeline-event-body">Assemblymember Richard Gottfried introduces the first version of the NY Health Act, beginning a 30+ year campaign.</p>
+      </div>
+      <div class="timeline-event highlight">
+        <div class="timeline-year">2015–2018</div>
+        <div class="timeline-event-title">Assembly Passes — Four Years in a Row</div>
+        <p class="timeline-event-body">The full Assembly passes the bill four years running — clearing committee and winning a floor vote each time. The Senate, then Republican-controlled, refuses to hold a committee vote.</p>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-event-title">Dems Win the Senate — Then Stall</div>
+        <p class="timeline-event-body">Democrats win a supermajority. For the first time, NYHA has majority co-sponsors in both chambers. But the Municipal Labor Committee (UFT, DC37) <a href="https://www.thebody.com/article/unions-holding-back-new-york-health-act" target="_blank" style="color:rgba(255,255,255,0.75); text-decoration:underline;">lobbies leadership directly</a>. Neither Speaker Heastie nor Majority Leader Stewart-Cousins schedules a vote.</p>
+      </div>
+      <div class="timeline-event highlight">
+        <div class="timeline-year">Now</div>
+        <div class="timeline-event-title">We Need Leadership to Act</div>
+        <p class="timeline-event-body">The Senate has a majority. The Assembly is one co-sponsor short. The only thing standing between New York and universal healthcare is 1 Assembly co-sponsor and two people choosing not to schedule a vote.</p>
+      </div>
+    </div>
+    <p style="font-family:var(--sans); font-size:11px; color:rgba(255,255,255,0.4); margin-top:20px;">Sources: NYSenate.gov S3425 · NYAssembly.gov A1466 · FastDemocracy.com · PNHP NY Metro · NY1 News · Jacobin · New York Focus</p>
+  </div>
+</section>
+
+<!-- WHO BENEFITS -->
+<section class="benefits-section">
+  <div style="max-width:1100px; margin:0 auto; padding:72px 40px 0;">
+    <div class="section-label">Who Benefits?</div>
+    <h2 class="section-h2">Workers built this state.<br><em>Healthcare should work for them.</em></h2>
+    <p class="section-lead">The for-profit healthcare system is designed to extract wealth from working people and funnel it to insurance executives and shareholders. The NY Health Act reverses that. It is, at its core, a workers' issue — and workers are how we win it.</p>
+  </div>
+  <div style="max-width:1100px; margin:0 auto; padding:0 40px 72px;">
+    <div class="benefits-cards">
+
+      <div class="benefit-card">
+        <div class="benefit-title">Untie your life from your Employer</div>
+        <p class="benefit-body">Right now, your healthcare is a leash that ties your job to your ability to receive the care you need. NYHA not only severs that relationship, it builds a system that covers more care and services than any employer or union health plan could ever cover.</p>
+        <ul class="benefit-points">
+          <li>Coverage that is better than any existing plan: no copays, no networks, no prior auth, no surprise bills</li>
+          <li>Change jobs, leave an abusive workplace, start a business, or go back to school without a gap in care</li>
+        </ul>
+      </div>
+
+      <div class="benefit-card alt">
+        <div class="benefit-title">More Power at the Bargaining Table</div>
+        <p class="benefit-body">If you are a union member, no matter how good your health benefits are under your benefit plan, NYHA still covers more. By removing healthcare off the bargaining table, workers can focus on fighting for higher wages rather than negotiating about benefits.</p>
+        <ul class="benefit-points">
+          <li>Go on strike without ever having the fear of losing health coverage</li>
+          <li>No more tiered networks — all facilities and all doctors will be zero copay and zero cost at the point of service</li>
+          <li>Fight for pay and safer working conditions. No more fighting for Healthcare</li>
+        </ul>
+      </div>
+
+      <div class="benefit-card dark">
+        <div class="benefit-title" style="color:var(--white)">Single Payer Is Just the Beginning</div>
+        <p class="benefit-body" style="color:rgba(255,255,255,0.6)">NYHA is a transformative step — but a democratic socialist vision for healthcare doesn't stop at insurance reform. We are fighting for a future built on working class solidarity and power: well-funded public hospitals accountable to their communities and a system governed democratically by the workers and patients it serves — not by executives and shareholders. Every person who joins this movement brings that future closer.</p>
+        <ul class="benefit-points">
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WHAT NEEDS TO HAPPEN -->
+<section class="action-section" id="take-action">
+  <div class="action-inner">
+    <div class="section-label">How We Win</div>
+    <h2 class="section-h2">Organized workers beat<br><em>organized money.</em></h2>
+    <p class="section-lead" style="max-width:700px; margin-bottom:0;">The insurance industry, pharmaceutical corporations, and hospital systems have spent decades buying influence in D.C. and Albany. To beat these powerful interests, we need to build our own power through building a shared vision of a system that we deserve. This is how we win.</p>
+    <div class="action-steps">
+      <div class="action-step">
+        <div class="step-num">01</div>
+        <div class="step-title">Organize and Learn with your community</div>
+        <p class="step-body">No bill this transformative has ever passed without a mass movement behind it. To pass it, we need to build a collective vision together. Join the DSA healthcare working group, where we are partnering with many other community partners to knock on doors, educate each other on how the current system robs us, and what exactly does a more just and democratic healthcare system look like. We have the momentum after the historic win of Mayor Mamdani, now lets continue to build.</p>
+      </div>
+      <div class="action-step">
+        <div class="step-num">02</div>
+        <div class="step-title">Force Leadership's Hand — In Both Chambers</div>
+        <p class="step-body">The Senate already has a majority. The Assembly needs just one more co-sponsor. The only thing standing between New York and universal healthcare is two Democratic leaders who have chosen to side with insurance industry donors over their own constituents. <a href="https://www.nysenate.gov/senators/andrea-stewart-cousins" target="_blank" style="color:var(--red); font-weight:700;">Senate Majority Leader Andrea Stewart-Cousins</a> controls the Senate floor calendar. <a href="https://nyassembly.gov/mem/Carl-E-Heastie" target="_blank" style="color:var(--red); font-weight:700;">Assembly Speaker Carl Heastie</a> controls the Assembly. Neither has to answer to the insurance lobby — they have to answer to voters. Make that unmistakably clear.</p>
+      </div>
+
+    </div>
+    <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;" class="photo-grid-2col">
+      <figure style="margin:0;">
+        <img src="{{ SITEURL }}/theme/images/nyha_image_2.jpeg" alt="New York State Nurses Association on strike for better patient care" style="width:100%; display:block; aspect-ratio:16/9; object-fit:cover; border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink);">
+        <figcaption style="font-family:var(--sans); font-size:10px; color:var(--ink-light); margin-top:6px; letter-spacing:0.04em;">NY State Nurses Association (NYSNA) Nurses On Strike</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <img src="{{ SITEURL }}/theme/images/nyha_image_3.jpeg" alt="Patients Over Profits — nurses strike solidarity at Mount Sinai" style="width:100%; display:block; aspect-ratio:16/9; object-fit:cover; border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink);">
+        <figcaption style="font-family:var(--sans); font-size:10px; color:var(--ink-light); margin-top:6px; letter-spacing:0.04em;">Solidarity on the picket line</figcaption>
+      </figure>
+    </div>
+    <div style="margin-top: 24px; padding: 20px 24px; background: var(--white); border: 2px solid var(--ink);">
+      <div style="font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-light); margin-bottom:12px;">Our Partners</div>
+      <p style="font-family:var(--body-serif); font-size:14px; color:var(--ink-mid); line-height:1.65; margin-bottom:16px;">NYC-DSA works in coordination with a growing coalition of allies fighting to get NYHA passed — and to advance other legislation that puts workers and patients first. Together, we are building the organized power needed to make universal healthcare a reality in New York.</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="https://www.pnhpnymetro.org" target="_blank" style="font-family:var(--sans); font-size:12px; font-weight:700; color:var(--ink); text-decoration:none; padding:6px 14px; border:2px solid var(--ink); transition:all 0.1s;">PNHP NY Metro</a>
+        <a href="https://workingfamiliesforhealth.org" target="_blank" style="font-family:var(--sans); font-size:12px; font-weight:700; color:var(--ink); text-decoration:none; padding:6px 14px; border:2px solid var(--ink); transition:all 0.1s;">Working Families for Health</a>
+        <a href="https://www.nyhcampaign.org" target="_blank" style="font-family:var(--sans); font-size:12px; font-weight:700; color:var(--ink); text-decoration:none; padding:6px 14px; border:2px solid var(--ink); transition:all 0.1s;">Campaign for NY Health</a>
+        <a href="https://www.nycaringmajority.org/" target="_blank" style="font-family:var(--sans); font-size:12px; font-weight:700; color:var(--ink); text-decoration:none; padding:6px 14px; border:2px solid var(--ink); transition:all 0.1s;">Caring Majority</a>
+        <a href="https://www.nationalnursesunited.org/" target="_blank" style="font-family:var(--sans); font-size:12px; font-weight:700; color:var(--ink); text-decoration:none; padding:6px 14px; border:2px solid var(--ink); transition:all 0.1s;">National Nurses United</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FOOTER -->
+<section class="cta-footer">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-label">Ready to Act?</div>
+      <h2 class="cta-h2">New York can lead<br>the nation — but only<br>if we <em>demand it.</em></h2>
+      <p class="cta-sub">The healthcare industry spends millions lobbying against this bill. The only thing that beats their money is organized people. Get involved with the NYC-DSA Healthcare Working Group today.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="https://actionnetwork.org/surveys/membership-form" target="_blank" class="cta-btn primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Join the Working Group
+      </a>
+      <a href="#" class="cta-btn outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        NY Healthcare Lobby Donations Tracker
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ SITEURL }}/theme/js/nyha.js"></script>
+{% endblock %}

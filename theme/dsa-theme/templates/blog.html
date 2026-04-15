@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block title %}Beyond Diagnosis — NYC-DSA Healthcare Working Group{% endblock %}
+
+{% block extra_head %}
+<style>
+  .blog-header{background:var(--white);border-bottom:3px solid var(--red);padding:56px 40px 48px;text-align:center;margin-top:-3rem;max-width:none;width:100%;}
+  .blog-header-inner{max-width:720px;margin:0 auto;}
+  .blog-header-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:8px;}
+  .blog-header-label::before,.blog-header-label::after{content:'';display:block;width:24px;height:2px;background:var(--cream-dark);}
+  .blog-header h1{font-family:var(--serif);font-size:clamp(40px,6vw,68px);font-weight:900;color:var(--ink);line-height:1.05;margin-bottom:18px;letter-spacing:-0.01em;}
+  .blog-header h1 em{font-style:italic;color:var(--red);}
+  .blog-header-sub{font-family:var(--body-serif);font-size:17px;color:var(--ink-mid);line-height:1.7;}
+
+  .blog-body{max-width:1100px;margin:0 auto;padding:48px 40px 80px;display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start;}
+
+  .blog-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--cream-dark);}
+  .blog-filter-btn{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background 0.15s,color 0.15s,border-color 0.15s;}
+  .blog-filter-btn:hover{background:var(--ink);color:var(--white);}
+  .blog-filter-btn.active{background:var(--red);color:#fff;border-color:var(--red);}
+
+  .tag{display:inline-block;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;background:var(--red);color:#fff;}
+  .tag.dark{background:#3B3838;}
+  .tag.outline{background:transparent;color:var(--ink);border:1px solid var(--ink);}
+
+  .post-featured{border:2px solid var(--ink);background:var(--white);box-shadow:4px 4px 0 var(--ink);margin-bottom:36px;}
+  .post-featured-body{padding:32px 32px 28px;}
+  .post-featured-body h2{font-family:var(--serif);font-size:clamp(22px,3vw,30px);font-weight:900;color:var(--ink);line-height:1.15;margin-bottom:12px;letter-spacing:-0.01em;}
+  .post-featured-body h2 em{font-style:italic;color:var(--red);}
+  .post-featured-body p{font-family:var(--body-serif);font-size:16px;color:var(--ink-mid);line-height:1.7;margin-bottom:20px;max-width:640px;}
+  .post-meta{font-family:var(--sans);font-size:11px;color:var(--ink-light);letter-spacing:0.06em;display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--cream-mid);padding-top:16px;margin-bottom:14px;}
+  .post-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--cream-dark);flex-shrink:0;}
+  .read-more{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);text-decoration:none;}
+  .read-more:hover{gap:10px;}
+
+  .solo-callout{background:var(--cream-mid);border:2px solid var(--ink);padding:28px 32px;display:flex;align-items:flex-start;gap:20px;margin-bottom:0;}
+  .solo-callout-icon{width:40px;height:40px;background:var(--red);border:2px solid var(--ink);flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .solo-callout-icon svg{width:20px;height:20px;}
+  .solo-callout-text h3{font-family:var(--serif);font-size:18px;font-weight:900;color:var(--ink);margin-bottom:6px;}
+  .solo-callout-text p{font-family:var(--body-serif);font-size:14px;color:var(--ink-mid);line-height:1.6;}
+
+  .no-results{font-family:var(--body-serif);font-size:16px;color:var(--ink-light);padding:32px 0;display:none;}
+
+  .section-divider{display:flex;align-items:center;gap:12px;margin:36px 0 24px;}
+  .section-divider-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-light);white-space:nowrap;}
+  .section-divider-line{flex:1;height:1px;background:var(--cream-dark);}
+  .post-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .post-card{border:2px solid var(--ink);background:var(--white);box-shadow:3px 3px 0 var(--ink);display:flex;flex-direction:column;text-decoration:none;transition:transform 0.1s,box-shadow 0.1s;}
+  .post-card:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink);}
+  .post-card-body{padding:18px 20px 16px;flex:1;display:flex;flex-direction:column;}
+  .post-card-body h3{font-family:var(--serif);font-size:18px;font-weight:900;color:var(--ink);line-height:1.2;margin-bottom:8px;letter-spacing:-0.01em;}
+  .post-card-body p{font-family:var(--body-serif);font-size:13px;color:var(--ink-mid);line-height:1.6;margin-bottom:14px;flex:1;}
+  .post-card-meta{font-family:var(--sans);font-size:10px;color:var(--ink-light);letter-spacing:0.06em;border-top:1px solid var(--cream-mid);padding-top:10px;margin-top:auto;display:flex;gap:12px;}
+
+  .sidebar{position:sticky;top:88px;display:flex;flex-direction:column;gap:28px;}
+  .sidebar-label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:14px;}
+  .sidebar-cta{background:var(--ink);padding:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink-mid);}
+  .sidebar-cta-eyebrow{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
+  .sidebar-cta h3{font-family:var(--serif);font-size:20px;font-weight:900;color:var(--white);line-height:1.2;margin-bottom:10px;}
+  .sidebar-cta p{font-family:var(--body-serif);font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:16px;}
+  .sidebar-cta a{display:block;text-align:center;background:var(--red);color:#fff;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:12px 16px;text-decoration:none;border:2px solid var(--red);}
+  .sidebar-cta a:hover{background:var(--red-dark);border-color:var(--red-dark);}
+  .sidebar-post{display:block;text-decoration:none;padding:10px 0;border-bottom:1px solid var(--cream-mid);}
+  .sidebar-post:last-child{border-bottom:none;}
+  .sidebar-post-title{font-family:var(--sans);font-size:13px;font-weight:700;color:var(--ink);line-height:1.35;margin-bottom:3px;transition:color 0.1s;}
+  .sidebar-post:hover .sidebar-post-title{color:var(--red);}
+  .sidebar-post-date{font-family:var(--sans);font-size:10px;color:var(--ink-light);letter-spacing:0.06em;}
+
+  @media(max-width:860px){
+    .blog-header{padding:40px 24px 36px;}
+    .blog-body{grid-template-columns:1fr;padding:32px 20px 60px;gap:40px;}
+    .sidebar{position:static;}
+    .post-grid{grid-template-columns:1fr;}
+    .post-featured-body{padding:20px 20px 18px;}
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="blog-header">
+  <div class="blog-header-inner">
+    <div class="blog-header-label">NYC-DSA Healthcare Working Group</div>
+    <h1>Beyond <em>Diagnosis</em></h1>
+    <p class="blog-header-sub">We are tired of constantly hearing politicians, policy wonks, and pundits diagnose the issues with our healthcare and economic system without prescribing clear solutions. This blog is a space for going beyond just diagnosing — a place for leftist healthcare analysis and democratic socialist perspectives from the NYC-DSA Healthcare Working Group that offer clear solutions and are wholeheartedly pro-patient and pro-worker.</p>
+  </div>
+</div>
+
+<div class="blog-body">
+  <main>
+
+    <!-- TOPIC FILTER -->
+    <div class="blog-filter">
+      <button class="blog-filter-btn active" data-filter="all">All</button>
+      {% for cat, _ in categories %}
+      <button class="blog-filter-btn" data-filter="{{ cat.name | lower | replace(' ', '-') }}">{{ cat.name }}</button>
+      {% endfor %}
+    </div>
+
+    {% if articles %}
+    <!-- FEATURED POST -->
+    <article class="post-featured" data-category="{{ articles[0].category.name | lower | replace(' ', '-') if articles[0].category else '' }}">
+      <div class="post-featured-body">
+        {% if articles[0].category %}
+        <div class="tag" style="margin-bottom:12px;">{{ articles[0].category }}</div>
+        {% endif %}
+        <h2>{{ articles[0].title }}</h2>
+        <p>{{ articles[0].summary | striptags | truncate(200) }}</p>
+        <div class="post-meta">
+          <span>{{ articles[0].locale_date }}</span>
+          <span class="post-meta-dot"></span>
+          <span>{{ articles[0].author }}</span>
+        </div>
+        <a class="read-more" href="{{ SITEURL }}/{{ articles[0].url }}">Read more →</a>
+      </div>
+    </article>
+    {% endif %}
+
+    <!-- SOLO CALLOUT — shown when only 1 post -->
+    <div class="solo-callout" id="solo-callout">
+      <div class="solo-callout-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <div class="solo-callout-text">
+        <h3>More posts coming soon</h3>
+        <p>We publish analysis, organizing updates, and socialist perspectives on healthcare in New York. Check back regularly — or join the working group to stay in the loop.</p>
+      </div>
+    </div>
+
+    <!-- POST GRID — shown once there are more posts -->
+    <div id="post-grid-section" style="display:none;">
+      <div class="section-divider">
+        <span class="section-divider-label">More Posts</span>
+        <div class="section-divider-line"></div>
+      </div>
+      <div class="post-grid" id="post-grid">
+        {% for article in articles[1:] %}
+        <a class="post-card" href="{{ SITEURL }}/{{ article.url }}" data-category="{{ article.category.name | lower | replace(' ', '-') if article.category else '' }}">
+          <div class="post-card-body">
+            {% if article.category %}
+            <div class="tag" style="margin-bottom:8px;">{{ article.category }}</div>
+            {% endif %}
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.summary | striptags | truncate(120) }}</p>
+            <div class="post-card-meta">
+              <span>{{ article.locale_date }}</span>
+              <span>{{ article.author }}</span>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      <p class="no-results" id="no-results">No posts found for this topic.</p>
+    </div>
+
+  </main>
+
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-eyebrow">Get Involved</div>
+        <h3>Join the Fight to Build a Better Healthcare System</h3>
+        <p>Join the NYC-DSA Healthcare Working Group and help build the movement for a Healthcare System for Our Time.</p>
+        <a href="https://actionnetwork.org/surveys/membership-form" target="_blank">Join the Working Group →</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-label">Quick Links</div>
+      <a class="sidebar-post" href="{{ SITEURL }}/pages/blog-about.html"><div class="sidebar-post-title">About Beyond Diagnosis</div><div class="sidebar-post-date">Editorial standards &amp; pitch info</div></a>
+    </div>
+  </aside>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Solo/grid toggle
+const postCount = {{ articles | length }};
+if (postCount > 1) {
+  document.getElementById('solo-callout').style.display = 'none';
+  document.getElementById('post-grid-section').style.display = 'block';
+}
+
+// Topic filter
+document.querySelectorAll('.blog-filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.blog-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    let visibleCards = 0;
+    document.querySelectorAll('[data-category]').forEach(el => {
+      if (filter === 'all') {
+        el.style.display = '';
+        visibleCards++;
+      } else {
+        const show = el.dataset.category === filter;
+        el.style.display = show ? '' : 'none';
+        if (show) visibleCards++;
+      }
+    });
+    const noResults = document.getElementById('no-results');
+    if (noResults) noResults.style.display = visibleCards === 0 ? 'block' : 'none';
+  });
+});
+</script>
+{% endblock %}

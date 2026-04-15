@@ -1,38 +1,151 @@
 {% extends "base.html" %}
 
-{% block title %}{{ article.title }} – {{ SITENAME }}{% endblock %}
+{% block title %}{{ article.title }} — Beyond Diagnosis — NYC-DSA Healthcare Working Group{% endblock %}
+
+{% block extra_head %}
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--ink); font-family: var(--sans); min-height: 100vh; }
+
+  .tag { display: inline-block; font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; background: var(--red); color: #fff; }
+  .tag.dark { background: #3B3838; }
+  .tag.outline { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+
+  .sidebar-label { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); border-bottom: 2px solid var(--ink); padding-bottom: 8px; margin-bottom: 14px; }
+  .sidebar-cta { background: var(--ink); padding: 24px; border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink-mid); margin-bottom: 28px; }
+  .sidebar-cta-eyebrow { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .sidebar-cta h3 { font-family: var(--serif); font-size: 20px; font-weight: 900; color: var(--white); line-height: 1.2; margin-bottom: 10px; }
+  .sidebar-cta p { font-family: var(--body-serif); font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 16px; }
+  .sidebar-cta a { display: block; text-align: center; background: var(--red); color: #fff; font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 16px; text-decoration: none; border: 2px solid var(--red); }
+  .sidebar-cta a:hover { background: var(--red-dark); border-color: var(--red-dark); }
+  .sidebar-post { display: block; text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--cream-mid); }
+  .sidebar-post:last-child { border-bottom: none; }
+  .sidebar-post-title { font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.35; margin-bottom: 3px; transition: color 0.1s; }
+  .sidebar-post:hover .sidebar-post-title { color: var(--red); }
+  .sidebar-post-date { font-family: var(--sans); font-size: 10px; color: var(--ink-light); letter-spacing: 0.06em; }
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .tag-pill { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; padding: 5px 12px; border: 1px solid var(--ink); color: var(--ink); cursor: pointer; background: transparent; text-decoration: none; }
+  .tag-pill:hover { background: var(--red); color: #fff; border-color: var(--red); }
+
+  .article-header { background: var(--white); border-bottom: 3px solid var(--red); padding: 56px 40px 48px; margin-top: -3rem; max-width: none; width: 100%; }
+  .article-header-inner { max-width: 800px; margin: 0 auto; }
+  .article-breadcrumb { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .article-breadcrumb a { color: var(--ink-mid); text-decoration: none; }
+  .article-breadcrumb a:hover { color: var(--red); }
+  .article-breadcrumb-sep { color: var(--ink-light); }
+  .article-header h1 { font-family: var(--serif); font-size: clamp(28px, 4.5vw, 52px); font-weight: 900; color: var(--ink); line-height: 1.08; margin-bottom: 18px; letter-spacing: -0.01em; }
+  .article-header h1 em { font-style: italic; color: var(--red); }
+  .article-header-deck { font-family: var(--body-serif); font-size: 18px; color: var(--ink-mid); line-height: 1.65; margin-bottom: 28px; max-width: 680px; }
+  .article-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-family: var(--sans); font-size: 11px; letter-spacing: 0.06em; color: var(--ink-light); padding-top: 20px; border-top: 1px solid var(--cream-dark); }
+  .article-meta strong { color: var(--ink); font-weight: 700; }
+  .article-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--cream-dark); flex-shrink: 0; }
+
+  .article-body { max-width: 1100px; margin: 0 auto; padding: 52px 40px 80px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; align-items: start; }
+  .article-content { min-width: 0; }
+  .article-content p { font-family: var(--body-serif); font-size: 18px; line-height: 1.8; color: var(--ink-mid); margin-bottom: 24px; }
+  .article-content h2 { font-family: var(--serif); font-size: 26px; font-weight: 900; color: var(--ink); line-height: 1.2; margin: 40px 0 14px; letter-spacing: -0.01em; }
+  .article-content h3 { font-family: var(--serif); font-size: 20px; font-weight: 900; color: var(--ink); margin: 32px 0 10px; }
+  .article-content ul, .article-content ol { font-family: var(--body-serif); font-size: 17px; line-height: 1.75; color: var(--ink-mid); margin-bottom: 24px; padding-left: 24px; }
+  .article-content li { margin-bottom: 6px; }
+  .article-content a { color: var(--red); }
+  .article-content strong { font-weight: 700; color: var(--ink); }
+
+  .pullquote { border-left: 4px solid var(--red); margin: 36px 0; padding: 20px 28px; background: var(--white); border-top: 1px solid var(--cream-mid); border-bottom: 1px solid var(--cream-mid); }
+  .pullquote p { font-family: var(--serif); font-size: 22px; font-weight: 700; font-style: italic; color: var(--ink); line-height: 1.4; margin: 0; }
+  .pullquote p em { color: var(--red); font-style: normal; }
+
+  .article-footer { margin-top: 48px; padding-top: 28px; border-top: 2px solid var(--ink); }
+  .article-tags { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+  .article-tags-label { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); margin-right: 4px; }
+  .article-share { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .article-share-label { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); }
+  .share-btn { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 16px; border: 2px solid var(--ink); color: var(--ink); text-decoration: none; transition: background 0.15s; background: transparent; cursor: pointer; }
+  .share-btn:hover { background: var(--ink); color: var(--white); }
+
+
+  .article-sidebar { position: sticky; top: 88px; }
+
+  @media (max-width: 860px) {
+    .article-header { padding: 40px 20px 36px; }
+    .article-body { grid-template-columns: 1fr; padding: 36px 20px 60px; gap: 40px; }
+    .article-sidebar { position: static; }
+    .article-content p, .article-content ul, .article-content ol { font-size: 16px; }
+    .pullquote p { font-size: 19px; }
+  }
+</style>
+{% endblock %}
 
 {% block content %}
-<div class="container">
-  <article>
+<div class="article-header">
+  <div class="article-header-inner">
+    <div class="article-breadcrumb">
+      <a href="{{ SITEURL }}/blog.html">Beyond Diagnosis</a>
+      <span class="article-breadcrumb-sep">›</span>
+      {% if article.category %}
+      <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+      {% endif %}
+    </div>
+    <h1>{{ article.title }}</h1>
+    {% if article.summary %}
+    <p class="article-header-deck">{{ article.summary | striptags }}</p>
+    {% endif %}
+    <div class="article-meta">
+      <strong>{{ article.author }}</strong>
+      <span class="article-meta-dot"></span>
+      <span>{{ article.locale_date }}</span>
+      {% if article.category %}
+      <span class="article-meta-dot"></span>
+      <div class="tag" style="margin:0;">{{ article.category }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
 
-    <header class="article-header">
-      <h1>{{ article.title }}</h1>
-      <div class="article-meta">
-        <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+<div class="article-body">
+  <main class="article-content">
 
-        {% if article.author %}
-        <span>by {{ article.author }}</span>
-        {% endif %}
+    {{ article.content }}
 
-        {% if article.category %}
-        <span>in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
-        {% endif %}
-
-        {% if article.tags %}
-        <span>
-          {% for tag in article.tags %}
-          <a class="article-tag" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-          {% endfor %}
-        </span>
-        {% endif %}
+    <div class="article-footer">
+<div class="article-share">
+        <span class="article-share-label">Share:</span>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?url={{ SITEURL }}/{{ article.url }}&text={{ article.title }}" target="_blank" rel="noopener">Twitter / X</a>
+        <a class="share-btn" href="https://bsky.app/intent/compose?text={{ article.title | urlencode }}%20{{ (SITEURL ~ '/' ~ article.url) | urlencode }}" target="_blank" rel="noopener">Bluesky</a>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}/{{ article.url }}" target="_blank" rel="noopener">Facebook</a>
+        <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href)">Copy link</button>
       </div>
-    </header>
-
-    <div class="article-body">
-      {{ article.content }}
     </div>
 
-  </article>
+
+  </main>
+
+  <aside class="article-sidebar">
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-eyebrow">Get Involved</div>
+      <h3>Join the Fight to Build a Better Healthcare System</h3>
+      <p>Join the NYC-DSA Healthcare Working Group and help build the movement for a Healthcare System for Our Time.</p>
+      <a href="https://actionnetwork.org/surveys/membership-form" target="_blank">Join the Working Group →</a>
+    </div>
+
+    <div style="margin-bottom:28px;">
+      <div class="sidebar-label">Recent Posts</div>
+      {% for a in articles[:4] %}
+      {% if a != article %}
+      <a class="sidebar-post" href="{{ SITEURL }}/{{ a.url }}">
+        <div class="sidebar-post-title">{{ a.title }}</div>
+        <div class="sidebar-post-date">{{ a.locale_date }}</div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div>
+      <div class="sidebar-label">Quick Links</div>
+      <a class="sidebar-post" href="{{ SITEURL }}/pages/blog-about.html"><div class="sidebar-post-title">About Beyond Diagnosis</div><div class="sidebar-post-date">Editorial standards &amp; pitch info</div></a>
+    </div>
+
+  </aside>
 </div>
 {% endblock %}

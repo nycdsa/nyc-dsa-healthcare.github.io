@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}About Beyond Diagnosis — NYC-DSA Healthcare Working Group{% endblock %}
+
+{% block extra_head %}
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);min-height:100vh;}
+
+  .page-header { background: var(--ink); border-bottom: 3px solid var(--red); padding: 56px 40px 48px; margin-top: -3rem; max-width: none; width: 100%; }
+  .page-header-inner { max-width: 740px; margin: 0 auto; }
+  .page-breadcrumb { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .page-breadcrumb a{color:rgba(255,255,255,0.5);text-decoration:none;}
+  .page-breadcrumb a:hover{color:rgba(255,255,255,0.8);}
+  .page-breadcrumb-sep{color:rgba(255,255,255,0.25);}
+  .page-header h1 { font-family: var(--serif); font-size: clamp(32px, 4.5vw, 52px); font-weight: 900; color: #fff; line-height: 1.08; margin-bottom: 16px; letter-spacing: -0.01em; }
+  .page-header h1 em{font-style:italic;color:var(--red);}
+  .page-header-sub { font-family: var(--body-serif); font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+  .page-body { max-width: 1100px; margin: 0 auto; padding: 56px 40px 80px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; align-items: start; }
+
+  .prose h2 { font-family: var(--serif); font-size: 28px; font-weight: 900; color: var(--ink); line-height: 1.15; margin: 48px 0 14px; letter-spacing: -0.01em; padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+  .prose h2:first-child { margin-top: 0; }
+  .prose p { font-family: var(--body-serif); font-size: 17px; line-height: 1.8; color: var(--ink-mid); margin-bottom: 20px; }
+  .prose p strong { font-weight: 700; color: var(--ink); }
+  .prose ul { font-family: var(--body-serif); font-size: 17px; line-height: 1.75; color: var(--ink-mid); margin-bottom: 20px; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .prose ul li { padding-left: 20px; position: relative; }
+  .prose ul li::before { content: ''; position: absolute; left: 0; top: 11px; width: 8px; height: 2px; background: var(--red); }
+  .prose a { color: var(--red); }
+  .prose a:hover { text-decoration: underline; }
+
+  .standards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 32px; }
+  .standard-card { background: var(--white); border: 2px solid var(--ink); padding: 20px 22px; box-shadow: 3px 3px 0 var(--ink); }
+  .standard-card-num { font-family: var(--serif); font-size: 36px; font-weight: 900; font-style: italic; color: var(--red-light); line-height: 0.9; margin-bottom: 10px; }
+  .standard-card h3 { font-family: var(--serif); font-size: 17px; font-weight: 900; color: var(--ink); margin-bottom: 8px; line-height: 1.2; }
+  .standard-card p { font-family: var(--body-serif); font-size: 14px; line-height: 1.6; color: var(--ink-mid); margin: 0; }
+
+  .pitch-form { background: var(--cream-mid); border: 2px solid var(--ink); padding: 32px; margin-top: 24px; box-shadow: 4px 4px 0 var(--ink); }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .form-group label { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
+  .form-group input, .form-group textarea, .form-group select { font-family: var(--body-serif); font-size: 15px; color: var(--ink); background: var(--white); border: 2px solid var(--ink); padding: 10px 14px; width: 100%; outline: none; appearance: none; }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--red); }
+  .form-group textarea { min-height: 110px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .submit-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 28px; border: 2px solid var(--red); cursor: pointer; box-shadow: 3px 3px 0 var(--ink); margin-top: 8px; transition: background 0.15s; }
+  .submit-btn:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+  .sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 28px; }
+  .sidebar-label { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); border-bottom: 2px solid var(--ink); padding-bottom: 8px; margin-bottom: 14px; }
+  .sidebar-cta { background: var(--ink); padding: 24px; border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink-mid); }
+  .sidebar-cta-eyebrow { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .sidebar-cta h3 { font-family: var(--serif); font-size: 20px; font-weight: 900; color: var(--white); line-height: 1.2; margin-bottom: 10px; }
+  .sidebar-cta p { font-family: var(--body-serif); font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 16px; }
+  .sidebar-cta a { display: block; text-align: center; background: var(--red); color: #fff; font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 16px; text-decoration: none; border: 2px solid var(--red); }
+  .sidebar-cta a:hover { background: var(--red-dark); border-color: var(--red-dark); }
+  .sidebar-link { display: block; text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--cream-mid); }
+  .sidebar-link:last-child { border-bottom: none; }
+  .sidebar-link-title { font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.35; margin-bottom: 2px; transition: color 0.1s; }
+  .sidebar-link:hover .sidebar-link-title { color: var(--red); }
+  .sidebar-link-sub { font-family: var(--sans); font-size: 10px; color: var(--ink-light); letter-spacing: 0.06em; }
+
+  @media(max-width:860px){
+    .page-header{padding:40px 20px 36px;}
+    .page-body{grid-template-columns:1fr;padding:36px 20px 60px;gap:40px;}
+    .sidebar{position:static;}
+    .standards-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-breadcrumb">
+      <a href="{{ SITEURL }}/blog.html">Beyond Diagnosis</a>
+      <span class="page-breadcrumb-sep">›</span>
+      <span>About</span>
+    </div>
+    <h1>About <em>Beyond Diagnosis</em></h1>
+    <p class="page-header-sub">What this blog is, how we work, and how to pitch us.</p>
+  </div>
+</div>
+
+<div class="page-body">
+  <main class="prose">
+
+    <h2>What This Blog Is</h2>
+    <p><em>Beyond Diagnosis</em> is the blog of the NYC-DSA Healthcare Working Group. We are a vehicle for the working group to communicate with the public about the DSA's positions on healthcare policy and our reaction to healthcare news and events. We also aim to be a starting point for the non-DSA layperson to understand the healthcare landscape — and what socialist policies could offer for their daily lives.</p>
+    <p>The name reflects our conviction that diagnosing the failures of the for-profit healthcare system, however necessary, is not enough. Every piece we publish is oriented toward solutions: what a better system looks like, how we get there, and what working people can do right now to build the power to win it.</p>
+    <p>We are not a neutral publication. We are socialists who believe healthcare is a human right, that the current system exists to extract profit from sick people, and that the only path to transformation runs through organized working-class power. We are upfront about that. We also hold ourselves to high standards of accuracy, evidence, and intellectual honesty — because our arguments are stronger when they are true.</p>
+
+    <h2>Types of Articles</h2>
+    <p>There are a few general categories of articles that are a good fit for the blog. Those include, but are not limited to:</p>
+    <ul>
+      <li><strong>Explanatory articles</strong> about a facet of our healthcare system, a healthcare policy, or a DSA action. These are "evergreen" and can be published at any time.</li>
+      <li><strong>Reactions to healthcare news</strong> or new policy. These should be submitted within 2–3 days of the news occurring.</li>
+      <li><strong>Novel research or analysis</strong> done by the healthcare working group or a working group member, including methodology, graphics, and data.</li>
+      <li><strong>Commentary</strong> on an article or piece of research published at another outlet or journal.</li>
+      <li><strong>Personal patient and/or healthcare worker stories</strong> about a failure of the healthcare system.</li>
+    </ul>
+    <p>Every article, regardless of type, should leave readers with a clear sense of why the subject matters and what they can do to take action in response.</p>
+
+    <h2>Writing Guidelines</h2>
+    <p>Articles should be written for the <strong>average layperson</strong>. Assume your reader is smart, but not an expert on healthcare or healthcare policy. Language should be clear and jargon-free. Articles should be <strong>600–800 words</strong>.</p>
+    <p>Articles should be written by humans, <strong>not by generative AI</strong>. All sources must be clearly cited. Plagiarism will not be tolerated.</p>
+    <p>All articles should address:</p>
+    <ul>
+      <li><strong>What</strong> happened or what the topic is</li>
+      <li><strong>Why</strong> it matters for the average person's health and daily life</li>
+      <li><strong>How</strong> to understand it through a socialist lens</li>
+      <li><strong>What</strong> the reader can do in response</li>
+      <li>Links to additional reading for those who want to go deeper</li>
+    </ul>
+
+    <h2>Editorial Standards</h2>
+
+    <p>All posts are reviewed by blog leadership before publication. After a pitch is accepted, you'll be paired with another working group member to discuss and refine your idea. After writing, articles go through peer review by another member and final editing by blog leadership. Contributors retain ownership of their work. We may edit for length, clarity, and style, and will communicate any substantive changes before publishing.</p>
+
+    <h2>Pitch Us</h2>
+    <p>Please reach out to Joe Patrick and Tim Frasca if you have an idea for an article or blog post. Your pitch should include:</p>
+    <ul>
+      <li>What you want to write about and a suggested headline</li>
+      <li>Why you want to write about this topic <strong>now</strong></li>
+      <li>Why you are the best person to write about this specific topic</li>
+    </ul>
+    <p>Pitches will be evaluated based on relevancy, fit with other ongoing articles, and consistency with the stated positions of the working group. We aim to respond within two weeks.</p>
+
+    <div class="pitch-form">
+      <div class="form-row" style="margin-bottom:16px;">
+        <div class="form-group">
+          <label for="pitch-name">Your Name</label>
+          <input type="text" id="pitch-name" placeholder="Full name">
+        </div>
+        <div class="form-group">
+          <label for="pitch-email">Email Address</label>
+          <input type="email" id="pitch-email" placeholder="your@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pitch-affiliation">Affiliation <span style="color:var(--ink-light);font-weight:400;text-transform:none;letter-spacing:0;">(optional — union local, org, title, etc.)</span></label>
+        <input type="text" id="pitch-affiliation" placeholder="e.g. DSA member, RN at Bellevue, NYSNA Local...">
+      </div>
+      <div class="form-group">
+        <label for="pitch-topic">Pitch Topic</label>
+        <select id="pitch-topic">
+          <option value="" disabled selected>Select a category</option>
+          <option>Organizing / campaign update</option>
+          <option>Labor / union politics</option>
+          <option>Legislative analysis</option>
+          <option>Healthcare worker experience</option>
+          <option>Patient experience</option>
+          <option>Policy / economics deep dive</option>
+          <option>International / historical perspective</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="pitch-body">Your Pitch</label>
+        <textarea id="pitch-body" placeholder="Describe your idea in 2–4 sentences. What's the argument, the angle, and why does it matter right now?"></textarea>
+      </div>
+      <button class="submit-btn">Send Pitch →</button>
+    </div>
+
+  </main>
+
+  <aside class="sidebar">
+
+    <div>
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-eyebrow">Get Involved</div>
+        <h3>Join the Fight to Build a Better Healthcare System</h3>
+        <p>Join the NYC-DSA Healthcare Working Group and help build the movement for a Healthcare System for Our Time.</p>
+        <a href="https://actionnetwork.org/surveys/membership-form" target="_blank">Join the Working Group →</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-label">Blog Navigation</div>
+      <a class="sidebar-link" href="{{ SITEURL }}/blog.html">
+        <div class="sidebar-link-title">All Posts</div>
+        <div class="sidebar-link-sub">Return to the blog index</div>
+      </a>
+    </div>
+
+  </aside>
+</div>
+{% endblock %}
