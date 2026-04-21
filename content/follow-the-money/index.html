@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NY Legislature & the Healthcare Lobby | NYC DSA Healthcare Working Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:     #F5F0E8;
+    --cream-mid: #EDE7DA;
+    --cream-dark:#DDD4C2;
+    --red:       #C8102E;
+    --red-dark:  #9B0D22;
+    --red-light: #F2CDCD;
+    --ink:       #1A1208;
+    --ink-mid:   #3D2B1A;
+    --ink-light: #7A6550;
+    --white:     #FDFAF5;
+
+    --serif:     'Playfair Display', Georgia, serif;
+    --body-serif:'Source Serif 4', Georgia, serif;
+    --sans:      'Source Sans 3', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    min-height: 100vh;
+  }
+
+  /* ── ANNOUNCE BAR ── */
+  .announce {
+    background: var(--red);
+    color: #fff;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 10px 20px;
+  }
+  .announce a { color: #fff; text-decoration: underline; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--white);
+    border-bottom: 2px solid var(--ink);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--red);
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.2;
+  }
+
+  .nav-logo-imgs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-imgs img {
+    height: 42px;
+    width: 42px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  .nav-quote {
+    font-family: var(--body-serif);
+    font-size: 15px;
+    font-style: italic;
+    color: var(--ink-light);
+    line-height: 1;
+    text-align: center;
+    flex: 1;
+    padding: 0 24px;
+    white-space: nowrap;
+  }
+
+  .hamburger {
+    background: none;
+    border: 2px solid var(--ink);
+    cursor: pointer;
+    padding: 7px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    z-index: 300;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--ink);
+    transition: all 0.2s;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  .nav-dropdown {
+    position: absolute;
+    top: 64px;
+    right: 40px;
+    background: var(--white);
+    border: 2px solid var(--ink);
+    border-top: 3px solid var(--red);
+    min-width: 220px;
+    z-index: 250;
+    box-shadow: 4px 4px 0 var(--ink);
+    display: none;
+  }
+
+  .nav-dropdown.open { display: block; }
+
+  .nav-dropdown a {
+    display: block;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--cream-mid);
+    transition: background 0.1s;
+  }
+
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover { background: var(--cream); color: var(--red); }
+
+  .nav-cta {
+    background: var(--red) !important;
+    color: #fff !important;
+    padding: 8px 18px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-cta:hover { background: var(--red-dark) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--white);
+    border-bottom: 3px solid var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -45deg, transparent, transparent 18px,
+      rgba(200,16,46,0.04) 18px, rgba(200,16,46,0.04) 19px
+    );
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 40px 64px;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 20px;
+  }
+
+  .hero-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--red);
+  }
+
+  .hero-h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5.5vw, 68px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+
+  .hero-h1 em {
+    font-style: italic;
+    color: var(--red);
+  }
+
+  .hero-deck {
+    font-family: var(--body-serif);
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-mid);
+    max-width: 540px;
+    margin-bottom: 28px;
+  }
+
+  .hero-source {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-light);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hero-source::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: var(--ink-light);
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .total-card {
+    background: var(--red);
+    color: #fff;
+    padding: 36px 40px 28px;
+    text-align: center;
+    min-width: 240px;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .total-card-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 10px;
+  }
+
+  .total-card-num {
+    font-family: var(--serif);
+    font-size: clamp(42px, 5vw, 62px);
+    font-weight: 900;
+    line-height: 1;
+    color: #fff;
+  }
+
+  .total-card-sub {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 8px;
+  }
+
+  .hero-meta-stats {
+    display: flex;
+    border: 2px solid var(--ink);
+    border-top: none;
+  }
+
+  .hero-meta-stat {
+    flex: 1;
+    padding: 14px 12px;
+    text-align: center;
+    background: var(--cream);
+  }
+
+  .hero-meta-stat + .hero-meta-stat { border-left: 2px solid var(--ink); }
+
+  .hero-meta-num {
+    display: block;
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--red);
+    line-height: 1;
+  }
+
+  .hero-meta-label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: 4px;
+  }
+
+  /* ── BIGGEST DONORS CARD ── */
+  .biggest-donors-card {
+    background: var(--white);
+    border: 2px solid var(--ink);
+    border-top: none;
+    margin-top: 0;
+  }
+
+  .biggest-donors-header {
+    background: var(--ink);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .biggest-donors-title {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+
+  .biggest-donors-list { padding: 4px 0; }
+
+  .bd-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px;
+    border-bottom: 1px solid var(--cream-mid);
+  }
+
+  .bd-row:last-child { border-bottom: none; }
+
+  .bd-rank {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--cream-dark);
+    width: 18px;
+    flex-shrink: 0;
+    text-align: right;
+    line-height: 1;
+  }
+
+  .bd-rank.top1 { color: var(--red); }
+
+  .bd-info { flex: 1; min-width: 0; }
+
+  .bd-name {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bd-bar-row { height: 2px; background: var(--cream-mid); margin-top: 4px; }
+  .bd-bar-fill { height: 100%; background: var(--red); }
+
+  .bd-amount {
+    font-family: var(--serif);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--red);
+    flex-shrink: 0;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* ── TOOLBAR ── */
+  .toolbar {
+    background: var(--cream-mid);
+    border-bottom: 2px solid var(--ink);
+    position: sticky;
+    top: 72px;
+    z-index: 100;
+  }
+
+  .toolbar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .toolbar-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-right: 2px;
+  }
+
+  .filter-group {
+    display: flex;
+    border: 2px solid var(--ink);
+    overflow: hidden;
+  }
+
+  .filter-btn {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: none;
+    border-right: 2px solid var(--ink);
+    background: var(--white);
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+
+  .filter-btn:last-child { border-right: none; }
+  .filter-btn:hover { background: var(--cream-dark); }
+  .filter-btn.active { background: var(--red); color: #fff; }
+
+  .party-btn {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border: none;
+    border-right: 2px solid var(--ink);
+    background: var(--white);
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+
+  .party-btn:last-child { border-right: none; }
+  .party-btn:hover { background: var(--cream-dark); }
+  .party-btn.active { background: var(--red); color: #fff; }
+
+  .search-wrap {
+    position: relative;
+    min-width: 220px;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ink-light);
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    background: var(--white);
+    border: 2px solid var(--ink);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 13px;
+    padding: 8px 12px 8px 36px;
+    outline: none;
+  }
+
+  .search-input:focus { border-color: var(--red); }
+  .search-input::placeholder { color: var(--ink-light); }
+
+  .sort-select {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--white);
+    border: 2px solid var(--ink);
+    color: var(--ink);
+    padding: 7px 12px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .date-filter-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid var(--ink);
+    background: var(--white);
+    padding: 0 12px;
+    height: 36px;
+  }
+
+  .date-filter-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .date-filter-input {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    color: var(--ink);
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .date-filter-input::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  .date-clear-btn {
+    background: none;
+    border: none;
+    color: var(--ink-light);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    display: none;
+  }
+
+  .date-clear-btn.visible { display: block; }
+  .date-clear-btn:hover { color: var(--red); }
+
+  /* ── GRID ── */
+  .grid-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 40px 80px;
+  }
+
+  .grid-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .grid-header-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .grid-count {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+
+  .legislator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  /* ── LEG CARD ── */
+  .leg-card {
+    background: var(--white);
+    border: 2px solid var(--ink);
+    cursor: pointer;
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+
+  .leg-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+
+  .leg-card-top {
+    display: flex;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .leg-photo-wrap {
+    width: 80px;
+    height: 90px;
+    flex-shrink: 0;
+    background: var(--cream-dark);
+    border-right: 2px solid var(--ink);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--ink-light);
+  }
+
+  .leg-photo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .leg-card-info { padding: 14px 16px; flex: 1; min-width: 0; }
+
+  .leg-chamber-tag {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .leg-chamber-tag.senate { background: var(--red); border-color: var(--red); color: #fff; }
+  .leg-chamber-tag { background: var(--red); border-color: var(--red); color: #fff; }
+
+  .leg-name {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.15;
+    margin-bottom: 4px;
+  }
+
+  .leg-district {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .leg-party {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 2px 6px;
+    border: 1.5px solid var(--ink);
+    margin-left: 4px;
+    margin-bottom: 6px;
+  }
+  .leg-party.dem { border-color: #1a4a9b; color: #1a4a9b; }
+  .leg-party.rep { border-color: var(--red); color: var(--red); }
+  .leg-party.ind { border-color: var(--ink-light); color: var(--ink-light); }
+
+  .leg-card-bottom { padding: 14px 16px 12px; }
+
+  .leg-amount {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--red);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  .leg-amount-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin: 3px 0 10px;
+  }
+
+  .leg-bar-track { height: 4px; background: var(--cream-dark); width: 100%; }
+  .leg-bar-fill { height: 100%; background: var(--red); transition: width 0.8s cubic-bezier(0.16,1,0.3,1); }
+
+  /* ── EMPTY ── */
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    font-family: var(--body-serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-light);
+  }
+
+  /* ── MODAL OVERLAY ── */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,18,8,0.75);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s;
+  }
+
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+  /* ── MODAL ── */
+  .modal {
+    background: var(--white);
+    border: 2px solid var(--ink);
+    max-width: 660px;
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(20px) scale(0.98);
+    transition: transform 0.22s cubic-bezier(0.16,1,0.3,1);
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+
+  .modal-overlay.open .modal { transform: translateY(0) scale(1); }
+
+  .modal-close {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.85);
+    font-family: var(--sans);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .modal-close:hover { color: #fff; }
+
+  .modal-stripe {
+    background: var(--red);
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .modal-stripe-brand {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .modal-stripe-brand strong {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .modal-header {
+    padding: 28px 32px 24px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    background: var(--cream);
+  }
+
+  .modal-photo {
+    width: 90px;
+    height: 100px;
+    flex-shrink: 0;
+    background: var(--cream-dark);
+    border: 2px solid var(--ink);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--ink-light);
+  }
+
+  .modal-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .modal-ident { flex: 1; }
+
+  .modal-chamber-tag {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    margin-bottom: 8px;
+    margin-right: 6px;
+  }
+
+  .modal-chamber-tag.senate  { background: var(--red); color: #fff; }
+  .modal-chamber-tag.assembly { background: var(--red); color: #fff; }
+
+  .modal-party-tag {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    margin-bottom: 8px;
+    background: var(--white);
+    border: 1.5px solid currentColor;
+  }
+
+  .modal-party-tag.dem { color: #1a4a9b; }
+  .modal-party-tag.rep { color: var(--red); }
+  .modal-party-tag.ind { color: var(--ink-light); }
+
+  .modal-name {
+    font-family: var(--serif);
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .modal-district {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  .modal-total {
+    background: var(--red);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 2px solid var(--ink);
+    flex-wrap: wrap;
+  }
+
+  .modal-total-lede {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .modal-total-num {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .modal-body { padding: 24px 32px 0; }
+
+  .modal-section-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 0;
+  }
+
+  .donor-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+
+  .donor-row:last-child { border-bottom: none; }
+
+  .donor-rank {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--cream-dark);
+    width: 30px;
+    text-align: right;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .donor-rank.top1 { color: var(--red); }
+
+  .donor-info { flex: 1; min-width: 0; }
+
+  .donor-name {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .donor-type {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-light);
+    margin-top: 2px;
+    font-weight: 600;
+  }
+
+  .donor-bar-row { width: 100%; margin-top: 6px; height: 3px; background: var(--cream-mid); }
+  .donor-bar-fill { height: 100%; background: var(--red); }
+
+  .donor-amount {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--red);
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .action-panel {
+    margin: 20px 32px 0;
+    border: 2px solid var(--ink);
+    overflow: hidden;
+  }
+
+  .action-panel-section {
+    padding: 16px 20px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .action-panel-section:last-child { border-bottom: none; }
+
+  .action-section-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 10px;
+  }
+
+  .social-btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .social-btn {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 9px 16px;
+    border: 2px solid var(--ink);
+    background: var(--white);
+    color: var(--ink);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.12s, color 0.12s;
+  }
+
+  .social-btn:hover { background: var(--ink); color: var(--white); }
+  .social-btn.x-btn:hover { background: #000; border-color: #000; color: #fff; }
+  .social-btn.fb-btn:hover { background: #1877f2; border-color: #1877f2; color: #fff; }
+  .social-btn.ig-btn:hover { background: #c13584; border-color: #c13584; color: #fff; }
+
+  .download-card-btn {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: 2px solid var(--ink);
+    background: var(--ink);
+    color: var(--white);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.12s;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .download-card-btn:hover { background: var(--red); border-color: var(--red); }
+
+  .download-card-btn.loading { opacity: 0.7; cursor: wait; }
+
+  .share-open-btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  /* ── HIDDEN SHARE CARD (rendered by html2canvas) ── */
+  #share-card-template {
+    position: fixed;
+    left: -9999px;
+    top: 0;
+    width: 600px;
+    background: #F5F0E8;
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .sc-stripe {
+    background: #C8102E;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sc-stripe-brand {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .sc-stripe-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .sc-header {
+    background: #FDFAF5;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border-bottom: 2px solid #1A1208;
+  }
+
+  .sc-photo {
+    width: 80px;
+    height: 88px;
+    background: #DDD4C2;
+    border: 2px solid #1A1208;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    font-style: italic;
+    color: #7A6550;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .sc-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .sc-ident { flex: 1; }
+
+  .sc-tags { display: flex; gap: 6px; margin-bottom: 8px; }
+
+  .sc-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    background: #C8102E;
+    color: #fff;
+  }
+
+  .sc-party-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    background: #fff;
+    border: 1.5px solid currentColor;
+  }
+
+  .sc-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #1A1208;
+    line-height: 1.05;
+    margin-bottom: 4px;
+  }
+
+  .sc-district {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #7A6550;
+  }
+
+  .sc-total {
+    background: #C8102E;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #1A1208;
+  }
+
+  .sc-total-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .sc-total-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .sc-donors { padding: 16px 24px 0; }
+
+  .sc-donors-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #7A6550;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #1A1208;
+    margin-bottom: 0;
+  }
+
+  .sc-donor-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #DDD4C2;
+  }
+
+  .sc-donor-row:last-child { border-bottom: none; }
+
+  .sc-donor-rank {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    color: #DDD4C2;
+    width: 24px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .sc-donor-rank.top1 { color: #C8102E; }
+
+  .sc-donor-info { flex: 1; min-width: 0; }
+
+  .sc-donor-name {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1A1208;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .sc-donor-type {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    color: #7A6550;
+    font-weight: 600;
+  }
+
+  .sc-donor-bar { height: 2px; background: #EDE7DA; margin-top: 4px; }
+  .sc-donor-bar-fill { height: 100%; background: #C8102E; }
+
+  .sc-donor-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #C8102E;
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .sc-footer {
+    background: #1A1208;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  .sc-footer-left {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #7A6550;
+    letter-spacing: 0.06em;
+  }
+
+  .sc-footer-right {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #C8102E;
+  }
+
+  .email-btn {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    border: 2px solid var(--ink);
+    background: var(--red);
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    transition: background 0.12s;
+    line-height: 1.3;
+  }
+
+  .email-btn:hover { background: var(--red-dark); }
+
+  .download-csv-btn {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border: 2px solid var(--ink);
+    background: var(--white);
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.12s, color 0.12s;
+    cursor: pointer;
+  }
+
+  .download-csv-btn:hover { background: var(--ink); color: var(--white); }
+
+  .email-btn-sub {
+    font-family: var(--body-serif);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0;
+    text-transform: none;
+    opacity: 0.85;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .modal-footer-note {
+    margin: 12px 32px 28px;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-light);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 40px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+
+  .footer-left {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--cream-dark);
+    line-height: 1.8;
+    max-width: 420px;
+  }
+
+  .footer-left strong { color: var(--cream); }
+
+  .footer-right {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 2.2;
+  }
+
+  .footer-right a { color: var(--red-light); text-decoration: none; }
+  .footer-right a:hover { text-decoration: underline; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 800px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 36px; padding: 48px 20px; }
+    .hero-right { align-items: stretch; }
+    nav { padding: 0 20px; }
+    .toolbar-inner { padding: 12px 20px; }
+    .grid-section { padding: 32px 20px 60px; }
+    .modal-header { padding: 20px; }
+    .modal-body { padding: 18px 20px 0; }
+    .modal-total { padding: 16px 20px; }
+    .share-strip { margin: 16px 20px 0; }
+    .modal-footer-note { margin: 10px 20px 20px; }
+    footer { padding: 32px 20px; }
+  }
+
+  @media (max-width: 520px) {
+    .nav-links { display: none; }
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--cream-mid); }
+  ::-webkit-scrollbar-thumb { background: var(--cream-dark); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--red); }
+</style>
+</head>
+<body>
+
+<div class="announce">
+  Learn about the New York Health Act — Universal Healthcare for New York State.
+  <a href="https://www.pnhpnymetro.org/new_york_health" target="_blank" rel="noopener">Learn more →</a>
+</div>
+
+<nav>
+  <a class="nav-logo" href="#">
+    New York City Democratic Socialists of America<br>Healthcare Working Group
+  </a>
+  <span class="nav-quote">"Health is a human right, not a privilege to be purchased." — Shirley Chisholm</span>
+  <div class="nav-right">
+    <a class="nav-cta" href="https://actionnetwork.org/surveys/membership-form" target="_blank" rel="noopener">Angry? Join the Movement.</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-dropdown" id="nav-dropdown">
+    <a href="https://healthcare.socialists.nyc" target="_blank" rel="noopener">HCWG Main ↗</a>
+    <a href="https://socialists.nyc" target="_blank" rel="noopener">NYC-DSA ↗</a>
+    <a href="methodology.html">Methodology and Why This Matters</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-label">New York State Legislature — Campaign Donations</div>
+      <h1 class="hero-h1">NY lawmakers have taken <em id="hero-inline">$0</em> from the healthcare lobby</h1>
+      <p class="hero-deck">New York senators and assembly members accept millions from health insurers, hospital lobbyists, and pharmaceutical companies — the same industries blocking universal healthcare. Use this tool to help us keep our lawmakers accountable to us, the people, and not billionaire and corporate interests.</p>
+      <div class="hero-source">Source: NYS Board of Elections &bull; Updated <span id="update-text">—</span></div>
+    </div>
+    <div class="hero-right">
+      <div class="total-card">
+        <div class="total-card-label">Total from healthcare &amp; insurance lobby</div>
+        <div class="total-card-num" id="stat-total">$0</div>
+        <div class="total-card-sub">across both chambers, current election cycle</div>
+      </div>
+      <div class="hero-meta-stats">
+        <div class="hero-meta-stat">
+          <span class="hero-meta-num" id="stat-legs">0</span>
+          <span class="hero-meta-label">Legislators</span>
+        </div>
+        <div class="hero-meta-stat">
+          <span class="hero-meta-num" id="stat-donors">0</span>
+          <span class="hero-meta-label">Donor Orgs</span>
+        </div>
+      </div>
+      <div class="biggest-donors-card">
+        <div class="biggest-donors-header">
+          <span class="biggest-donors-title">Biggest Donors — All Legislators</span>
+        </div>
+        <div class="biggest-donors-list" id="biggest-donors-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="filter-group">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="senate">Senate</button>
+      <button class="filter-btn" data-filter="assembly">Assembly</button>
+    </div>
+    <div class="filter-group">
+      <button class="party-btn active" data-party="all">All</button>
+      <button class="party-btn" data-party="D">Dem</button>
+      <button class="party-btn" data-party="R">Rep</button>
+      <button class="party-btn" data-party="I">Ind</button>
+    </div>
+    <div class="search-wrap">
+      <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="search-input" id="search-input" type="text" placeholder="Search name or district…">
+    </div>
+    <div class="date-filter-wrap">
+      <span class="date-filter-label">Donations since</span>
+      <input class="date-filter-input" id="date-filter" type="date">
+      <button class="date-clear-btn" id="date-clear" title="Clear date filter">✕</button>
+    </div>
+  </div>
+</div>
+
+<main class="grid-section" id="grid-section">
+  <div class="grid-header">
+    <h2 class="grid-header-title">Legislators</h2>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a class="download-csv-btn" href="data/legislators_contributions.csv" download>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Full Data (CSV)
+      </a>
+      <span class="grid-count" id="grid-count">— records</span>
+      <select class="sort-select" id="sort-select">
+        <option value="amount-desc">↓ Most money received</option>
+        <option value="amount-asc">↑ Least money received</option>
+        <option value="name-asc">Name A–Z</option>
+        <option value="name-desc">Name Z–A</option>
+      </select>
+    </div>
+  </div>
+  <div class="legislator-grid" id="legislator-grid"></div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">NYC DSA Healthcare Working Group</div>
+      <div class="footer-left">
+        <strong>Data source:</strong> New York State Board of Elections, Campaign Finance Disclosures.<br>
+        Updated quarterly. Not affiliated with NYSBOE.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- HIDDEN SHARE CARD TEMPLATE -->
+<div id="share-card-template"></div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    <div class="modal-stripe">
+      <span class="modal-stripe-brand">Created by <strong>NYC-DSA Healthcare Working Group</strong></span>
+    </div>
+    <div class="modal-header" id="modal-header"></div>
+    <div class="modal-total" id="modal-total"></div>
+    <div class="modal-body">
+      <div class="modal-section-label">Top 5 Healthcare Industry Donors</div>
+      <div id="modal-donors"></div>
+    </div>
+    <div class="action-panel" id="modal-share"></div>
+    <div class="modal-footer-note" id="modal-note"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+let DATA = {};
+fetch('data/legislators.json')
+  .then(r => r.json())
+  .then(json => { DATA = json; init(); });
+
+let st = { filter:'all', search:'', sort:'amount-desc', since_date: null, party: 'all' };
+let maxAmt = 0;
+
+const fmt = n => n >= 1e6 ? '$'+(n/1e6).toFixed(2)+'M' : n >= 1000 ? '$'+(n/1000).toFixed(0)+'K' : '$'+n.toLocaleString();
+const fmtFull = n => '$'+n.toLocaleString();
+const initials = name => { const p = name.split(' '); return (p[0][0]+(p[p.length-1][0]||'')).toUpperCase(); };
+
+function animateCount(el, target, prefix='$', dur=1800) {
+  const t0 = performance.now();
+  (function tick(now) {
+    const t = Math.min((now-t0)/dur, 1);
+    const ease = 1-Math.pow(1-t, 4);
+    el.textContent = prefix + Math.round(ease*target).toLocaleString();
+    if (t < 1) requestAnimationFrame(tick);
+  })(t0);
+}
+
+function init() {
+  maxAmt = Math.max(...DATA.legislators.map(l => l.total_healthcare));
+  document.getElementById('update-text').textContent = DATA.meta.last_updated;
+  animateCount(document.getElementById('hero-inline'), DATA.meta.total_donated, '$', 2400);
+  animateCount(document.getElementById('stat-total'), DATA.meta.total_donated, '$', 2200);
+  animateCount(document.getElementById('stat-legs'), DATA.legislators.length, '', 1500);
+  animateCount(document.getElementById('stat-donors'), DATA.meta.unique_donors, '', 1400);
+  renderBiggestDonors();
+  renderGrid();
+
+  document.getElementById('search-input').addEventListener('input', e => { st.search = e.target.value.toLowerCase(); renderGrid(); });
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+    st.filter = btn.dataset.filter;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrid();
+  }));
+  document.querySelectorAll('.party-btn').forEach(btn => btn.addEventListener('click', () => {
+    st.party = btn.dataset.party;
+    document.querySelectorAll('.party-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrid();
+  }));
+  document.getElementById('sort-select').addEventListener('change', e => { st.sort = e.target.value; renderGrid(); });
+
+  const dateInput = document.getElementById('date-filter');
+  const dateClear = document.getElementById('date-clear');
+  dateInput.addEventListener('change', e => {
+    st.since_date = e.target.value || null;
+    dateClear.classList.toggle('visible', !!e.target.value);
+    renderGrid();
+  });
+  dateClear.addEventListener('click', () => {
+    dateInput.value = '';
+    st.since_date = null;
+    dateClear.classList.remove('visible');
+    renderGrid();
+  });
+  document.getElementById('modal-overlay').addEventListener('click', e => { if (e.target.id==='modal-overlay') closeModal(); });
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
+}
+
+function getFiltered() {
+  let list = DATA.legislators.slice();
+  if (st.filter !== 'all') list = list.filter(l => l.chamber === st.filter);
+  if (st.party !== 'all') list = list.filter(l => l.party === st.party);
+  if (st.search) list = list.filter(l => l.name.toLowerCase().includes(st.search) || l.district.toLowerCase().includes(st.search));
+
+  // If a since_date is set, filter each legislator's donors by date and recompute total
+  if (st.since_date) {
+    const cutoff = new Date(st.since_date);
+    list = list.map(l => {
+      const filteredDonors = (l.top_donors || []).filter(d => {
+        if (!d.date) return true; // if no date on donor, include by default
+        return new Date(d.date) >= cutoff;
+      });
+      const filteredTotal = filteredDonors.reduce((sum, d) => sum + d.amount, 0);
+      return { ...l, top_donors: filteredDonors, total_healthcare: filteredTotal };
+    }).filter(l => l.total_healthcare > 0);
+  }
+
+  list.sort((a,b) => {
+    if (st.sort==='amount-desc') return b.total_healthcare-a.total_healthcare;
+    if (st.sort==='amount-asc') return a.total_healthcare-b.total_healthcare;
+    if (st.sort==='name-asc') return a.name.localeCompare(b.name);
+    return b.name.localeCompare(a.name);
+  });
+  return list;
+}
+
+function renderBiggestDonors() {
+  // Aggregate all top_donors across all legislators by donor name
+  const totals = {};
+  DATA.legislators.forEach(leg => {
+    leg.top_donors.forEach(d => {
+      totals[d.name] = (totals[d.name] || 0) + d.amount;
+    });
+  });
+
+  const sorted = Object.entries(totals)
+    .map(([name, amount]) => ({ name, amount }))
+    .sort((a, b) => b.amount - a.amount)
+    .slice(0, 5);
+
+  const max = sorted[0]?.amount || 1;
+
+  document.getElementById('biggest-donors-list').innerHTML = sorted.map((d, i) => `
+    <div class="bd-row">
+      <div class="bd-rank ${i === 0 ? 'top1' : ''}">${i + 1}</div>
+      <div class="bd-info">
+        <div class="bd-name">${d.name}</div>
+        <div class="bd-bar-row"><div class="bd-bar-fill" style="width:${(d.amount / max * 100).toFixed(1)}%"></div></div>
+      </div>
+      <div class="bd-amount">${fmt(d.amount)}</div>
+    </div>
+  `).join('');
+}
+
+function renderGrid() {
+  const grid = document.getElementById('legislator-grid');
+  const list = getFiltered();
+  document.getElementById('grid-count').textContent = `${list.length} records`;
+  if (!list.length) { grid.innerHTML = '<div class="empty-state">No legislators match your search.</div>'; return; }
+
+  grid.innerHTML = list.map(leg => {
+    const pct = (leg.total_healthcare/maxAmt*100).toFixed(1);
+    const isSen = leg.chamber==='senate';
+    const loc = leg.district.split('—')[1]?.trim() || leg.district;
+    const photo = leg.photo_url ? `<img src="${leg.photo_url}" alt="${leg.name}">` : initials(leg.name);
+    const partyClass = leg.party === 'D' ? 'dem' : leg.party === 'R' ? 'rep' : 'ind';
+    const partyLabel = leg.party === 'D' ? '(D)' : leg.party === 'R' ? '(R)' : '(I)';
+    return `
+      <article class="leg-card" data-id="${leg.id}" tabindex="0" role="button">
+        <div class="leg-card-top">
+          <div class="leg-photo-wrap">${photo}</div>
+          <div class="leg-card-info">
+            <span class="leg-chamber-tag ${isSen?'senate':''}">${isSen?'SEN':'ASM'}</span><span class="leg-party ${partyClass}">${partyLabel}</span>
+            <div class="leg-name">${leg.name}</div>
+            <div class="leg-district">${loc}</div>
+          </div>
+        </div>
+        <div class="leg-card-bottom">
+          <div class="leg-amount">${fmt(leg.total_healthcare)}</div>
+          <div class="leg-amount-label">from healthcare lobby</div>
+          <div class="leg-bar-track"><div class="leg-bar-fill" style="width:${pct}%"></div></div>
+        </div>
+      </article>`;
+  }).join('');
+
+  grid.querySelectorAll('.leg-card').forEach(card => {
+    const open = () => openModal(DATA.legislators.find(l => l.id===+card.dataset.id));
+    card.addEventListener('click', open);
+    card.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') open(); });
+  });
+}
+
+function openModal(leg) {
+  const isSen = leg.chamber==='senate';
+  const photo = leg.photo_url ? `<img src="${leg.photo_url}" alt="${leg.name}">` : initials(leg.name);
+  const topMax = leg.top_donors[0]?.amount||1;
+  const partyClass = leg.party === 'D' ? 'dem' : leg.party === 'R' ? 'rep' : 'ind';
+  const partyFull  = leg.party === 'D' ? 'Democrat' : leg.party === 'R' ? 'Republican' : 'Independent';
+
+  document.getElementById('modal-header').innerHTML = `
+    <div class="modal-photo">${photo}</div>
+    <div class="modal-ident">
+      <span class="modal-chamber-tag ${isSen?'senate':'assembly'}">${isSen?'State Senator':'Assembly Member'}</span><span class="modal-party-tag ${partyClass}">${partyFull}</span>
+      <div class="modal-name">${leg.name}</div>
+      <div class="modal-district">${leg.district}</div>
+    </div>`;
+
+  document.getElementById('modal-total').innerHTML = `
+    <div class="modal-total-lede">Total received from healthcare &amp; insurance lobby</div>
+    <div class="modal-total-num">${fmtFull(leg.total_healthcare)}</div>`;
+
+  document.getElementById('modal-donors').innerHTML = leg.top_donors.map((d,i) => `
+    <div class="donor-row">
+      <div class="donor-rank ${i===0?'top1':''}">${i+1}</div>
+      <div class="donor-info">
+        <div class="donor-name">${d.name}</div>
+        <div class="donor-type">${d.type}</div>
+        <div class="donor-bar-row"><div class="donor-bar-fill" style="width:${(d.amount/topMax*100).toFixed(1)}%"></div></div>
+      </div>
+      <div class="donor-amount">${fmt(d.amount)}</div>
+    </div>`).join('');
+
+  // Build share card template
+  const scPhoto = leg.photo_url ? `<img src="${leg.photo_url}" alt="${leg.name}">` : initials(leg.name);
+  const scPartyClass = leg.party === 'D' ? 'dem' : leg.party === 'R' ? 'rep' : 'ind';
+  const scPartyFull  = leg.party === 'D' ? 'Democrat' : leg.party === 'R' ? 'Republican' : 'Independent';
+  const scPartyColor = leg.party === 'D' ? '#1a4a9b' : leg.party === 'R' ? '#C8102E' : '#7A6550';
+
+  document.getElementById('share-card-template').innerHTML = `
+    <div id="share-card-inner">
+      <div class="sc-stripe">
+        <span class="sc-stripe-brand">NYC-DSA Healthcare Working Group</span>
+        <span class="sc-stripe-tag">nycdsahealthcarewg</span>
+      </div>
+      <div class="sc-header">
+        <div class="sc-photo">${scPhoto}</div>
+        <div class="sc-ident">
+          <div class="sc-tags">
+            <span class="sc-tag">${leg.chamber === 'senate' ? 'State Senator' : 'Assembly Member'}</span>
+            <span class="sc-party-tag" style="color:${scPartyColor}">${scPartyFull}</span>
+          </div>
+          <div class="sc-name">${leg.name}</div>
+          <div class="sc-district">${leg.district}</div>
+        </div>
+      </div>
+      <div class="sc-total">
+        <div class="sc-total-label">Received from healthcare &amp; insurance lobby</div>
+        <div class="sc-total-num">${fmtFull(leg.total_healthcare)}</div>
+      </div>
+      <div class="sc-donors">
+        <div class="sc-donors-label">Top 5 Healthcare Industry Donors</div>
+        ${leg.top_donors.map((d, i) => `
+          <div class="sc-donor-row">
+            <div class="sc-donor-rank ${i === 0 ? 'top1' : ''}">${i+1}</div>
+            <div class="sc-donor-info">
+              <div class="sc-donor-name">${d.name}</div>
+              <div class="sc-donor-type">${d.type}</div>
+              <div class="sc-donor-bar"><div class="sc-donor-bar-fill" style="width:${(d.amount/topMax*100).toFixed(1)}%"></div></div>
+            </div>
+            <div class="sc-donor-amount">${fmt(d.amount)}</div>
+          </div>`).join('')}
+      </div>
+      <div class="sc-footer">
+        <span class="sc-footer-left">Data: NYS Board of Elections &bull; Updated ${DATA.meta.last_updated}</span>
+        <span class="sc-footer-right">#NYHealthAct</span>
+      </div>
+    </div>`;
+
+  document.getElementById('modal-share').innerHTML = `
+    <div class="action-panel-section">
+      <div class="action-section-label">Share</div>
+      <button class="download-card-btn" id="download-card-btn" onclick="downloadShareCard('${leg.name.replace(/'/g, "\\'")}')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Image and Please Share Broadly.
+      </button>
+    </div>`;
+
+  const emailSubject = encodeURIComponent(`Why are you taking money from the healthcare lobby?`);
+  const emailBody = encodeURIComponent(`Dear ${leg.name},\n\nI am a constituent writing to express my serious concern about the ${fmtFull(leg.total_healthcare)} you have received from health insurance and healthcare industry donors.\n\nThese are the same corporations and lobbyists who have stood in the way of universal healthcare for New Yorkers. Their financial contributions to your campaign represent a conflict of interest when it comes to legislating on healthcare policy.\n\nI am asking you to:\n1. Pledge to stop accepting donations from the health insurance industry\n2. Support and co-sponsor the New York Health Act (S.5474 / A.6058), which would establish universal single-payer healthcare coverage for all New Yorkers\n\nNew Yorkers deserve a healthcare system that works for all of us — not one that prioritizes corporate profits. I urge you to stand with your constituents.\n\nSincerely,\nA constituent`);
+
+  document.getElementById('modal-share').innerHTML += `
+    <div class="action-panel-section">
+      <div class="action-section-label">Contact your lawmaker</div>
+      <a class="email-btn" href="mailto:?subject=${emailSubject}&body=${emailBody}">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+        <span>
+          Send an email to ${leg.name}
+          <span class="email-btn-sub">Ask why they're taking healthcare lobby money — and demand they support the NY Health Act</span>
+        </span>
+      </a>
+    </div>`;
+
+  document.getElementById('modal-note').textContent =
+    `Data: NYS Board of Elections, Campaign Finance Disclosures. Updated ${DATA.meta.last_updated}.`;
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function downloadShareCard(name) {
+  const btn = document.getElementById('download-card-btn');
+  btn.classList.add('loading');
+  btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Generating…`;
+  const card = document.getElementById('share-card-inner');
+  html2canvas(card, {
+    scale: 2,
+    useCORS: true,
+    backgroundColor: '#F5F0E8',
+    logging: false
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `${name.replace(/\s+/g, '_')}_healthcare_donations.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    btn.classList.remove('loading');
+    btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download Image and Please Share Broadly.`;
+  }).catch(() => {
+    btn.classList.remove('loading');
+    btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download Image and Please Share Broadly.`;
+  });
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── HAMBURGER ──
+const hamburger = document.getElementById('hamburger');
+const navDropdown = document.getElementById('nav-dropdown');
+hamburger.addEventListener('click', e => {
+  e.stopPropagation();
+  hamburger.classList.toggle('open');
+  navDropdown.classList.toggle('open');
+});
+document.addEventListener('click', () => {
+  hamburger.classList.remove('open');
+  navDropdown.classList.remove('open');
+});
+navDropdown.addEventListener('click', e => e.stopPropagation());
+
+</script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+{
+  "meta": {
+    "last_updated": "Q2 2026",
+    "total_donated": 42850,
+    "unique_donors": 22,
+    "generated_at": "2026-03-17 23:46"
+  },
+  "legislators": [
+    {
+      "id": 1,
+      "name": "Gustavo Rivera",
+      "chamber": "senate",
+      "district": "Senate District 33 \u2014 The Bronx / Norwood",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/gustavo-rivera",
+      "total_healthcare": 7500,
+      "top_donors": [
+        {
+          "name": "Montefiore Pac Inc.",
+          "type": "Care Provider / Hospital / Health System",
+          "amount": 5000
+        },
+        {
+          "name": "NYS Radiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        },
+        {
+          "name": "MLMIC PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 750
+        },
+        {
+          "name": "Uhap Pac",
+          "type": "Lobbying / Trade Org",
+          "amount": 750
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Toby Ann Stavisky",
+      "chamber": "senate",
+      "district": "Senate District 11 \u2014 Queens / Flushing",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/toby-ann-stavisky",
+      "total_healthcare": 7250,
+      "top_donors": [
+        {
+          "name": "NY Anesthesiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 2000
+        },
+        {
+          "name": "NYS Radiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 1500
+        },
+        {
+          "name": "Committee For Medical Eye Care",
+          "type": "Healthcare Industry",
+          "amount": 1000
+        },
+        {
+          "name": "Nurse Practitioners Of Nys Pac",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        },
+        {
+          "name": "Ny Podiatry Pac",
+          "type": "Healthcare Industry",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Patricia Fahy",
+      "chamber": "senate",
+      "district": "Senate District 46 \u2014 Albany",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/patricia-fahy",
+      "total_healthcare": 5500,
+      "top_donors": [
+        {
+          "name": "Nysana-Crna Pac",
+          "type": "Lobbying / Trade Org",
+          "amount": 1500
+        },
+        {
+          "name": "NY Anesthesiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        },
+        {
+          "name": "Anthem Health PAC",
+          "type": "Insurer",
+          "amount": 1000
+        },
+        {
+          "name": "Cdphp State Pac",
+          "type": "Insurer",
+          "amount": 1000
+        },
+        {
+          "name": "HANYS PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Jeremy Cooney",
+      "chamber": "senate",
+      "district": "Senate District 50 \u2014 Monroe / Rochester",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/jeremy-cooney",
+      "total_healthcare": 5000,
+      "top_donors": [
+        {
+          "name": "Medamerica Insurance",
+          "type": "Insurer",
+          "amount": 1000
+        },
+        {
+          "name": "Cdphp State Pac",
+          "type": "Insurer",
+          "amount": 1000
+        },
+        {
+          "name": "New York Chiropractic Political Action C",
+          "type": "Healthcare Industry",
+          "amount": 1000
+        },
+        {
+          "name": "HANYS PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        },
+        {
+          "name": "Anthem Health PAC",
+          "type": "Insurer",
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Grace Lee",
+      "chamber": "senate",
+      "district": "Assembly District 65 \u2014 Manhattan / Lower East Side",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://nyassembly.gov/mem/Grace-Lee",
+      "total_healthcare": 3500,
+      "top_donors": [
+        {
+          "name": "Caipa Pac",
+          "type": "Lobbying / Trade Org",
+          "amount": 3000
+        },
+        {
+          "name": "HANYS PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Andrew Gounardes",
+      "chamber": "senate",
+      "district": "Senate District 26 \u2014 Brooklyn / Bay Ridge",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/andrew-gounardes",
+      "total_healthcare": 3000,
+      "top_donors": [
+        {
+          "name": "NY Anesthesiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        },
+        {
+          "name": "Metropolitan Life Company",
+          "type": "Insurer",
+          "amount": 1000
+        },
+        {
+          "name": "HANYS PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 500
+        },
+        {
+          "name": "Medamerica Insurance",
+          "type": "Insurer",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Monica Martinez",
+      "chamber": "senate",
+      "district": "Senate District 4 \u2014 Suffolk / Islip",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/monica-r-martinez",
+      "total_healthcare": 2750,
+      "top_donors": [
+        {
+          "name": "HANYS PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        },
+        {
+          "name": "The Life Insurance Council Of New York P",
+          "type": "Insurer",
+          "amount": 1000
+        },
+        {
+          "name": "NYS Radiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 500
+        },
+        {
+          "name": "NY Anesthesiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 250
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Jessica Ramos",
+      "chamber": "senate",
+      "district": "Senate District 13 \u2014 Queens / Jackson Heights",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/jessica-ramos",
+      "total_healthcare": 2200,
+      "top_donors": [
+        {
+          "name": "Garden Of Eden Hfa",
+          "type": "Care Provider / Hospital / Health System",
+          "amount": 1200
+        },
+        {
+          "name": "Nyspt Political Action Committee",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Michelle Hinchey",
+      "chamber": "senate",
+      "district": "Senate District 41 \u2014 Greene / Ulster / Columbia",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/michelle-hinchey",
+      "total_healthcare": 1250,
+      "top_donors": [
+        {
+          "name": "HANYS PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        },
+        {
+          "name": "NY Anesthesiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 250
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Jonathan Rivera",
+      "chamber": "senate",
+      "district": "Assembly District 149 \u2014 Erie / Niagara",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://nyassembly.gov/mem/Jonathan-Rivera",
+      "total_healthcare": 1000,
+      "top_donors": [
+        {
+          "name": "NY Anesthesiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 500
+        },
+        {
+          "name": "Anthem Health PAC",
+          "type": "Insurer",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Chris Ryan",
+      "chamber": "senate",
+      "district": "Senate District 59 \u2014 Onondaga / Cortland",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/chris-ryan",
+      "total_healthcare": 1000,
+      "top_donors": [
+        {
+          "name": "NY Anesthesiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 500
+        },
+        {
+          "name": "NYS Radiologists PAC",
+          "type": "Lobbying / Trade Org",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Robert Jackson",
+      "chamber": "senate",
+      "district": "Senate District 31 \u2014 Manhattan / Washington Heights",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/robert-jackson",
+      "total_healthcare": 1000,
+      "top_donors": [
+        {
+          "name": "Nysana-Crna Pac",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Kristen Gonzalez",
+      "chamber": "senate",
+      "district": "Senate District 59 \u2014 Brooklyn / Bushwick",
+      "party": "D",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/kristen-gonzalez",
+      "total_healthcare": 1000,
+      "top_donors": [
+        {
+          "name": "Nysana-Crna Pac",
+          "type": "Lobbying / Trade Org",
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Steven Rhoads",
+      "chamber": "senate",
+      "district": "Senate District 5 \u2014 Nassau / Syosset",
+      "party": "R",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/steven-rhoads",
+      "total_healthcare": 500,
+      "top_donors": [
+        {
+          "name": "Anthem Health PAC",
+          "type": "Insurer",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Joseph Griffo",
+      "chamber": "senate",
+      "district": "Senate District 53 \u2014 Oneida / Lewis / Hamilton",
+      "party": "R",
+      "photo_url": null,
+      "contact_url": "https://www.nysenate.gov/senators/joseph-a-griffo",
+      "total_healthcare": 400,
+      "top_donors": [
+        {
+          "name": "Metlife Pac",
+          "type": "Insurer",
+          "amount": 400
+        }
+      ]
+    }
+  ]
+}

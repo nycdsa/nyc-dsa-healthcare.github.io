@@ -1,0 +1,198 @@
+filer_id,display_name,chamber,district_label,party,photo_url,contact_url
+,Anthony Palumbo,senate,Senate District 1 — Suffolk / Riverhead,R,,https://www.nysenate.gov/senators/anthony-palumbo
+,Mario Mattera,senate,Senate District 2 — Suffolk / Smithtown,R,,https://www.nysenate.gov/senators/mario-mattera
+,Dean Murray,senate,Senate District 3 — Suffolk / Patchogue,R,,https://www.nysenate.gov/senators/dean-murray
+,Monica Martinez,senate,Senate District 4 — Suffolk / Islip,D,,https://www.nysenate.gov/senators/monica-r-martinez
+,Steven Rhoads,senate,Senate District 5 — Nassau / Syosset,R,,https://www.nysenate.gov/senators/steven-rhoads
+,Siela Bynoe,senate,Senate District 6 — Nassau / Westbury,D,,https://www.nysenate.gov/senators/siela-bynoe
+,Jack Martins,senate,Senate District 7 — Nassau / Mineola,R,,https://www.nysenate.gov/senators/jack-martins
+,Alexis Weik,senate,Senate District 8 — Suffolk / Patchogue,R,,https://www.nysenate.gov/senators/alexis-weik
+,Patricia Canzoneri-Fitzpatrick,senate,Senate District 9 — Nassau / Rockville Centre,R,,https://www.nysenate.gov/senators/patricia-canzoneri-fitzpatrick
+,James Sanders Jr.,senate,Senate District 10 — Queens / Far Rockaway,D,,https://www.nysenate.gov/senators/james-sanders-jr
+,Toby Ann Stavisky,senate,Senate District 11 — Queens / Flushing,D,,https://www.nysenate.gov/senators/toby-ann-stavisky
+,Michael Gianaris,senate,Senate District 12 — Queens / Astoria,D,,https://www.nysenate.gov/senators/michael-gianaris
+,Jessica Ramos,senate,Senate District 13 — Queens / Jackson Heights,D,,https://www.nysenate.gov/senators/jessica-ramos
+,Leroy Comrie,senate,Senate District 14 — Queens / Jamaica,D,,https://www.nysenate.gov/senators/leroy-comrie
+,Joseph Addabbo Jr.,senate,Senate District 15 — Queens / Howard Beach,D,,https://www.nysenate.gov/senators/joseph-p-addabbo-jr
+,John Liu,senate,Senate District 16 — Queens / Flushing,D,,https://www.nysenate.gov/senators/john-c-liu
+,Jessica Scarcella-Spanton,senate,Senate District 17 — Staten Island / South Shore,R,,https://www.nysenate.gov/senators/jessica-scarcella-spanton
+,Andrew Lanza,senate,Senate District 24 — Staten Island,R,,https://www.nysenate.gov/senators/andrew-lanza
+,Roxanne Persaud,senate,Senate District 19 — Brooklyn / Canarsie,D,,https://www.nysenate.gov/senators/roxanne-j-persaud
+,Zellnor Myrie,senate,Senate District 20 — Brooklyn / Crown Heights,D,,https://www.nysenate.gov/senators/zellnor-myrie
+,Kevin Parker,senate,Senate District 21 — Brooklyn / Flatbush,D,,https://www.nysenate.gov/senators/kevin-s-parker
+,Sam Sutton,senate,Senate District 22 — Brooklyn / Borough Park,D,,https://www.nysenate.gov/senators/sam-sutton
+,Julia Salazar,senate,Senate District 18 — Brooklyn / Bushwick,D,,https://www.nysenate.gov/senators/julia-salazar
+,Steve Chan,senate,Senate District 23 — Brooklyn / Bensonhurst,R,,https://www.nysenate.gov/senators/steve-chan
+,Jabari Brisport,senate,Senate District 25 — Brooklyn / Crown Heights,D,,https://www.nysenate.gov/senators/jabari-brisport
+,Andrew Gounardes,senate,Senate District 26 — Brooklyn / Bay Ridge,D,,https://www.nysenate.gov/senators/andrew-gounardes
+,Brian Kavanagh,senate,Senate District 27 — Lower Manhattan / East Side,D,,https://www.nysenate.gov/senators/brian-p-kavanagh
+,Liz Krueger,senate,Senate District 28 — Manhattan / Midtown East,D,,https://www.nysenate.gov/senators/liz-krueger
+,Cordell Cleare,senate,Senate District 29 — Manhattan / Harlem,D,,https://www.nysenate.gov/senators/cordell-cleare
+,Roxanne Persaud,senate,Senate District 30 — Manhattan / Harlem,D,,https://www.nysenate.gov/senators/robert-jackson
+,Robert Jackson,senate,Senate District 31 — Manhattan / Washington Heights,D,,https://www.nysenate.gov/senators/robert-jackson
+,Luis Sepulveda,senate,Senate District 32 — The Bronx / Soundview,D,,https://www.nysenate.gov/senators/luis-r-sepulveda
+,Gustavo Rivera,senate,Senate District 33 — The Bronx / Norwood,D,,https://www.nysenate.gov/senators/gustavo-rivera
+,Nathalia Fernandez,senate,Senate District 34 — The Bronx / Pelham Parkway,D,,https://www.nysenate.gov/senators/nathalia-fernandez
+,Andrea Stewart-Cousins,senate,Senate District 35 — Westchester / Yonkers,D,,https://www.nysenate.gov/senators/andrea-stewart-cousins
+,Jamaal Bailey,senate,Senate District 36 — The Bronx / Co-op City,D,,https://www.nysenate.gov/senators/jamaal-t-bailey
+,Shelley Mayer,senate,Senate District 37 — Westchester / Yonkers,D,,https://www.nysenate.gov/senators/shelley-b-mayer
+,Bill Weber,senate,Senate District 38 — Rockland / Orange,R,,https://www.nysenate.gov/senators/bill-weber
+,Evan Menist,senate,Senate District 39 — Schenectady / Saratoga,D,,https://www.nysenate.gov/senators/evan-menist
+,Pete Harckham,senate,Senate District 40 — Westchester / Putnam,D,,https://www.nysenate.gov/senators/pete-harckham
+,Michelle Hinchey,senate,Senate District 41 — Greene / Ulster / Columbia,D,,https://www.nysenate.gov/senators/michelle-hinchey
+,James Skoufis,senate,Senate District 42 — Orange / Rockland,D,,https://www.nysenate.gov/senators/james-skoufis
+,Jake Ashby,senate,Senate District 43 — Columbia / Rensselaer,R,,https://www.nysenate.gov/senators/jake-ashby
+,Neil Breslin,senate,Senate District 44 — Albany / Schenectady,D,,https://www.nysenate.gov/senators/neil-d-breslin
+,Richard Amedure,senate,Senate District 45 — Fulton / Montgomery / Schoharie,R,,https://www.nysenate.gov/senators/richard-amedure
+,Patricia Fahy,senate,Senate District 46 — Albany,D,,https://www.nysenate.gov/senators/patricia-fahy
+,Erik Bottcher,senate,Senate District 47 — Manhattan / West Village / Chelsea,D,,https://www.nysenate.gov/senators/erik-bottcher
+,Rachel May,senate,Senate District 48 — Onondaga / Oswego,D,,https://www.nysenate.gov/senators/rachel-may
+,Mark Walczyk,senate,Senate District 49 — Jefferson / St. Lawrence,R,,https://www.nysenate.gov/senators/mark-walczyk
+,Jeremy Cooney,senate,Senate District 50 — Monroe / Rochester,D,,https://www.nysenate.gov/senators/jeremy-cooney
+,Peter Oberacker,senate,Senate District 51 — Otsego / Chenango / Delaware,R,,https://www.nysenate.gov/senators/peter-oberacker
+,Patrick Gallivan,senate,Senate District 52 — Erie / Wyoming,R,,https://www.nysenate.gov/senators/patrick-m-gallivan
+,Joseph Griffo,senate,Senate District 53 — Oneida / Lewis / Hamilton,R,,https://www.nysenate.gov/senators/joseph-a-griffo
+,Pamela Helming,senate,Senate District 54 — Cayuga / Ontario / Seneca,R,,https://www.nysenate.gov/senators/pam-helming
+,Samra Brouk,senate,Senate District 55 — Monroe / Brighton,D,,https://www.nysenate.gov/senators/samra-brouk
+,Jeremy Cooney,senate,Senate District 56 — Monroe / Rochester,D,,https://www.nysenate.gov/senators/jeremy-cooney
+,George Borrello,senate,Senate District 57 — Chautauqua / Cattaraugus,R,,https://www.nysenate.gov/senators/george-m-borrello
+,Jen Lunsford,senate,Senate District 58 — Monroe / Wayne / Seneca,D,,https://www.nysenate.gov/senators/jen-lunsford
+,Chris Ryan,senate,Senate District 59 — Onondaga / Cortland,D,,https://www.nysenate.gov/senators/chris-ryan
+,April Baskin,senate,Senate District 60 — Erie / Buffalo,D,,https://www.nysenate.gov/senators/april-baskin
+,Jeremy Zellner,senate,Senate District 61 — Erie / Buffalo / Niagara,D,,https://www.nysenate.gov/senators/jeremy-zellner
+,Robert Ortt,senate,Senate District 62 — Niagara / Orleans,R,,https://www.nysenate.gov/senators/robert-g-ortt
+,Edward Rath,senate,Senate District 63 — Erie / Amherst,R,,https://www.nysenate.gov/senators/edward-rath
+,Anthony Palumbo,assembly,Assembly District 1 — Suffolk / Riverhead,R,,https://nyassembly.gov/mem/Anthony-Palumbo
+,Jodi Giglio,assembly,Assembly District 2 — Suffolk / Riverhead,R,,https://nyassembly.gov/mem/Jodi-Giglio
+,Joe DeStefano,assembly,Assembly District 3 — Suffolk / Smithtown,R,,https://nyassembly.gov/mem/Joseph-DeStefano
+,Rebecca Kassay,assembly,Assembly District 4 — Suffolk / Brookhaven,D,,https://nyassembly.gov/mem/Rebecca-Kassay
+,Douglas Smith,assembly,Assembly District 5 — Suffolk / Brookhaven,R,,https://nyassembly.gov/mem/Douglas-Smith
+,Philip Ramos,assembly,Assembly District 6 — Suffolk / Brentwood,D,,https://nyassembly.gov/mem/Philip-Ramos
+,T. John Schiavoni,assembly,Assembly District 7 — Suffolk / Smithtown,D,,https://nyassembly.gov/mem/T-John-Schiavoni
+,Michael Fitzpatrick,assembly,Assembly District 8 — Suffolk / Islip,R,,https://nyassembly.gov/mem/Michael-Fitzpatrick
+,David Hawkins,assembly,Assembly District 9 — Suffolk / Islip,R,,https://nyassembly.gov/mem/David-Hawkins
+,Kimberly Jean-Pierre,assembly,Assembly District 10 — Suffolk / Wyandanch,D,,https://nyassembly.gov/mem/Kimberly-Jean-Pierre
+,Fred Thiele,assembly,Assembly District 11 — Suffolk / Eastern Long Island,D,,https://nyassembly.gov/mem/Fred-W-Thiele-Jr
+,Keith Brown,assembly,Assembly District 12 — Suffolk / Northport,R,,https://nyassembly.gov/mem/Keith-Brown
+,Charles Lavine,assembly,Assembly District 13 — Nassau / Glen Cove,D,,https://nyassembly.gov/mem/Charles-Lavine
+,Dave McDonough,assembly,Assembly District 14 — Nassau / Merrick,R,,https://nyassembly.gov/mem/David-G-McDonough
+,Michael LiPetri,assembly,Assembly District 15 — Nassau / Massapequa,R,,https://nyassembly.gov/mem/Michael-LiPetri
+,Gina Sillitti,assembly,Assembly District 16 — Nassau / Manhasset,D,,https://nyassembly.gov/mem/Gina-Sillitti
+,Tom McKevitt,assembly,Assembly District 17 — Nassau / East Meadow,R,,https://nyassembly.gov/mem/Thomas-McKevitt
+,Judy Griffin,assembly,Assembly District 18 — Nassau / Seaford,D,,https://nyassembly.gov/mem/Judy-Griffin
+,Ed Ra,assembly,Assembly District 19 — Nassau / Garden City,R,,https://nyassembly.gov/mem/Ed-Ra
+,Missy Miller,assembly,Assembly District 20 — Nassau / Atlantic Beach,R,,https://nyassembly.gov/mem/Melissa-Miller
+,Michaelle Solages,assembly,Assembly District 21 — Nassau / Elmont,D,,https://nyassembly.gov/mem/Michaelle-C-Solages
+,Stacey Pheffer Amato,assembly,Assembly District 22 — Queens / Rockaway,D,,https://nyassembly.gov/mem/Stacey-Pheffer-Amato
+,Clyde Vanel,assembly,Assembly District 23 — Queens / Cambria Heights,D,,https://nyassembly.gov/mem/Clyde-Vanel
+,David Weprin,assembly,Assembly District 24 — Queens / Hollis,D,,https://nyassembly.gov/mem/David-I-Weprin
+,Nily Rozic,assembly,Assembly District 25 — Queens / Fresh Meadows,D,,https://nyassembly.gov/mem/Nily-Rozic
+,Edward Braunstein,assembly,Assembly District 26 — Queens / Bayside,D,,https://nyassembly.gov/mem/Edward-Braunstein
+,Daniel Rosenthal,assembly,Assembly District 27 — Queens / Kew Gardens Hills,D,,https://nyassembly.gov/mem/Daniel-Rosenthal
+,Andrew Hevesi,assembly,Assembly District 28 — Queens / Forest Hills,D,,https://nyassembly.gov/mem/Andrew-Hevesi
+,Alicia Hyndman,assembly,Assembly District 29 — Queens / Springfield Gardens,D,,https://nyassembly.gov/mem/Alicia-Hyndman
+,Steven Raga,assembly,Assembly District 30 — Queens / Astoria,D,,https://nyassembly.gov/mem/Steven-Raga
+,Khaleel Anderson,assembly,Assembly District 31 — Queens / South Jamaica,D,,https://nyassembly.gov/mem/Khaleel-Anderson
+,Brian Barnwell,assembly,Assembly District 32 — Queens / Maspeth,D,,https://nyassembly.gov/mem/Brian-Barnwell
+,Larinda Hooks,assembly,Assembly District 33 — Queens / South Queens,D,,https://nyassembly.gov/mem/Larinda-Hooks
+,Jessica Gonzalez-Rojas,assembly,Assembly District 34 — Queens / Jackson Heights,D,,https://nyassembly.gov/mem/Jessica-Gonzalez-Rojas
+,Larinda Hooks,assembly,Assembly District 35 — Queens / Richmond Hill,D,,https://nyassembly.gov/mem/Larinda-Hooks
+,Zohran Mamdani,assembly,Assembly District 36 — Queens / Astoria,D,,https://nyassembly.gov/mem/Zohran-Wasef-Mamdani
+,Claire Valdez,assembly,Assembly District 37 — Queens / Woodside,D,,https://nyassembly.gov/mem/Claire-Valdez
+,Jenifer Rajkumar,assembly,Assembly District 38 — Queens / Woodhaven,D,,https://nyassembly.gov/mem/Jenifer-Rajkumar
+,Catalina Cruz,assembly,Assembly District 39 — Queens / Corona,D,,https://nyassembly.gov/mem/Catalina-Cruz
+,Ron Kim,assembly,Assembly District 40 — Queens / Flushing,D,,https://nyassembly.gov/mem/Ron-Kim
+,Kalman Yeger,assembly,Assembly District 41 — Brooklyn / Borough Park,D,,https://nyassembly.gov/mem/Kalman-Yeger
+,Rodneyse Bichotte Hermelyn,assembly,Assembly District 42 — Brooklyn / Flatbush,D,,https://nyassembly.gov/mem/Rodneyse-Bichotte-Hermelyn
+,Diana Richardson,assembly,Assembly District 43 — Brooklyn / Crown Heights,D,,https://nyassembly.gov/mem/Diana-C-Richardson
+,Robert Carroll,assembly,Assembly District 44 — Brooklyn / Park Slope,D,,https://nyassembly.gov/mem/Robert-Carroll
+,Michael Novakhov,assembly,Assembly District 45 — Brooklyn / Gravesend,R,,https://nyassembly.gov/mem/Michael-Novakhov
+,Mathylde Frontus,assembly,Assembly District 46 — Brooklyn / Coney Island,D,,https://nyassembly.gov/mem/Mathylde-Frontus
+,William Colton,assembly,Assembly District 47 — Brooklyn / Bensonhurst,D,,https://nyassembly.gov/mem/William-Colton
+,Simcha Eichenstein,assembly,Assembly District 48 — Brooklyn / Borough Park,D,,https://nyassembly.gov/mem/Simcha-Eichenstein
+,Peter Abbate Jr.,assembly,Assembly District 49 — Brooklyn / Dyker Heights,D,,https://nyassembly.gov/mem/Peter-J-Abbate-Jr
+,Marcela Mitaynes,assembly,Assembly District 50 — Brooklyn / Sunset Park,D,,https://nyassembly.gov/mem/Marcela-Mitaynes
+,Felix Ortiz,assembly,Assembly District 51 — Brooklyn / Sunset Park,D,,https://nyassembly.gov/mem/Felix-Ortiz
+,Jo Anne Simon,assembly,Assembly District 52 — Brooklyn / Park Slope,D,,https://nyassembly.gov/mem/Jo-Anne-Simon
+,Ifeoma Ike,assembly,Assembly District 53 — Brooklyn / Carroll Gardens,D,,https://nyassembly.gov/mem/Ifeoma-Ike
+,Marty Dilan,assembly,Assembly District 54 — Brooklyn / Bushwick,D,,https://nyassembly.gov/mem/Martin-Malave-Dilan
+,Latrice Walker,assembly,Assembly District 55 — Brooklyn / Brownsville,D,,https://nyassembly.gov/mem/Latrice-M-Walker
+,Tremaine Wright,assembly,Assembly District 56 — Brooklyn / Bed-Stuy,D,,https://nyassembly.gov/mem/Tremaine-S-Wright
+,Phara Souffrant Forrest,assembly,Assembly District 57 — Brooklyn / Crown Heights,D,,https://nyassembly.gov/mem/Phara-Souffrant-Forrest
+,Nick Perry,assembly,Assembly District 58 — Brooklyn / East Flatbush,D,,https://nyassembly.gov/mem/Nick-Perry
+,Jaime Williams,assembly,Assembly District 59 — Brooklyn / Canarsie,D,,https://nyassembly.gov/mem/Jaime-R-Williams
+,Nikki Lucas,assembly,Assembly District 60 — Brooklyn / East New York,D,,https://nyassembly.gov/mem/Nikki-Lucas
+,Charles Fall,assembly,Assembly District 61 — Staten Island / North Shore,D,,https://nyassembly.gov/mem/Charles-D-Fall
+,Sam Pirozzolo,assembly,Assembly District 62 — Staten Island / Mid-Island,R,,https://nyassembly.gov/mem/Sam-Pirozzolo
+,Michael Cusick,assembly,Assembly District 63 — Staten Island / Mid-Island,D,,https://nyassembly.gov/mem/Michael-Cusick
+,Michael Tannousis,assembly,Assembly District 64 — Staten Island / Brooklyn,R,,https://nyassembly.gov/mem/Michael-Tannousis
+,Grace Lee,assembly,Assembly District 65 — Manhattan / Lower East Side,D,,https://nyassembly.gov/mem/Grace-Lee
+,Deborah Glick,assembly,Assembly District 66 — Manhattan / Greenwich Village,D,,https://nyassembly.gov/mem/Deborah-J-Glick
+,Linda Rosenthal,assembly,Assembly District 67 — Manhattan / Upper West Side,D,,https://nyassembly.gov/mem/Linda-B-Rosenthal
+,Eddie Gibbs,assembly,Assembly District 68 — Manhattan / Harlem,D,,https://nyassembly.gov/mem/Eddie-Gibbs
+,Micah Lasher,assembly,Assembly District 69 — Manhattan / Upper West Side,D,,https://nyassembly.gov/mem/Micah-Lasher
+,Jordan Wright,assembly,Assembly District 70 — Manhattan / Harlem,D,,https://nyassembly.gov/mem/Jordan-Wright
+,Al Taylor,assembly,Assembly District 71 — Manhattan / Washington Heights,D,,https://nyassembly.gov/mem/Al-Taylor
+,Carmen De La Rosa,assembly,Assembly District 72 — Manhattan / Washington Heights,D,,https://nyassembly.gov/mem/Carmen-De-La-Rosa
+,Alex Bores,assembly,Assembly District 73 — Manhattan / Upper East Side,D,,https://nyassembly.gov/mem/Alex-Bores
+,Tony Simone,assembly,Assembly District 74 — Manhattan / Clinton Hill,D,,https://nyassembly.gov/mem/Tony-Simone
+,Rebecca Seawright,assembly,Assembly District 75 — Manhattan / Upper East Side,D,,https://nyassembly.gov/mem/Rebecca-A-Seawright
+,Harvey Epstein,assembly,Assembly District 76 — Manhattan / East Village,D,,https://nyassembly.gov/mem/Harvey-Epstein
+,Karines Reyes,assembly,Assembly District 77 — The Bronx / Parkchester,D,,https://nyassembly.gov/mem/Karines-Reyes
+,Jose Rivera,assembly,Assembly District 78 — The Bronx / Fordham,D,,https://nyassembly.gov/mem/Jose-Rivera
+,Chantel Jackson,assembly,Assembly District 79 — The Bronx / Norwood,D,,https://nyassembly.gov/mem/Chantel-Jackson
+,Nathalia Fernandez,assembly,Assembly District 80 — The Bronx / Pelham Parkway,D,,https://nyassembly.gov/mem/Nathalia-Fernandez
+,Jeffrey Dinowitz,assembly,Assembly District 81 — The Bronx / Riverdale,D,,https://nyassembly.gov/mem/Jeffrey-Dinowitz
+,Michael Benedetto,assembly,Assembly District 82 — The Bronx / Throggs Neck,D,,https://nyassembly.gov/mem/Michael-R-Benedetto
+,Carl Heastie,assembly,Assembly District 83 — The Bronx / Wakefield,D,,https://nyassembly.gov/mem/Carl-E-Heastie
+,Amanda Septimo,assembly,Assembly District 84 — The Bronx / Hunts Point,D,,https://nyassembly.gov/mem/Amanda-Septimo
+,Kenny Burgos,assembly,Assembly District 85 — The Bronx / Mott Haven,D,,https://nyassembly.gov/mem/Kenny-Burgos
+,Victor Pichardo,assembly,Assembly District 86 — The Bronx / Fordham,D,,https://nyassembly.gov/mem/Victor-M-Pichardo
+,Yudelka Tapia,assembly,Assembly District 87 — The Bronx / Mt. Vernon,D,,https://nyassembly.gov/mem/Yudelka-Tapia
+,Amy Paulin,assembly,Assembly District 88 — Westchester / Scarsdale,D,,https://nyassembly.gov/mem/Amy-Paulin
+,Gary Pretlow,assembly,Assembly District 89 — Westchester / Mt. Vernon,D,,https://nyassembly.gov/mem/J-Gary-Pretlow
+,Nader Sayegh,assembly,Assembly District 90 — Westchester / Yonkers,D,,https://nyassembly.gov/mem/Nader-J-Sayegh
+,Vacant,assembly,Assembly District 91 — Westchester / Yonkers,D,,
+,MaryJane Shimsky,assembly,Assembly District 92 — Westchester / Dobbs Ferry,D,,https://nyassembly.gov/mem/MaryJane-Shimsky
+,Chris Burdick,assembly,Assembly District 93 — Westchester / Bedford,D,,https://nyassembly.gov/mem/Chris-Burdick
+,Matthew Slater,assembly,Assembly District 94 — Westchester / Putnam,R,,https://nyassembly.gov/mem/Matthew-Slater
+,Dana Levenberg,assembly,Assembly District 95 — Westchester / Ossining,D,,https://nyassembly.gov/mem/Dana-Levenberg
+,Anil Beephan Jr.,assembly,Assembly District 96 — Dutchess / Putnam,R,,https://nyassembly.gov/mem/Anil-Beephan-Jr
+,Didi Barrett,assembly,Assembly District 97 — Columbia / Dutchess,D,,https://nyassembly.gov/mem/Didi-Barrett
+,Karl Brabenec,assembly,Assembly District 98 — Rockland / Orange,R,,https://nyassembly.gov/mem/Karl-Brabenec
+,Colin Schmitt,assembly,Assembly District 99 — Orange / Goshen,R,,https://nyassembly.gov/mem/Colin-J-Schmitt
+,Aileen Gunther,assembly,Assembly District 100 — Sullivan / Orange,D,,https://nyassembly.gov/mem/Aileen-M-Gunther
+,Brian Maher,assembly,Assembly District 101 — Sullivan / Ulster,R,,https://nyassembly.gov/mem/Brian-Maher
+,Christopher Tague,assembly,Assembly District 102 — Schoharie / Otsego,R,,https://nyassembly.gov/mem/Christopher-Tague
+,Sarahana Shrestha,assembly,Assembly District 103 — Ulster / Greene,D,,https://nyassembly.gov/mem/Sarahana-Shrestha
+,Jonathan Jacobson,assembly,Assembly District 104 — Orange / Newburgh,D,,https://nyassembly.gov/mem/Jonathan-G-Jacobson
+,Forrest Raphael,assembly,Assembly District 105 — Orange / Sullivan,R,,https://nyassembly.gov/mem/Forrest-Raphael
+,Kevin Cahill,assembly,Assembly District 106 — Ulster / Kingston,D,,https://nyassembly.gov/mem/Kevin-A-Cahill
+,Mary Beth Walsh,assembly,Assembly District 107 — Saratoga / Washington,R,,https://nyassembly.gov/mem/Mary-Beth-Walsh
+,John McDonald,assembly,Assembly District 108 — Albany / Cohoes,D,,https://nyassembly.gov/mem/John-T-McDonald-III
+,Patricia Fahy,assembly,Assembly District 109 — Albany,D,,https://nyassembly.gov/mem/Patricia-Fahy
+,Phil Steck,assembly,Assembly District 110 — Albany / Colonie,D,,https://nyassembly.gov/mem/Phil-Steck
+,Angelo Santabarbara,assembly,Assembly District 111 — Schenectady / Montgomery,D,,https://nyassembly.gov/mem/Angelo-Santabarbara
+,Carrie Woerner,assembly,Assembly District 113 — Saratoga / Washington,D,,https://nyassembly.gov/mem/Carrie-Woerner
+,Robert Smullen,assembly,Assembly District 118 — Herkimer / Fulton,R,,https://nyassembly.gov/mem/Robert-Smullen
+,Billy Jones,assembly,Assembly District 115 — Clinton / Franklin,D,,https://nyassembly.gov/mem/Billy-Jones
+,Ken Blankenbush,assembly,Assembly District 117 — Lewis / Jefferson / St. Lawrence,R,,https://nyassembly.gov/mem/Ken-Blankenbush
+,Scott Gray,assembly,Assembly District 116 — Jefferson / St. Lawrence,R,,https://nyassembly.gov/mem/Scott-Gray
+,Will Barclay,assembly,Assembly District 120 — Oswego / Jefferson,R,,https://nyassembly.gov/mem/William-A-Barclay
+,John Salka,assembly,Assembly District 121 — Madison / Chenango,R,,https://nyassembly.gov/mem/John-Salka
+,Clifford Crouch,assembly,Assembly District 122 — Broome / Delaware,R,,https://nyassembly.gov/mem/Clifford-W-Crouch
+,Donna Lupardo,assembly,Assembly District 123 — Broome / Chenango,D,,https://nyassembly.gov/mem/Donna-A-Lupardo
+,Brian Miller,assembly,Assembly District 101 — Oneida / Herkimer,R,,https://nyassembly.gov/mem/Brian-D-Miller
+,Mark Johns,assembly,Assembly District 135 — Monroe / Wayne,R,,https://nyassembly.gov/mem/Mark-Johns
+,Joshua Jensen,assembly,Assembly District 134 — Monroe / Greece,R,,https://nyassembly.gov/mem/Joshua-Jensen
+,Harry Bronson,assembly,Assembly District 138 — Monroe / Rochester,D,,https://nyassembly.gov/mem/Harry-B-Bronson
+,Sarah Clark,assembly,Assembly District 136 — Monroe / Irondequoit,D,,https://nyassembly.gov/mem/Sarah-Clark
+,Jen Lunsford,assembly,Assembly District 135 — Monroe / Fairport,D,,https://nyassembly.gov/mem/Jen-Lunsford
+,Joseph Giglio,assembly,Assembly District 148 — Cattaraugus / Allegany,R,,https://nyassembly.gov/mem/Joseph-M-Giglio
+,David DiPietro,assembly,Assembly District 147 — Erie / Wyoming,R,,https://nyassembly.gov/mem/David-DiPietro
+,Angelo Morinello,assembly,Assembly District 145 — Niagara / Orleans,R,,https://nyassembly.gov/mem/Angelo-J-Morinello
+,Michael Norris,assembly,Assembly District 144 — Niagara / Lockport,R,,https://nyassembly.gov/mem/Michael-H-Norris
+,Andy Goodell,assembly,Assembly District 150 — Chautauqua,R,,https://nyassembly.gov/mem/Andrew-W-Goodell
+,Jonathan Rivera,assembly,Assembly District 149 — Erie / Niagara,D,,https://nyassembly.gov/mem/Jonathan-Rivera
+,Kristen Gonzalez,senate,Senate District 59 — Brooklyn / Bushwick,D,,https://www.nysenate.gov/senators/kristen-gonzalez
+,Aber Kawas,senate,Senate District 12 — Queens / Astoria,D,,https://www.nysenate.gov/senators/aber-kawas

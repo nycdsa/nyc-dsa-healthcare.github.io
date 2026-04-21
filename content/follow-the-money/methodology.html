@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — NYC DSA Healthcare Working Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:      #F5F0E8;
+    --cream-mid:  #EDE7DA;
+    --cream-dark: #DDD4C2;
+    --red:        #C8102E;
+    --red-dark:   #9B0D22;
+    --red-light:  #F2CDCD;
+    --ink:        #1A1208;
+    --ink-mid:    #3D2B1A;
+    --ink-light:  #7A6550;
+    --white:      #FDFAF5;
+    --serif:      'Playfair Display', Georgia, serif;
+    --body-serif: 'Source Serif 4', Georgia, serif;
+    --sans:       'Source Sans 3', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--ink); font-family: var(--sans); min-height: 100vh; }
+
+  /* ── ANNOUNCE ── */
+  .announce {
+    background: var(--red);
+    color: #fff;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 10px 20px;
+  }
+  .announce a { color: #fff; text-decoration: underline; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--white);
+    border-bottom: 2px solid var(--ink);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--red);
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+
+  .nav-back {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border: 2px solid var(--ink);
+    padding: 7px 14px;
+    transition: background 0.12s;
+  }
+
+  .nav-back:hover { background: var(--ink); color: var(--white); }
+
+  .nav-cta {
+    background: var(--red);
+    color: #fff;
+    padding: 8px 18px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .nav-cta:hover { background: var(--red-dark); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: var(--white);
+    border-bottom: 3px solid var(--ink);
+    padding: 56px 40px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -45deg, transparent, transparent 18px,
+      rgba(200,16,46,0.04) 18px, rgba(200,16,46,0.04) 19px
+    );
+    pointer-events: none;
+  }
+
+  .page-header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+
+  .page-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--red);
+  }
+
+  .page-h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .page-deck {
+    font-family: var(--body-serif);
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-mid);
+    max-width: 620px;
+  }
+
+  /* ── CONTENT ── */
+  .content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 56px 40px 100px;
+  }
+
+  .method-section {
+    margin-bottom: 52px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+
+  .method-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .method-num {
+    font-family: var(--serif);
+    font-size: 72px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--cream-dark);
+    line-height: 1;
+    margin-bottom: -8px;
+  }
+
+  .method-h2 {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .method-body {
+    font-family: var(--body-serif);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+
+  .method-body p { margin-bottom: 14px; }
+  .method-body p:last-child { margin-bottom: 0; }
+
+  .method-body strong { color: var(--ink); font-weight: 600; }
+
+  .method-body a { color: var(--red); }
+  .method-body a:hover { text-decoration: none; }
+
+  /* Keyword tag cloud */
+  .keyword-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .keyword-tag {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    background: var(--white);
+  }
+
+  .keyword-tag.highlight { background: var(--red); border-color: var(--red); color: #fff; }
+
+  /* Callout box */
+  .callout {
+    background: var(--white);
+    border: 2px solid var(--ink);
+    border-left: 5px solid var(--red);
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .callout-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+
+  .callout p {
+    font-family: var(--body-serif);
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-mid);
+    margin: 0;
+  }
+
+  /* Data table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: var(--sans);
+    font-size: 13px;
+  }
+
+  .data-table th {
+    background: var(--ink);
+    color: var(--cream);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 10px 14px;
+    text-align: left;
+  }
+
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--cream-dark);
+    color: var(--ink-mid);
+    vertical-align: top;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: var(--cream); }
+  .data-table td strong { color: var(--ink); font-weight: 700; }
+
+  /* Limitations list */
+  .limitation-list {
+    list-style: none;
+    margin-top: 16px;
+  }
+
+  .limitation-list li {
+    font-family: var(--body-serif);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-mid);
+    padding: 10px 0 10px 24px;
+    border-bottom: 1px solid var(--cream-dark);
+    position: relative;
+  }
+
+  .limitation-list li:last-child { border-bottom: none; }
+
+  .limitation-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 40px;
+  }
+
+  .footer-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+
+  .footer-left {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--cream-dark);
+    line-height: 1.8;
+  }
+
+  .footer-left strong { color: var(--cream); }
+
+  .footer-right {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 2.2;
+  }
+
+  .footer-right a { color: var(--red-light); text-decoration: none; }
+  .footer-right a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 20px; }
+    .page-header { padding: 40px 20px 36px; }
+    .content { padding: 40px 20px 60px; }
+    footer { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">
+  Support the New York Health Act — Universal Health Care for New York State.
+  <a href="https://www.nyhcampaign.org/" target="_blank" rel="noopener">Learn more →</a>
+</div>
+
+<nav>
+  <a class="nav-logo" href="ny-healthcare-money.html">NYC DSA Healthcare Working Group</a>
+  <div class="nav-right">
+    <a class="nav-back" href="ny-healthcare-money.html">← Back to Tracker</a>
+    <a class="nav-cta" href="#">Angry? Join the Movement.</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">Transparency &amp; Accountability</div>
+    <h1 class="page-h1">Our Methodology</h1>
+    <p class="page-deck">How we collected, classified, and calculated healthcare industry donations to New York State legislators — and what the numbers do and don't tell you.</p>
+  </div>
+</header>
+
+<main class="content">
+
+  <section class="method-section">
+    <div class="method-num">01</div>
+    <h2 class="method-h2">Data Source</h2>
+    <div class="method-body">
+      <p>All campaign finance data in this tool comes directly from the <strong>New York State Board of Elections (NYSBOE)</strong> Campaign Finance database, which is publicly available at <a href="https://www.elections.ny.gov/CFViewReports.html" target="_blank" rel="noopener">elections.ny.gov</a>. The NYSBOE requires all candidates for state office to publicly disclose their campaign contributions, including the contributor's name, employer, occupation, address, and contribution amount.</p>
+      <p>We download the bulk transaction files directly from the NYSBOE portal on a quarterly basis. These files include all disclosed contributions to active campaign committees for sitting members of the New York State Senate and Assembly.</p>
+    </div>
+    <div class="callout">
+      <div class="callout-label">Important note on disclosure</div>
+      <p>Campaign finance disclosures are self-reported by campaigns. While NYSBOE requires disclosure, the completeness and accuracy of employer/occupation fields depends on what contributors report to campaigns, and what campaigns report to NYSBOE. Some donations from healthcare industry sources may be undercounted if employer information was not fully disclosed.</p>
+    </div>
+  </section>
+
+  <section class="method-section">
+    <div class="method-num">02</div>
+    <h2 class="method-h2">How We Identify Healthcare Industry Donations</h2>
+    <div class="method-body">
+      <p>The NYSBOE data does not include a standardized industry classification for contributors. To identify donations from the healthcare and insurance industry, we apply <strong>keyword matching</strong> against the contributor's reported employer name and occupation fields.</p>
+      <p>We flag a contribution as healthcare industry-related if the contributor's employer or occupation contains any of the following terms:</p>
+    </div>
+
+    <div class="keyword-cloud">
+      <span class="keyword-tag highlight">insurance</span>
+      <span class="keyword-tag highlight">health plan</span>
+      <span class="keyword-tag highlight">hospital</span>
+      <span class="keyword-tag highlight">pharmaceutical</span>
+      <span class="keyword-tag highlight">pharmacy</span>
+      <span class="keyword-tag">UnitedHealth</span>
+      <span class="keyword-tag">Aetna</span>
+      <span class="keyword-tag">Cigna</span>
+      <span class="keyword-tag">Anthem</span>
+      <span class="keyword-tag">BlueCross</span>
+      <span class="keyword-tag">Blue Cross</span>
+      <span class="keyword-tag">Emblem</span>
+      <span class="keyword-tag">Excellus</span>
+      <span class="keyword-tag">Humana</span>
+      <span class="keyword-tag">Molina</span>
+      <span class="keyword-tag">Centene</span>
+      <span class="keyword-tag">Northwell</span>
+      <span class="keyword-tag">Montefiore</span>
+      <span class="keyword-tag">CVS</span>
+      <span class="keyword-tag">Walgreens</span>
+      <span class="keyword-tag">Rite Aid</span>
+      <span class="keyword-tag">Express Scripts</span>
+      <span class="keyword-tag">McKesson</span>
+      <span class="keyword-tag">AmerisourceBergen</span>
+      <span class="keyword-tag">Pfizer</span>
+      <span class="keyword-tag">Merck</span>
+      <span class="keyword-tag">AbbVie</span>
+      <span class="keyword-tag">AstraZeneca</span>
+      <span class="keyword-tag">Johnson &amp; Johnson</span>
+      <span class="keyword-tag">Sanofi</span>
+      <span class="keyword-tag">Lilly</span>
+      <span class="keyword-tag">Teva</span>
+      <span class="keyword-tag">PhRMA</span>
+      <span class="keyword-tag">healthcare</span>
+      <span class="keyword-tag">health care</span>
+      <span class="keyword-tag">medical center</span>
+      <span class="keyword-tag">health system</span>
+      <span class="keyword-tag">physician</span>
+      <span class="keyword-tag">managed care</span>
+      <span class="keyword-tag">PBM</span>
+      <span class="keyword-tag">benefit manager</span>
+    </div>
+
+    <div class="callout" style="margin-top: 24px;">
+      <div class="callout-label">Classification approach</div>
+      <p>Highlighted terms in red are the broadest, highest-volume categories. Non-highlighted terms are specific organization names. Matching is case-insensitive. We review matches periodically to remove false positives (e.g., a "Health &amp; Wellness" coaching business would be excluded on review).</p>
+    </div>
+  </section>
+
+  <section class="method-section">
+    <div class="method-num">03</div>
+    <h2 class="method-h2">How Totals Are Calculated</h2>
+    <div class="method-body">
+      <p>For each legislator, we sum all contributions that match our healthcare industry keyword criteria within the current election cycle. The <strong>total shown on each profile</strong> represents the gross amount received from healthcare and insurance industry sources — it is not adjusted for any refunds or returned contributions unless those are separately reported in the NYSBOE data.</p>
+      <p>The <strong>headline figure on the landing page</strong> is the sum of all individual legislator healthcare totals across both chambers.</p>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Total from healthcare lobby</strong></td>
+          <td>Sum of all contributions matching healthcare industry keywords, current cycle</td>
+        </tr>
+        <tr>
+          <td><strong>Top 5 donors</strong></td>
+          <td>The five contributor organizations (by employer name) that gave the most to that legislator in aggregate, across all transactions</td>
+        </tr>
+        <tr>
+          <td><strong>Biggest donors (landing page)</strong></td>
+          <td>Aggregated across all legislators — total given by each donor organization to any NY legislator in our dataset</td>
+        </tr>
+        <tr>
+          <td><strong>Unique donor organizations</strong></td>
+          <td>Count of distinct employer names after normalization (e.g., "United Health" and "UnitedHealth Group" are merged)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="method-section">
+    <div class="method-num">04</div>
+    <h2 class="method-h2">Update Schedule</h2>
+    <div class="method-body">
+      <p>We update this tool <strong>quarterly</strong>, aligned with NYSBOE's disclosure filing deadlines. New York State requires campaign committees to file disclosure reports in January, April, July, and October of each year. We process and publish updated data within two weeks of each filing deadline.</p>
+      <p>The data vintage shown in the tool header reflects the most recent quarterly update. Data from the most recent filing period may not yet be reflected if we are still processing.</p>
+    </div>
+  </section>
+
+  <section class="method-section">
+    <div class="method-num">05</div>
+    <h2 class="method-h2">Limitations &amp; What This Data Doesn't Show</h2>
+    <div class="method-body">
+      <p>This tool is designed to make a complex public dataset more accessible. It has real limitations that users should understand:</p>
+    </div>
+    <ul class="limitation-list">
+      <li>We only capture <strong>disclosed contributions</strong>. Independent expenditures, dark money, and other forms of political influence are not included.</li>
+      <li>The <strong>employer/occupation fields are self-reported</strong> and sometimes incomplete, vague, or missing — meaning some healthcare industry contributions may not be captured by keyword matching.</li>
+      <li>We do <strong>not distinguish between types of healthcare organizations</strong> — a community hospital and a for-profit insurer are both included. We believe the full scope of industry influence is relevant, but users should review individual donor breakdowns for context.</li>
+      <li><strong>Contribution totals are not normalized</strong> for district size, campaign competitiveness, or total fundraising — a legislator from a large competitive district may raise more overall and thus show a higher raw healthcare total.</li>
+      <li>This data covers <strong>state-level campaign committees only</strong>. Federal PAC contributions, LLC contributions routed through holding companies, and in-kind contributions may not be fully reflected.</li>
+    </ul>
+  </section>
+
+  <section class="method-section">
+    <div class="method-num">06</div>
+    <h2 class="method-h2">About This Project</h2>
+    <div class="method-body">
+      <p>This tool was built by the <strong>NYC-DSA Healthcare Working Group</strong> as part of our ongoing campaign for the <a href="https://www.nyhcampaign.org/" target="_blank" rel="noopener">New York Health Act</a> — legislation that would establish universal, single-payer healthcare coverage for all New Yorkers.</p>
+      <p>We believe that transparency about the financial relationships between the healthcare industry and our elected representatives is essential to democratic accountability. This tool is not intended to imply corruption or illegal activity — all of the contributions shown here are legal and publicly disclosed. We believe New Yorkers have the right to know who is funding their lawmakers and to draw their own conclusions.</p>
+      <p>If you have questions about our methodology, spot an error, or want to get involved with the Healthcare Working Group, <a href="https://healthcare.socialists.nyc" target="_blank" rel="noopener">visit our main page</a> or <a href="https://socialists.nyc" target="_blank" rel="noopener">join NYC-DSA</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">NYC DSA Healthcare Working Group</div>
+      <div class="footer-left">
+        <strong>Data source:</strong> New York State Board of Elections, Campaign Finance Disclosures.<br>
+        Updated quarterly. Independent project, not affiliated with NYSBOE.
+      </div>
+    </div>
+    <div class="footer-right">
+      <div><a href="https://healthcare.socialists.nyc" target="_blank" rel="noopener">HCWG Main ↗</a></div>
+      <div><a href="https://socialists.nyc" target="_blank" rel="noopener">NYC-DSA ↗</a></div>
+      <div><a href="https://www.elections.ny.gov/CFViewReports.html" target="_blank" rel="noopener">NYSBOE Data ↗</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

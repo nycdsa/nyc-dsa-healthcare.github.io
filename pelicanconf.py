@@ -7,6 +7,10 @@ SITEURL = ""
 
 PATH = "content"
 
+# Static assets — copied to output/ as-is. Includes the Blood Money
+# campaign-finance tool, a self-contained static app under follow-the-money/.
+STATIC_PATHS = ["images", "follow-the-money"]
+
 TIMEZONE = "America/New_York"
 
 DEFAULT_LANG = "en"
