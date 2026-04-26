@@ -48,3 +48,6 @@ Thumbs.db
 
 # Environment / secrets
 .env
+
+# Local Netlify folder
+.netlify
