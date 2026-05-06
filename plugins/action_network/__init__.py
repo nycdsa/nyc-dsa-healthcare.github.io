@@ -232,10 +232,9 @@ def _build_calendar(events):
 def add_events_to_context(pelican):
     api_key = os.environ.get("ACTION_NETWORK_API_KEY", "")
     if not api_key:
-        print("action_network plugin: ACTION_NETWORK_API_KEY not set — using mock events for local dev")
-        events = _mock_events()
-        pelican.settings["ACTION_NETWORK_EVENTS"] = events
-        pelican.settings["ACTION_NETWORK_CALENDAR"] = _build_calendar(events)
+        print("action_network plugin: ACTION_NETWORK_API_KEY not set — no events will be shown")
+        pelican.settings["ACTION_NETWORK_EVENTS"] = []
+        pelican.settings["ACTION_NETWORK_CALENDAR"] = []
         return
 
     try:
