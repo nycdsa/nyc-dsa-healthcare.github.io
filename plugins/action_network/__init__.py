@@ -256,4 +256,5 @@ def inject_into_context(generator, context):
 
 def register():
     signals.initialized.connect(add_events_to_context)
-    signals.generator_context.connect(inject_into_context)
+    signals.article_generator_context.connect(inject_into_context)
+    signals.page_generator_context.connect(inject_into_context)
