@@ -248,5 +248,12 @@ def add_events_to_context(pelican):
         pelican.settings["ACTION_NETWORK_CALENDAR"] = []
 
 
+def inject_into_context(generator, context):
+    """Explicitly inject events into each generator's template context."""
+    context["ACTION_NETWORK_EVENTS"] = generator.settings.get("ACTION_NETWORK_EVENTS", [])
+    context["ACTION_NETWORK_CALENDAR"] = generator.settings.get("ACTION_NETWORK_CALENDAR", [])
+
+
 def register():
     signals.initialized.connect(add_events_to_context)
+    signals.generator_context.connect(inject_into_context)
