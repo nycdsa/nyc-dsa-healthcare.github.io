@@ -1,11 +1,14 @@
 """
 Pelican plugin: fetch upcoming events from Action Network at build time.
 
-Requires env var ACTION_NETWORK_API_KEY. If unset, events will be empty
-(safe for local dev without the key).
+If ACTION_NETWORK_API_KEY is set, events are fetched live from the API.
+Otherwise, falls back to content/events_cache.json (a file committed to the
+repo and kept fresh by the refresh-events GitHub Actions workflow). This lets
+Cloudflare Pages build the site with real events without needing the API key.
 """
 
 import calendar as cal_module
+import json
 import os
 from datetime import date, datetime, timezone
 
@@ -13,6 +16,10 @@ import requests
 from pelican import signals
 
 BASE_URL = "https://actionnetwork.org/api/v2"
+
+# Path to the committed events cache, relative to repo root
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+CACHE_PATH = os.path.join(_REPO_ROOT, "content", "events_cache.json")
 
 
 def _parse_dt(date_str):
@@ -35,9 +42,8 @@ def _event_to_dict(raw):
     month_year = ""
     if date_str:
         dt = _parse_dt(date_str)
-        # Convert to Eastern time for display (rough offset; DST not handled)
         date_formatted = dt.strftime("%-I:%M %p, %A %B %-d, %Y")
-        month_year = dt.strftime("%Y-%m")  # used for groupby sort key
+        month_year = dt.strftime("%Y-%m")
         month_label = dt.strftime("%B %Y")
     else:
         month_label = "Unknown"
@@ -96,87 +102,24 @@ def fetch_events(api_key):
     return events
 
 
-def _mock_events():
-    """Return fake events for local development (no API key required)."""
-    return [
-        {
-            "id": "mock:1",
-            "name": "Healthcare for All Phonebank",
-            "date": "2026-03-07T18:00:00+00:00",
-            "date_formatted": "6:00 PM, Saturday March 7, 2026",
-            "month_year": "2026-03",
-            "month_label": "March 2026",
-            "status": "confirmed",
-            "description": "Join us for our weekly phonebank calling New Yorkers about single-payer healthcare. No experience needed — training provided!",
-            "browser_url": "https://actionnetwork.org/events/mock-phonebank-march",
-            "signup_url": "https://actionnetwork.org/events/mock-phonebank-march",
-            "location": "zoom.us/j/mock",
-            "borough": "",
-        },
-        {
-            "id": "mock:2",
-            "name": "Canvass — Bushwick",
-            "date": "2026-03-14T14:00:00+00:00",
-            "date_formatted": "2:00 PM, Saturday March 14, 2026",
-            "month_year": "2026-03",
-            "month_label": "March 2026",
-            "status": "confirmed",
-            "description": "Door-to-door canvassing in Bushwick to talk with neighbors about the fight for universal healthcare. Meet at Maria Hernandez Park.",
-            "browser_url": "https://actionnetwork.org/events/mock-canvass-bushwick",
-            "signup_url": "https://actionnetwork.org/events/mock-canvass-bushwick",
-            "location": "Maria Hernandez Park",
-            "borough": "Brooklyn",
-        },
-        {
-            "id": "mock:3",
-            "name": "Teach-In: How Single Payer Works",
-            "date": "2026-03-21T19:00:00+00:00",
-            "date_formatted": "7:00 PM, Saturday March 21, 2026",
-            "month_year": "2026-03",
-            "month_label": "March 2026",
-            "status": "confirmed",
-            "description": "A deep dive into how Medicare for All would work, what it covers, and how we win it. Featuring a healthcare policy expert and Q&A.",
-            "browser_url": "https://actionnetwork.org/events/mock-teachin",
-            "signup_url": "https://actionnetwork.org/events/mock-teachin",
-            "location": "Brooklyn Commons",
-            "borough": "Brooklyn",
-        },
-        {
-            "id": "mock:4",
-            "name": "Healthcare for All Phonebank",
-            "date": "2026-04-04T18:00:00+00:00",
-            "date_formatted": "6:00 PM, Saturday April 4, 2026",
-            "month_year": "2026-04",
-            "month_label": "April 2026",
-            "status": "confirmed",
-            "description": "Weekly phonebank — keep the pressure on elected officials and build our base of supporters.",
-            "browser_url": "https://actionnetwork.org/events/mock-phonebank-april",
-            "signup_url": "https://actionnetwork.org/events/mock-phonebank-april",
-            "location": "zoom.us/j/mock",
-            "borough": "",
-        },
-        {
-            "id": "mock:5",
-            "name": "Rally for NY Health Act",
-            "date": "2026-04-18T12:00:00+00:00",
-            "date_formatted": "12:00 PM, Saturday April 18, 2026",
-            "month_year": "2026-04",
-            "month_label": "April 2026",
-            "status": "confirmed",
-            "description": "Rally at City Hall to demand the NY Health Act pass this session. Bring signs, bring friends.",
-            "browser_url": "https://actionnetwork.org/events/mock-rally",
-            "signup_url": "https://actionnetwork.org/events/mock-rally",
-            "location": "City Hall Park",
-            "borough": "Manhattan",
-        },
-    ]
+def _load_from_cache():
+    """Load events from the committed JSON cache file."""
+    try:
+        with open(CACHE_PATH) as f:
+            data = json.load(f)
+        events = data.get("events", [])
+        calendar = data.get("calendar", [])
+        print(f"action_network plugin: loaded {len(events)} events from cache")
+        return events, calendar
+    except Exception as exc:
+        print(f"action_network plugin: could not read cache — {exc}")
+        return [], []
 
 
 def _build_calendar(events):
     """Build a month-grid data structure for the calendar template."""
     today = date.today()
 
-    # Collect all (year, month) pairs from events
     month_set = set()
     for event in events:
         date_str = event.get("date", "")
@@ -184,10 +127,8 @@ def _build_calendar(events):
             parts = date_str[:10].split("-")
             month_set.add((int(parts[0]), int(parts[1])))
 
-    # Always include the current month
     month_set.add((today.year, today.month))
 
-    # Build lookup: (year, month, day) -> list of events
     event_lookup = {}
     for event in events:
         date_str = event.get("date", "")
@@ -196,7 +137,6 @@ def _build_calendar(events):
             key = (int(parts[0]), int(parts[1]), int(parts[2]))
             event_lookup.setdefault(key, []).append(event)
 
-    # Sunday-first calendar (firstweekday=6 in Python's calendar module)
     cal = cal_module.Calendar(firstweekday=6)
     result = []
 
@@ -231,21 +171,22 @@ def _build_calendar(events):
 
 def add_events_to_context(pelican):
     api_key = os.environ.get("ACTION_NETWORK_API_KEY", "")
-    if not api_key:
-        print("action_network plugin: ACTION_NETWORK_API_KEY not set — no events will be shown")
-        pelican.settings["ACTION_NETWORK_EVENTS"] = []
-        pelican.settings["ACTION_NETWORK_CALENDAR"] = []
-        return
 
-    try:
-        events = fetch_events(api_key)
-        pelican.settings["ACTION_NETWORK_EVENTS"] = events
-        pelican.settings["ACTION_NETWORK_CALENDAR"] = _build_calendar(events)
-        print(f"action_network plugin: fetched {len(events)} upcoming events")
-    except Exception as exc:
-        print(f"action_network plugin: ERROR fetching events — {exc}")
-        pelican.settings["ACTION_NETWORK_EVENTS"] = []
-        pelican.settings["ACTION_NETWORK_CALENDAR"] = []
+    if api_key:
+        # API key available — fetch live (GitHub Actions build)
+        try:
+            events = fetch_events(api_key)
+            calendar = _build_calendar(events)
+            print(f"action_network plugin: fetched {len(events)} upcoming events from API")
+        except Exception as exc:
+            print(f"action_network plugin: ERROR fetching from API — {exc}, falling back to cache")
+            events, calendar = _load_from_cache()
+    else:
+        # No API key — read from committed cache (Cloudflare Pages build)
+        events, calendar = _load_from_cache()
+
+    pelican.settings["ACTION_NETWORK_EVENTS"] = events
+    pelican.settings["ACTION_NETWORK_CALENDAR"] = calendar
 
 
 def inject_into_generator(generator):
