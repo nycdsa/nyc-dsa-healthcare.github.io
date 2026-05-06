@@ -61,7 +61,6 @@
   </section>
 
   <!-- ===== BLOG / NEWS ===== -->
-  {% if articles_page.object_list %}
   <section class="news-section">
     <div class="news-inner">
 
@@ -93,12 +92,15 @@
         {% endfor %}
       </div>
       {% else %}
-      <p style="font-family: var(--body-serif); font-size: 16px; color: var(--ink-mid); padding: 32px 0; font-style: italic;">Our first posts are on their way — check back soon.</p>
+      <div style="border: 2px solid var(--cream-dark); padding: 48px 40px; text-align: center; margin-top: 8px;">
+        <p style="font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 12px;">Coming Soon</p>
+        <p style="font-family: var(--serif); font-size: 22px; font-weight: 900; color: var(--ink); margin-bottom: 12px;">Our first posts are on their way.</p>
+        <p style="font-family: var(--body-serif); font-size: 16px; color: var(--ink-mid); font-style: italic;">Check back soon or <a href="https://actionnetwork.org/surveys/membership-form" style="color: var(--red);">join the working group</a> to stay in the loop.</p>
+      </div>
       {% endif %}
 
     </div>
   </section>
-  {% endif %}
 
   <!-- ===== SUBSTACK NEWSLETTER ===== -->
   <section class="substack-section">
