@@ -248,13 +248,18 @@ def add_events_to_context(pelican):
         pelican.settings["ACTION_NETWORK_CALENDAR"] = []
 
 
-def inject_into_context(generator, context):
-    """Explicitly inject events into each generator's template context."""
-    context["ACTION_NETWORK_EVENTS"] = generator.settings.get("ACTION_NETWORK_EVENTS", [])
-    context["ACTION_NETWORK_CALENDAR"] = generator.settings.get("ACTION_NETWORK_CALENDAR", [])
+def inject_into_generator(generator):
+    """Inject events directly into each generator's Jinja2 env globals.
+
+    generator_init fires after Generator.__init__ sets up self.env, so
+    env.globals are reliably available in every template render.
+    """
+    generator.env.globals.update({
+        "ACTION_NETWORK_EVENTS": generator.settings.get("ACTION_NETWORK_EVENTS", []),
+        "ACTION_NETWORK_CALENDAR": generator.settings.get("ACTION_NETWORK_CALENDAR", []),
+    })
 
 
 def register():
     signals.initialized.connect(add_events_to_context)
-    signals.article_generator_context.connect(inject_into_context)
-    signals.page_generator_context.connect(inject_into_context)
+    signals.generator_init.connect(inject_into_generator)
