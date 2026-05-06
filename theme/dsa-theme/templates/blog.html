@@ -96,6 +96,14 @@
       {% endfor %}
     </div>
 
+    {% if not articles %}
+    <div style="padding: 60px 0; text-align: center;">
+      <p style="font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 16px;">Coming Soon</p>
+      <h2 style="font-family: var(--serif); font-size: clamp(24px, 3vw, 36px); font-weight: 900; color: var(--ink); margin-bottom: 16px;">The first posts are on their way.</h2>
+      <p style="font-family: var(--body-serif); font-size: 17px; color: var(--ink-mid); max-width: 480px; margin: 0 auto; line-height: 1.65;">We are working on our first pieces now. Check back soon or join the working group to stay in the loop.</p>
+    </div>
+    {% endif %}
+
     {% if articles %}
     <!-- FEATURED POST -->
     <article class="post-featured" data-category="{{ articles[0].category.name | lower | replace(' ', '-') if articles[0].category else '' }}">

@@ -74,6 +74,7 @@
         <a class="news-all-link" href="{{ SITEURL }}/blog.html">All posts →</a>
       </div>
 
+      {% if articles_page.object_list %}
       <div class="news-grid">
         {% for article in articles_page.object_list[:3] %}
         <a class="news-card {% if loop.first %}primary{% endif %}" href="{{ SITEURL }}/{{ article.url }}">
@@ -91,6 +92,9 @@
         </a>
         {% endfor %}
       </div>
+      {% else %}
+      <p style="font-family: var(--body-serif); font-size: 16px; color: var(--ink-mid); padding: 32px 0; font-style: italic;">Our first posts are on their way — check back soon.</p>
+      {% endif %}
 
     </div>
   </section>
