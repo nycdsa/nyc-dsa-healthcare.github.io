@@ -1,1 +1,305 @@
-{"events": [], "calendar": []}
+{
+  "events": [
+    {
+      "id": "action_network:04ed8865-a68a-4980-9efb-13adbb3a526d",
+      "name": "Healthcare Working Group May General Meeting",
+      "date": "2026-05-21T18:30:00Z",
+      "date_formatted": "6:30 PM, Thursday May 21, 2026",
+      "month_year": "2026-05",
+      "month_label": "May 2026",
+      "status": "confirmed",
+      "description": "<p>Join our healthcare working group and the ascendant movement behind Zohran's inspiring Mayoral upset. We are an organizing space for health workers, patients, DSA-curious members of the public, and healthcare-curious DSA members building the movement to de-commodify healthcare. Plug in, meet new people, join upcoming actions, and help build this plane while we are flying it.</p><p>This is an in-person meeting but if you can't make it there is a Zoom option, we will do our best to include you.</p>",
+      "browser_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
+      "signup_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
+      "location": "320 W 37th St",
+      "borough": "New York"
+    }
+  ],
+  "calendar": [
+    {
+      "month_label": "May 2026",
+      "month_year": "2026-05",
+      "weeks": [
+        [
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 1,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 2,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 3,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 4,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 5,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 6,
+            "in_month": true,
+            "events": [],
+            "is_today": true
+          },
+          {
+            "day": 7,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 8,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 9,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 10,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 11,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 12,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 13,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 14,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 15,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 16,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 17,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 18,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 19,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 20,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 21,
+            "in_month": true,
+            "events": [
+              {
+                "id": "action_network:04ed8865-a68a-4980-9efb-13adbb3a526d",
+                "name": "Healthcare Working Group May General Meeting",
+                "date": "2026-05-21T18:30:00Z",
+                "date_formatted": "6:30 PM, Thursday May 21, 2026",
+                "month_year": "2026-05",
+                "month_label": "May 2026",
+                "status": "confirmed",
+                "description": "<p>Join our healthcare working group and the ascendant movement behind Zohran's inspiring Mayoral upset. We are an organizing space for health workers, patients, DSA-curious members of the public, and healthcare-curious DSA members building the movement to de-commodify healthcare. Plug in, meet new people, join upcoming actions, and help build this plane while we are flying it.</p><p>This is an in-person meeting but if you can't make it there is a Zoom option, we will do our best to include you.</p>",
+                "browser_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
+                "signup_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
+                "location": "320 W 37th St",
+                "borough": "New York"
+              }
+            ],
+            "is_today": false
+          },
+          {
+            "day": 22,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 23,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 24,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 25,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 26,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 27,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 28,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 29,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 30,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 31,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          }
+        ]
+      ]
+    }
+  ]
+}
