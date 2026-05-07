@@ -27,20 +27,22 @@
     <ul class="nav-drawer-links">
       <li><a href="{{ SITEURL }}/">Home</a></li>
       <li><a href="{{ SITEURL }}/pages/ny-health-act.html">The NY Health Act</a></li>
+      <li><a href="{{ SITEURL }}/pages/single-payer.html">The Case for Single Payer</a></li>
+      <li><a href="{{ SITEURL }}/pages/mutual-aid.html">Mutual Aid</a></li>
       <li><a href="{{ SITEURL }}/pages/calendar.html">Events</a></li>
       <li><a href="{{ SITEURL }}/blog.html">Blog</a></li>
       {% for p in pages %}
-      {% if p.title not in ['NY Health Act', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis'] %}
+      {% if p.title not in ['NY Health Act', 'The Case for Single Payer', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis', 'Mutual Aid'] %}
       <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>
+    <ul class="nav-drawer-links nav-drawer-links--secondary">
+      <li><a href="https://linktr.ee/DSAHCWG" target="_blank" rel="noopener">Linktree</a></li>
+      <li><a href="https://secure.actblue.com/donate/healthcare-nyc-dsa" target="_blank" rel="noopener">Donate to the WG</a></li>
+    </ul>
     <div class="nav-drawer-cta">
-      {% if DONATE_URL is defined %}
       <a href="https://actionnetwork.org/surveys/membership-form" target="_blank">Get Involved →</a>
-      {% else %}
-      <a href="https://actionnetwork.org/surveys/membership-form" target="_blank">Get Involved →</a>
-      {% endif %}
     </div>
   </div>
 
@@ -54,10 +56,12 @@
     <div class="footer-brand">New York City Democratic Socialists of America<br>Healthcare Working Group</div>
     <div class="footer-links">
       <a href="{{ SITEURL }}/pages/ny-health-act.html">NY Health Act</a>
+      <a href="{{ SITEURL }}/pages/single-payer.html">The Case for Single Payer</a>
+      <a href="{{ SITEURL }}/pages/mutual-aid.html">Mutual Aid</a>
       <a href="{{ SITEURL }}/pages/calendar.html">Events</a>
       <a href="{{ SITEURL }}/blog.html">Blog</a>
       {% for p in pages %}
-      {% if p.title not in ['NY Health Act', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis'] %}
+      {% if p.title not in ['NY Health Act', 'The Case for Single Payer', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis', 'Mutual Aid'] %}
       <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
       {% endif %}
       {% endfor %}
@@ -71,6 +75,9 @@
       </a>
       <a href="https://www.facebook.com/nycdsahealthcarewg/" target="_blank" rel="noopener" aria-label="Facebook">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.406 18.627 0 12 0S0 5.406 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.254h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      </a>
+      <a href="https://linktr.ee/DSAHCWG" target="_blank" rel="noopener" aria-label="Linktree">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.517.528.897 1.052.897h2.072v5.501c0 .649-.527 1.05-1.052 1.05H8.589c-.528 0-1.052-.483-1.052-1.05V16.45H5.31c-.527 0-.975-.38-1.052-.897-.08-.243 0-.486.08-.649L8.59 7.842c.243-.405.73-.567 1.134-.405.162.081.324.162.405.324l4.25 8.063c.162.244.243.568.162.812-.081.486-.528.812-1.051.812h-2.234v5.502c0 .648-.528 1.05-1.052 1.05h-1.378c-.527 0-1.052-.484-1.052-1.05V16.45h-2.07c-.527 0-1.052-.325-1.052-.812-.081-.243 0-.486.081-.73l4.25-8.062c.243-.406.729-.568 1.133-.406.163.081.325.163.406.325l2.266 4.3zm8.085-5.988l-1.538-2.912L12.562 9.08l2.153 4.057h-2.234c-.526 0-1.05.324-1.05.81-.082.244 0 .487.08.73l4.25 8.063c.244.405.73.567 1.134.405.163-.081.325-.162.406-.324l4.25-8.063c.162-.243.243-.567.162-.81-.081-.487-.528-.812-1.052-.812h-2.07V6.635c0-.648-.527-1.05-1.052-1.05h-1.377c-.527 0-1.052.483-1.052 1.05v2.443z"/></svg>
       </a>
     </div>
   </footer>
