@@ -27,8 +27,6 @@
     <ul class="nav-drawer-links">
       <li><a href="{{ SITEURL }}/">Home</a></li>
       <li><a href="{{ SITEURL }}/pages/ny-health-act.html">The NY Health Act</a></li>
-      <li><a href="{{ SITEURL }}/pages/single-payer.html">The Case for Single Payer</a></li>
-      <li><a href="{{ SITEURL }}/pages/mutual-aid.html">Mutual Aid</a></li>
       <li><a href="{{ SITEURL }}/pages/calendar.html">Events</a></li>
       <li><a href="{{ SITEURL }}/blog.html">Blog</a></li>
       {% for p in pages %}
@@ -36,8 +34,6 @@
       <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
       {% endif %}
       {% endfor %}
-    </ul>
-    <ul class="nav-drawer-links nav-drawer-links--secondary">
       <li><a href="https://linktr.ee/DSAHCWG" target="_blank" rel="noopener">Linktree</a></li>
       <li><a href="https://secure.actblue.com/donate/healthcare-nyc-dsa" target="_blank" rel="noopener">Donate to the WG</a></li>
     </ul>
