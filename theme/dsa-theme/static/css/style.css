@@ -593,6 +593,8 @@ body {
 .btn:hover { opacity: 0.88; transform: translateY(-1px); }
 .btn-red { background: var(--red); color: #fff; }
 .btn-cream { background: var(--cream); color: var(--ink); }
+.btn-ink { background: var(--ink); color: #fff; }
+.vision-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; justify-content: center; }
 .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.85); }
 .btn-outline:hover { border-color: rgba(255,255,255,0.7); color: #fff; }
 
