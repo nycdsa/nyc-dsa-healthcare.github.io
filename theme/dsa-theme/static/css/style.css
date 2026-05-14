@@ -327,6 +327,73 @@ body {
   padding: 56px 40px;
 }
 .events-inner { max-width: 1280px; margin: 0 auto; }
+
+/* ── Actions & Pledges ── */
+.actions-section {
+  background: var(--cream);
+  border-bottom: 2px solid var(--ink);
+  padding: 56px 40px;
+}
+.actions-inner { max-width: 1280px; margin: 0 auto; }
+.actions-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; }
+.actions-header-left { display: flex; flex-direction: column; gap: 4px; }
+.actions-section-label {
+  font-family: var(--sans); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--red);
+}
+.actions-section-title {
+  font-family: var(--serif); font-size: 28px; font-weight: 900;
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.action-card {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  padding: 28px 26px 24px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s, border-color 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.action-card:hover { background: var(--cream); border-color: var(--red); }
+.action-tag {
+  display: inline-block;
+  font-family: var(--sans); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--red); margin-bottom: 12px;
+}
+.action-title {
+  font-family: var(--serif); font-size: 18px; font-weight: 900;
+  color: var(--ink); line-height: 1.2; margin-bottom: 10px;
+}
+.action-desc {
+  font-family: var(--body-serif); font-size: 13px;
+  color: var(--ink-mid); line-height: 1.65; margin-bottom: 16px; flex: 1;
+}
+.action-partner { display: flex; align-items: center; gap: 6px; margin-bottom: 16px; flex-wrap: wrap; }
+.action-partner-label {
+  font-family: var(--sans); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light);
+}
+.action-partner-name {
+  font-family: var(--sans); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.06em; color: var(--ink-mid); text-transform: uppercase;
+}
+.action-cta {
+  font-family: var(--sans); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--red);
+}
+@media (max-width: 700px) {
+  .actions-section { padding: 40px 20px; }
+  .actions-grid { grid-template-columns: 1fr; }
+}
 .events-header {
   display: flex;
   align-items: baseline;
