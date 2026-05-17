@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:87d3453f-d80d-4459-969b-ab04792dba3f",
-      "name": "Coffee with Comrades: to your Healthcare!",
-      "date": "2026-05-16T15:00:00Z",
-      "date_formatted": "3:00 PM, Saturday May 16, 2026",
-      "month_year": "2026-05",
-      "month_label": "May 2026",
-      "status": "confirmed",
-      "description": "<p>Meet DSA Healthcare Working Group comrades and join fellow activists chilling after Darializa canvass in this awesome spot on Amsterdam right by 125. Let's go Darializa, let's go New York Health Act. </p><p><br></p>",
-      "browser_url": "https://actionnetwork.org/events/coffee-with-comrades-to-you-healthcare",
-      "signup_url": "https://actionnetwork.org/events/coffee-with-comrades-to-you-healthcare",
-      "location": "1351 Amsterdam Ave",
-      "borough": "New York"
-    },
-    {
       "id": "action_network:04ed8865-a68a-4980-9efb-13adbb3a526d",
       "name": "Healthcare Working Group May General Meeting",
       "date": "2026-05-21T19:00:00Z",
@@ -22,7 +8,7 @@
       "month_year": "2026-05",
       "month_label": "May 2026",
       "status": "confirmed",
-      "description": "<p>Get plugged into the healthcare working group at our May General Meeting at the People's Forum.</p><p>This month we will share updates of the work we are doing and break-out to plan our action packed \"Hot Healthcare Summer\", building up to the Labor Day parade.</p>",
+      "description": "<p> Get plugged into the healthcare working group at our May General Meeting at the People's Forum.</p><p>Snacks and get settled at 6:30. Zoom and in person meeting to start right at 7.<br></p><p>This month we will share updates of the work we are doing and break-out to plan our action packed \"Hot Healthcare Summer\", building up to the Labor Day parade.</p>",
       "browser_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
       "signup_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
       "location": "320 W 37th St",
@@ -204,23 +190,8 @@
           {
             "day": 16,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:87d3453f-d80d-4459-969b-ab04792dba3f",
-                "name": "Coffee with Comrades: to your Healthcare!",
-                "date": "2026-05-16T15:00:00Z",
-                "date_formatted": "3:00 PM, Saturday May 16, 2026",
-                "month_year": "2026-05",
-                "month_label": "May 2026",
-                "status": "confirmed",
-                "description": "<p>Meet DSA Healthcare Working Group comrades and join fellow activists chilling after Darializa canvass in this awesome spot on Amsterdam right by 125. Let's go Darializa, let's go New York Health Act. </p><p><br></p>",
-                "browser_url": "https://actionnetwork.org/events/coffee-with-comrades-to-you-healthcare",
-                "signup_url": "https://actionnetwork.org/events/coffee-with-comrades-to-you-healthcare",
-                "location": "1351 Amsterdam Ave",
-                "borough": "New York"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           }
         ],
         [
@@ -228,7 +199,7 @@
             "day": 17,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 18,
@@ -260,7 +231,7 @@
                 "month_year": "2026-05",
                 "month_label": "May 2026",
                 "status": "confirmed",
-                "description": "<p>Get plugged into the healthcare working group at our May General Meeting at the People's Forum.</p><p>This month we will share updates of the work we are doing and break-out to plan our action packed \"Hot Healthcare Summer\", building up to the Labor Day parade.</p>",
+                "description": "<p> Get plugged into the healthcare working group at our May General Meeting at the People's Forum.</p><p>Snacks and get settled at 6:30. Zoom and in person meeting to start right at 7.<br></p><p>This month we will share updates of the work we are doing and break-out to plan our action packed \"Hot Healthcare Summer\", building up to the Labor Day parade.</p>",
                 "browser_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
                 "signup_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
                 "location": "320 W 37th St",
