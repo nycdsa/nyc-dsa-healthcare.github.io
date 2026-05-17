@@ -15,6 +15,20 @@
       "borough": "New York"
     },
     {
+      "id": "action_network:ad76f379-5e9d-4ada-be54-dc65bf8e6603",
+      "name": "Healthcare Working Group May General Meeting",
+      "date": "2026-05-21T19:00:00Z",
+      "date_formatted": "7:00 PM, Thursday May 21, 2026",
+      "month_year": "2026-05",
+      "month_label": "May 2026",
+      "status": "confirmed",
+      "description": "<p>Join our healthcare working group, riding the wave that swept Mamdani into Gracie Mansion. We are an organizing space for health workers, patients, DSA curious, members of the public, and healthcare curious DSA members set to build the movement to decommodify healthcare and cover everybody for everything!</p><p>We urge people to attend and participate in person. However, we understand that traveling can make it difficult and are offering the hybrid option if you can't be with us in person.</p>",
+      "browser_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-3",
+      "signup_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-3",
+      "location": "320 W 37th St",
+      "borough": "New York"
+    },
+    {
       "id": "action_network:ee9e4cd9-1262-4fd1-b97e-08c67c771f32",
       "name": "DSAcro",
       "date": "2026-05-24T17:00:00Z",
@@ -234,6 +248,20 @@
                 "description": "<p> Get plugged into the healthcare working group at our May General Meeting at the People's Forum.</p><p>Snacks and get settled at 6:30. Zoom and in person meeting to start right at 7.<br></p><p>This month we will share updates of the work we are doing and break-out to plan our action packed \"Hot Healthcare Summer\", building up to the Labor Day parade.</p>",
                 "browser_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
                 "signup_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-2",
+                "location": "320 W 37th St",
+                "borough": "New York"
+              },
+              {
+                "id": "action_network:ad76f379-5e9d-4ada-be54-dc65bf8e6603",
+                "name": "Healthcare Working Group May General Meeting",
+                "date": "2026-05-21T19:00:00Z",
+                "date_formatted": "7:00 PM, Thursday May 21, 2026",
+                "month_year": "2026-05",
+                "month_label": "May 2026",
+                "status": "confirmed",
+                "description": "<p>Join our healthcare working group, riding the wave that swept Mamdani into Gracie Mansion. We are an organizing space for health workers, patients, DSA curious, members of the public, and healthcare curious DSA members set to build the movement to decommodify healthcare and cover everybody for everything!</p><p>We urge people to attend and participate in person. However, we understand that traveling can make it difficult and are offering the hybrid option if you can't be with us in person.</p>",
+                "browser_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-3",
+                "signup_url": "https://actionnetwork.org/events/healthcare-working-group-may-general-meeting-3",
                 "location": "320 W 37th St",
                 "borough": "New York"
               }
