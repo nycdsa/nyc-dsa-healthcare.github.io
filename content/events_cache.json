@@ -59,8 +59,8 @@
     {
       "id": "action_network:f2a9e756-31ff-4a88-a0f5-5b16782b22da",
       "name": "Healthcare WG: Comms Committee Meeting",
-      "date": "2026-06-02T19:00:00Z",
-      "date_formatted": "7:00 PM, Tuesday June 2, 2026",
+      "date": "2026-06-01T19:00:00Z",
+      "date_formatted": "7:00 PM, Monday June 1, 2026",
       "month_year": "2026-06",
       "month_label": "June 2026",
       "status": "confirmed",
@@ -428,18 +428,12 @@
           {
             "day": 1,
             "in_month": true,
-            "events": [],
-            "is_today": false
-          },
-          {
-            "day": 2,
-            "in_month": true,
             "events": [
               {
                 "id": "action_network:f2a9e756-31ff-4a88-a0f5-5b16782b22da",
                 "name": "Healthcare WG: Comms Committee Meeting",
-                "date": "2026-06-02T19:00:00Z",
-                "date_formatted": "7:00 PM, Tuesday June 2, 2026",
+                "date": "2026-06-01T19:00:00Z",
+                "date_formatted": "7:00 PM, Monday June 1, 2026",
                 "month_year": "2026-06",
                 "month_label": "June 2026",
                 "status": "confirmed",
@@ -448,7 +442,14 @@
                 "signup_url": "https://actionnetwork.org/events/healthcare-wg-comms-committee-meeting",
                 "location": "Virtual Event",
                 "borough": ""
-              },
+              }
+            ],
+            "is_today": false
+          },
+          {
+            "day": 2,
+            "in_month": true,
+            "events": [
               {
                 "id": "action_network:00b9c483-a063-4ceb-8ddc-395cf7a0c446",
                 "name": "Healthcare Working Group June Membership Committee Meeting",
