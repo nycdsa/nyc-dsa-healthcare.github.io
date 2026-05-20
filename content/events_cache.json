@@ -239,13 +239,13 @@
             "day": 19,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 20,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 21,
