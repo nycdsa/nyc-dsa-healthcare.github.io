@@ -1,34 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:ee9e4cd9-1262-4fd1-b97e-08c67c771f32",
-      "name": "DSAcro",
-      "date": "2026-05-24T17:00:00Z",
-      "date_formatted": "5:00 PM, Sunday May 24, 2026",
-      "month_year": "2026-05",
-      "month_label": "May 2026",
-      "status": "confirmed",
-      "description": "<p>\"Health is a state of complete physical, mental and social well-being and not merely the absence of disease\"</p><p>Invert your body and class society</p><p>Strengthen your core, build the base</p><p>Put the phone down and join a fun, safe, beginner-level acro-yoga class (with a touch of political education). </p><p>\"Acro-yoga\" is a playful practice with cooperative group stretching and poses that build trust, communication, strength and balance. Touching and lifting up your comrades encouraged but not necessary, nor is a partner. All body types and fitness levels welcome. Wear comfortable clothes.</p><p>A fundraiser for the DSA healthcare working group. Cost should not be a barrier, contact us if it is.</p>",
-      "browser_url": "https://actionnetwork.org/events/dsacro",
-      "signup_url": "https://actionnetwork.org/events/dsacro",
-      "location": "669 Meeker Ave",
-      "borough": "Brooklyn"
-    },
-    {
-      "id": "action_network:97494210-b384-41f4-b47d-d9e3bdae5989",
-      "name": "Sumud film screening",
-      "date": "2026-05-24T19:00:00Z",
-      "date_formatted": "7:00 PM, Sunday May 24, 2026",
-      "month_year": "2026-05",
-      "month_label": "May 2026",
-      "status": "confirmed",
-      "description": "<p>We are screening the short film Sumud - we'll order food from Pita Palace and discuss as a group after</p><p>See the trailer</p><p>https://palestineexceptionfilm.com/sumud/</p><p>The film follows an American anesthesiologist volunteering at Nasser Hospital in Gaza as he works with Palestinian surgical teams that continue training even as the medical center is under siege</p>",
-      "browser_url": "https://actionnetwork.org/events/sumud-film-screening",
-      "signup_url": "https://actionnetwork.org/events/sumud-film-screening",
-      "location": "669 Meeker Ave",
-      "borough": "Brooklyn"
-    },
-    {
       "id": "action_network:f2a9e756-31ff-4a88-a0f5-5b16782b22da",
       "name": "Healthcare WG: Comms Committee Meeting",
       "date": "2026-06-01T19:00:00Z",
@@ -242,43 +214,14 @@
           {
             "day": 24,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:ee9e4cd9-1262-4fd1-b97e-08c67c771f32",
-                "name": "DSAcro",
-                "date": "2026-05-24T17:00:00Z",
-                "date_formatted": "5:00 PM, Sunday May 24, 2026",
-                "month_year": "2026-05",
-                "month_label": "May 2026",
-                "status": "confirmed",
-                "description": "<p>\"Health is a state of complete physical, mental and social well-being and not merely the absence of disease\"</p><p>Invert your body and class society</p><p>Strengthen your core, build the base</p><p>Put the phone down and join a fun, safe, beginner-level acro-yoga class (with a touch of political education). </p><p>\"Acro-yoga\" is a playful practice with cooperative group stretching and poses that build trust, communication, strength and balance. Touching and lifting up your comrades encouraged but not necessary, nor is a partner. All body types and fitness levels welcome. Wear comfortable clothes.</p><p>A fundraiser for the DSA healthcare working group. Cost should not be a barrier, contact us if it is.</p>",
-                "browser_url": "https://actionnetwork.org/events/dsacro",
-                "signup_url": "https://actionnetwork.org/events/dsacro",
-                "location": "669 Meeker Ave",
-                "borough": "Brooklyn"
-              },
-              {
-                "id": "action_network:97494210-b384-41f4-b47d-d9e3bdae5989",
-                "name": "Sumud film screening",
-                "date": "2026-05-24T19:00:00Z",
-                "date_formatted": "7:00 PM, Sunday May 24, 2026",
-                "month_year": "2026-05",
-                "month_label": "May 2026",
-                "status": "confirmed",
-                "description": "<p>We are screening the short film Sumud - we'll order food from Pita Palace and discuss as a group after</p><p>See the trailer</p><p>https://palestineexceptionfilm.com/sumud/</p><p>The film follows an American anesthesiologist volunteering at Nasser Hospital in Gaza as he works with Palestinian surgical teams that continue training even as the medical center is under siege</p>",
-                "browser_url": "https://actionnetwork.org/events/sumud-film-screening",
-                "signup_url": "https://actionnetwork.org/events/sumud-film-screening",
-                "location": "669 Meeker Ave",
-                "borough": "Brooklyn"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 25,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 26,
