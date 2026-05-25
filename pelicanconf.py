@@ -44,7 +44,7 @@ DONATE_URL = "https://chuffed.org/project/nyc-dsa-healthcare"
 
 # SEO defaults
 SITE_DESCRIPTION = "NYC DSA's Healthcare Working Group is building a mass movement for single-payer healthcare in New York. Find free healthcare resources, take action, and join the fight for the NY Health Act."
-SITE_IMAGE = "https://healthcare.socialists.nyc/theme/images/nycdsa-hcwg-logo.png"
+SITE_IMAGE = "https://healthcare.socialists.nyc/theme/images/favicon.png"
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
