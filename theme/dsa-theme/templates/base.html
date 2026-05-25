@@ -102,5 +102,43 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleMenu(false); });
   </script>
 
+  <!-- GA4 custom click tracking -->
+  <script>
+    (function () {
+      // Map of link patterns to human-readable event labels
+      var trackedLinks = [
+        { match: 'actionnetwork.org/surveys/membership-form', label: 'Join the Working Group' },
+        { match: 'actblue.com/donate/healthcare-nyc-dsa',    label: 'Donate to the WG' },
+        { match: 'linktr.ee/DSAHCWG',                        label: 'Linktree' },
+        { match: 'socialists.nyc',                           label: 'Main NYC DSA Website' },
+        { match: 'calendar.socialists.nyc',                  label: 'See All Upcoming DSA Events' },
+        { match: 'actionnetwork.org/letters/patients-over-profits-pledge', label: 'Sign Patients Over Profits Pledge' },
+        { match: 'patientsoverprofits.org',                  label: 'Patients Over Profits Website' },
+        { match: 'timfrasca.substack.com',                   label: 'Read Newsletter' },
+        { match: '/pages/ny-health-act',                     label: 'NY Health Act Page' },
+        { match: '/pages/calendar',                          label: 'Events Calendar' },
+        { match: '/blog',                                     label: 'Blog' },
+      ];
+
+      document.addEventListener('click', function (e) {
+        var el = e.target.closest('a');
+        if (!el || !el.href) return;
+
+        var href = el.href;
+        for (var i = 0; i < trackedLinks.length; i++) {
+          if (href.indexOf(trackedLinks[i].match) !== -1) {
+            gtag('event', 'click', {
+              event_category: 'CTA',
+              event_label: trackedLinks[i].label,
+              link_url: href,
+              page_location: window.location.href,
+            });
+            break;
+          }
+        }
+      });
+    })();
+  </script>
+
 </body>
 </html>
