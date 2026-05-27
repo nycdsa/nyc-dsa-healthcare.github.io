@@ -27,6 +27,20 @@
       "signup_url": "https://actionnetwork.org/events/healthcare-working-group-june-membership-committee-meeting",
       "location": "Virtual Event",
       "borough": ""
+    },
+    {
+      "id": "action_network:f5e7d869-4b0d-460d-89a8-df9c069f62f9",
+      "name": "Building out the Healthcare WG Labor coordinating committee",
+      "date": "2026-06-05T20:00:00Z",
+      "date_formatted": "8:00 PM, Friday June 5, 2026",
+      "month_year": "2026-06",
+      "month_label": "June 2026",
+      "status": "confirmed",
+      "description": "<div>Interested in healthcare labor organizing, workplace campaigns, union strategy, or helping build stronger coordination in healthcare justice in NYC? Join us as we continue building out the Labor Coordination Subcommittee.</div><div><br></div><div>We\u2019ll be discussing labor organizing projects, NYHA education, union outreach, and ways to support healthcare organizing throughout the city. Whether you\u2019re experienced in organizing or just looking to get involved, come through!</div>",
+      "browser_url": "https://actionnetwork.org/events/labor-coordination-committee-meet-up",
+      "signup_url": "https://actionnetwork.org/events/labor-coordination-committee-meet-up",
+      "location": "14 Jefferson St.",
+      "borough": "New York"
     }
   ],
   "calendar": [
@@ -227,13 +241,13 @@
             "day": 26,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 27,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 28,
@@ -368,7 +382,22 @@
           {
             "day": 5,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:f5e7d869-4b0d-460d-89a8-df9c069f62f9",
+                "name": "Building out the Healthcare WG Labor coordinating committee",
+                "date": "2026-06-05T20:00:00Z",
+                "date_formatted": "8:00 PM, Friday June 5, 2026",
+                "month_year": "2026-06",
+                "month_label": "June 2026",
+                "status": "confirmed",
+                "description": "<div>Interested in healthcare labor organizing, workplace campaigns, union strategy, or helping build stronger coordination in healthcare justice in NYC? Join us as we continue building out the Labor Coordination Subcommittee.</div><div><br></div><div>We\u2019ll be discussing labor organizing projects, NYHA education, union outreach, and ways to support healthcare organizing throughout the city. Whether you\u2019re experienced in organizing or just looking to get involved, come through!</div>",
+                "browser_url": "https://actionnetwork.org/events/labor-coordination-committee-meet-up",
+                "signup_url": "https://actionnetwork.org/events/labor-coordination-committee-meet-up",
+                "location": "14 Jefferson St.",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
