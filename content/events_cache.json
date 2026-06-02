@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:f2a9e756-31ff-4a88-a0f5-5b16782b22da",
-      "name": "Healthcare WG: Comms Committee Meeting",
-      "date": "2026-06-01T19:00:00Z",
-      "date_formatted": "7:00 PM, Monday June 1, 2026",
-      "month_year": "2026-06",
-      "month_label": "June 2026",
-      "status": "confirmed",
-      "description": "<p>Join the Healthcare Working Group Comms Committee meeting, where we're building a mass communications strategy around Medicare for All, the New York Health Act, and a socialist healthcare system that puts working people over corporate profits.</p><p>We'll be discussing the following:</p>\r\n<ol>\r\n<li><strong>Developing a weekly HCWG newsletter</strong> that gives readers actions to plug into and articles to help them understand the state of healthcare.</li>\r\n<li><strong>Developing blog posts for the new HCWG blog, <em>Beyond Diagnosis</em>.</strong> If you're a health worker, patient, health researcher, or just someone with something to say about the healthcare system, come discuss and pitch an idea to be featured!</li>\r\n<li><strong>Building a field and social media comms strategy</strong> to educate and mobilize people around single payer healthcare. If you're interested in developing fun, engaging content to teach NYC about a better healthcare future, come get involved!</li></ol><p><br></p><p><strong>Zoom Info:</strong></p><p>Topic: Healthcare WG: Comms Committee Meeting<br>Time: Jun 1, 2026 07:00 PM Eastern Time (US and Canada)<br>Join Zoom Meeting<br><a href=\"https://us02web.zoom.us/j/84602240170?pwd=hFDb1X1Z34oQCAfhXoYLjogbaXKckk.1\">https://us02web.zoom.us/j/84602240170?pwd=hFDb1X1Z34oQCAfhXoYLjogbaXKckk.1</a><br><br>Meeting chat link<br><a href=\"https://us02web.zoom.us/launch/jc/84602240170\">https://us02web.zoom.us/launch/jc/84602240170</a><br><br>Meeting ID: 846 0224 0170<br>Passcode: 061625</p>",
-      "browser_url": "https://actionnetwork.org/events/healthcare-wg-comms-committee-meeting",
-      "signup_url": "https://actionnetwork.org/events/healthcare-wg-comms-committee-meeting",
-      "location": "Virtual Event",
-      "borough": ""
-    },
-    {
       "id": "action_network:00b9c483-a063-4ceb-8ddc-395cf7a0c446",
       "name": "Healthcare Working Group June Membership Committee Meeting",
       "date": "2026-06-02T19:00:00Z",
@@ -58,23 +44,8 @@
           {
             "day": 1,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:f2a9e756-31ff-4a88-a0f5-5b16782b22da",
-                "name": "Healthcare WG: Comms Committee Meeting",
-                "date": "2026-06-01T19:00:00Z",
-                "date_formatted": "7:00 PM, Monday June 1, 2026",
-                "month_year": "2026-06",
-                "month_label": "June 2026",
-                "status": "confirmed",
-                "description": "<p>Join the Healthcare Working Group Comms Committee meeting, where we're building a mass communications strategy around Medicare for All, the New York Health Act, and a socialist healthcare system that puts working people over corporate profits.</p><p>We'll be discussing the following:</p>\r\n<ol>\r\n<li><strong>Developing a weekly HCWG newsletter</strong> that gives readers actions to plug into and articles to help them understand the state of healthcare.</li>\r\n<li><strong>Developing blog posts for the new HCWG blog, <em>Beyond Diagnosis</em>.</strong> If you're a health worker, patient, health researcher, or just someone with something to say about the healthcare system, come discuss and pitch an idea to be featured!</li>\r\n<li><strong>Building a field and social media comms strategy</strong> to educate and mobilize people around single payer healthcare. If you're interested in developing fun, engaging content to teach NYC about a better healthcare future, come get involved!</li></ol><p><br></p><p><strong>Zoom Info:</strong></p><p>Topic: Healthcare WG: Comms Committee Meeting<br>Time: Jun 1, 2026 07:00 PM Eastern Time (US and Canada)<br>Join Zoom Meeting<br><a href=\"https://us02web.zoom.us/j/84602240170?pwd=hFDb1X1Z34oQCAfhXoYLjogbaXKckk.1\">https://us02web.zoom.us/j/84602240170?pwd=hFDb1X1Z34oQCAfhXoYLjogbaXKckk.1</a><br><br>Meeting chat link<br><a href=\"https://us02web.zoom.us/launch/jc/84602240170\">https://us02web.zoom.us/launch/jc/84602240170</a><br><br>Meeting ID: 846 0224 0170<br>Passcode: 061625</p>",
-                "browser_url": "https://actionnetwork.org/events/healthcare-wg-comms-committee-meeting",
-                "signup_url": "https://actionnetwork.org/events/healthcare-wg-comms-committee-meeting",
-                "location": "Virtual Event",
-                "borough": ""
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 2,
@@ -95,7 +66,7 @@
                 "borough": ""
               }
             ],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 3,
