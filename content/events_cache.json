@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:00b9c483-a063-4ceb-8ddc-395cf7a0c446",
-      "name": "Healthcare Working Group June Membership Committee Meeting",
-      "date": "2026-06-02T19:00:00Z",
-      "date_formatted": "7:00 PM, Tuesday June 2, 2026",
-      "month_year": "2026-06",
-      "month_label": "June 2026",
-      "status": "confirmed",
-      "description": "<p>Monthly membership committee meeting</p>",
-      "browser_url": "https://actionnetwork.org/events/healthcare-working-group-june-membership-committee-meeting",
-      "signup_url": "https://actionnetwork.org/events/healthcare-working-group-june-membership-committee-meeting",
-      "location": "Virtual Event",
-      "borough": ""
-    },
-    {
       "id": "action_network:f5e7d869-4b0d-460d-89a8-df9c069f62f9",
       "name": "Building out the Healthcare WG Labor coordinating committee",
       "date": "2026-06-05T17:30:00Z",
@@ -50,29 +36,14 @@
           {
             "day": 2,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:00b9c483-a063-4ceb-8ddc-395cf7a0c446",
-                "name": "Healthcare Working Group June Membership Committee Meeting",
-                "date": "2026-06-02T19:00:00Z",
-                "date_formatted": "7:00 PM, Tuesday June 2, 2026",
-                "month_year": "2026-06",
-                "month_label": "June 2026",
-                "status": "confirmed",
-                "description": "<p>Monthly membership committee meeting</p>",
-                "browser_url": "https://actionnetwork.org/events/healthcare-working-group-june-membership-committee-meeting",
-                "signup_url": "https://actionnetwork.org/events/healthcare-working-group-june-membership-committee-meeting",
-                "location": "Virtual Event",
-                "borough": ""
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 3,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 4,
