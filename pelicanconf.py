@@ -7,6 +7,8 @@ SITEURL = ""
 
 PATH = "content"
 
+STATIC_PATHS = ["images"]
+
 TIMEZONE = "America/New_York"
 
 DEFAULT_LANG = "en"
