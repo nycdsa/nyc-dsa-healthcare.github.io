@@ -112,12 +112,11 @@
     {{ article.content }}
 
     <div class="article-footer">
-<div class="article-share">
+      <div class="article-share">
         <span class="article-share-label">Share:</span>
-        <a class="share-btn" href="https://twitter.com/intent/tweet?url={{ SITEURL }}/{{ article.url }}&text={{ article.title }}" target="_blank" rel="noopener">Twitter / X</a>
-        <a class="share-btn" href="https://bsky.app/intent/compose?text={{ article.title | urlencode }}%20{{ (SITEURL ~ '/' ~ article.url) | urlencode }}" target="_blank" rel="noopener">Bluesky</a>
-        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}/{{ article.url }}" target="_blank" rel="noopener">Facebook</a>
-        <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href)">Copy link</button>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?url={{ (SITEURL ~ '/' ~ article.url) | urlencode }}&text={{ article.title | urlencode }}" target="_blank" rel="noopener">Twitter / X</a>
+        <a class="share-btn" href="https://bsky.app/intent/compose?text={{ (article.title ~ ' ' ~ SITEURL ~ '/' ~ article.url) | urlencode }}" target="_blank" rel="noopener">Bluesky</a>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u={{ (SITEURL ~ '/' ~ article.url) | urlencode }}" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
 
