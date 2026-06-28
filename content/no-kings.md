@@ -5,6 +5,8 @@ Category: From the OC
 Slug: no-kings
 Summary: The media wants to call Zohran Mamdani a "kingmaker" after Tuesday's DSA sweep, but the real force behind those wins was the relentless work of thousands of volunteers. Now it's time to build off the momentum and push for the New York Health Act and Medicare for All.
 
+![Claire Valdez for Congress rally, June 23]({static}/images/no-kings-rally.png)
+
 The immediate reaction in mainstream media about the huge triumph of DSA candidates Tuesday night was to anoint Zohran Mamdani a "kingmaker."
 
 We know what they mean: the mayor took a big risk by backing socialists in defiance of powerful Democrats in the U.S. Congress as well as several challengers to party incumbents in Albany. Alienating them and then losing would have been costly; instead, DSA candidates swept the board with a single exception, often by double digits.
