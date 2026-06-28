@@ -3,7 +3,7 @@ Date: 2026-06-28
 Author: HCWG OC
 Category: From the OC
 Slug: no-kings
-Summary: The mainstream media wants to call Zohran Mamdani a "kingmaker" after Tuesday's DSA sweep — but the real force behind those wins was the relentless, mass-based work of thousands of volunteers. Now it's time to take a big swing at the New York Health Act.
+Summary: The media wants to call Zohran Mamdani a "kingmaker" after Tuesday's DSA sweep, but the real force behind those wins was the relentless work of thousands of volunteers. Now it's time to build off the momentum and push for the New York Health Act and Medicare for All.
 
 The immediate reaction in mainstream media about the huge triumph of DSA candidates Tuesday night was to anoint Zohran Mamdani a "kingmaker."
 
