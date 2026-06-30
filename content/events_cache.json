@@ -1,5 +1,20 @@
 {
-  "events": [],
+  "events": [
+    {
+      "id": "action_network:0974e9ff-5c0c-4294-8fa2-492b2a2f4710",
+      "name": "HealthCare WG Labor subcommittee meeting",
+      "date": "2026-07-19T12:30:00Z",
+      "date_formatted": "12:30 PM, Sunday July 19, 2026",
+      "month_year": "2026-07",
+      "month_label": "July 2026",
+      "status": "confirmed",
+      "description": "<p>Join Abby Donley to review organizing next steps for rank and filers and their activist supporters. </p>",
+      "browser_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
+      "signup_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
+      "location": "14 Jefferson St.",
+      "borough": "New York"
+    }
+  ],
   "calendar": [
     {
       "month_label": "June 2026",
@@ -215,6 +230,247 @@
           {
             "day": 0,
             "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          }
+        ]
+      ]
+    },
+    {
+      "month_label": "July 2026",
+      "month_year": "2026-07",
+      "weeks": [
+        [
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 0,
+            "in_month": false,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 1,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 2,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 3,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 4,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 5,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 6,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 7,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 8,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 9,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 10,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 11,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 12,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 13,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 14,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 15,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 16,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 17,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 18,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 19,
+            "in_month": true,
+            "events": [
+              {
+                "id": "action_network:0974e9ff-5c0c-4294-8fa2-492b2a2f4710",
+                "name": "HealthCare WG Labor subcommittee meeting",
+                "date": "2026-07-19T12:30:00Z",
+                "date_formatted": "12:30 PM, Sunday July 19, 2026",
+                "month_year": "2026-07",
+                "month_label": "July 2026",
+                "status": "confirmed",
+                "description": "<p>Join Abby Donley to review organizing next steps for rank and filers and their activist supporters. </p>",
+                "browser_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
+                "signup_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
+                "location": "14 Jefferson St.",
+                "borough": "New York"
+              }
+            ],
+            "is_today": false
+          },
+          {
+            "day": 20,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 21,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 22,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 23,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 24,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 25,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          }
+        ],
+        [
+          {
+            "day": 26,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 27,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 28,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 29,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 30,
+            "in_month": true,
+            "events": [],
+            "is_today": false
+          },
+          {
+            "day": 31,
+            "in_month": true,
             "events": [],
             "is_today": false
           },
