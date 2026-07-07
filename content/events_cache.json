@@ -13,6 +13,20 @@
       "signup_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
       "location": "14 Jefferson St.",
       "borough": "New York"
+    },
+    {
+      "id": "action_network:fcccc6f3-924e-48fe-ad88-06779bb9d915",
+      "name": "Dive-In to Fight for Healthcare",
+      "date": "2026-07-25T14:00:00Z",
+      "date_formatted": "2:00 PM, Saturday July 25, 2026",
+      "month_year": "2026-07",
+      "month_label": "July 2026",
+      "status": "confirmed",
+      "description": "<p>Meeting to hear pros and cons on our resolution to focus Healthcare working group energies on passing NYHA and applying and winning priority status in the chapter. You should receive a copy of this very brief resolution by email to review and comment or submit amendment ahead of the meeting. We will vote online, in the days following the meeting. We will also breakout by geographic branch to discuss strategies to engage in our branches. There will be time for updates and announcements and after we invite all to jump in the pool with us! Everybody In Nobody Out! LOL.</p>",
+      "browser_url": "https://actionnetwork.org/events/dive-in-to-fight-for-healthcare",
+      "signup_url": "https://actionnetwork.org/events/dive-in-to-fight-for-healthcare",
+      "location": "Shore Blvd, Astoria",
+      "borough": "Queens"
     }
   ],
   "calendar": [
@@ -207,7 +221,22 @@
           {
             "day": 25,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:fcccc6f3-924e-48fe-ad88-06779bb9d915",
+                "name": "Dive-In to Fight for Healthcare",
+                "date": "2026-07-25T14:00:00Z",
+                "date_formatted": "2:00 PM, Saturday July 25, 2026",
+                "month_year": "2026-07",
+                "month_label": "July 2026",
+                "status": "confirmed",
+                "description": "<p>Meeting to hear pros and cons on our resolution to focus Healthcare working group energies on passing NYHA and applying and winning priority status in the chapter. You should receive a copy of this very brief resolution by email to review and comment or submit amendment ahead of the meeting. We will vote online, in the days following the meeting. We will also breakout by geographic branch to discuss strategies to engage in our branches. There will be time for updates and announcements and after we invite all to jump in the pool with us! Everybody In Nobody Out! LOL.</p>",
+                "browser_url": "https://actionnetwork.org/events/dive-in-to-fight-for-healthcare",
+                "signup_url": "https://actionnetwork.org/events/dive-in-to-fight-for-healthcare",
+                "location": "Shore Blvd, Astoria",
+                "borough": "Queens"
+              }
+            ],
             "is_today": false
           }
         ],
