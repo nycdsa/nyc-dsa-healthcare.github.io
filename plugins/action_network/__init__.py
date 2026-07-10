@@ -116,8 +116,12 @@ def _load_from_cache():
         return [], []
 
 
-def _build_calendar(events):
-    """Build a month-grid data structure for the calendar template."""
+def _build_calendar(events, lookahead_months=4):
+    """Build a month-grid data structure for the calendar template.
+
+    Always includes the current month plus `lookahead_months` future months so
+    the calendar navigation has months to jump to even if some are event-free.
+    """
     today = date.today()
 
     month_set = set()
@@ -127,7 +131,10 @@ def _build_calendar(events):
             parts = date_str[:10].split("-")
             month_set.add((int(parts[0]), int(parts[1])))
 
-    month_set.add((today.year, today.month))
+    # Always include current month + next N months
+    for i in range(lookahead_months + 1):
+        m = today.month - 1 + i
+        month_set.add((today.year + m // 12, m % 12 + 1))
 
     event_lookup = {}
     for event in events:
