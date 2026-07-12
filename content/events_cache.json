@@ -27,6 +27,34 @@
       "signup_url": "https://actionnetwork.org/events/dive-in-to-fight-for-healthcare",
       "location": "Shore Blvd, Astoria",
       "borough": "Queens"
+    },
+    {
+      "id": "action_network:5d28fa00-2935-461d-93d6-a359f1b2b1f4",
+      "name": "Back ground/intro to New York Health Act",
+      "date": "2026-08-07T18:30:00Z",
+      "date_formatted": "6:30 PM, Friday August 7, 2026",
+      "month_year": "2026-08",
+      "month_label": "August 2026",
+      "status": "confirmed",
+      "description": "<p>Come learn about the New York Health Act our universal healthcare bill to de-privatize how we pay for medical costs and send the extortionist insurance companies packing. No more premiums, deductibles, and co pays! No denials of care or medication and no restricted networks! There will be time Q&A and discussion.</p>",
+      "browser_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act",
+      "signup_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act",
+      "location": "14 Jefferson St.",
+      "borough": "New York"
+    },
+    {
+      "id": "action_network:5acfe794-eda8-4ee8-9b24-dce33105103f",
+      "name": "Back ground/intro to New York Health Act",
+      "date": "2026-09-03T18:30:00Z",
+      "date_formatted": "6:30 PM, Thursday September 3, 2026",
+      "month_year": "2026-09",
+      "month_label": "September 2026",
+      "status": "confirmed",
+      "description": "<p>Come learn about the New York Health Act our universal healthcare bill to de-privatize how we pay for medical costs and send the extortionist insurance companies packing. No more premiums, deductibles, and co pays! No denials of care or medication and no restricted networks! There will be time Q&A and discussion.</p>",
+      "browser_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act-2",
+      "signup_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act-2",
+      "location": "14 Jefferson St.",
+      "borough": "New York"
     }
   ],
   "calendar": [
@@ -368,7 +396,22 @@
           {
             "day": 7,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:5d28fa00-2935-461d-93d6-a359f1b2b1f4",
+                "name": "Back ground/intro to New York Health Act",
+                "date": "2026-08-07T18:30:00Z",
+                "date_formatted": "6:30 PM, Friday August 7, 2026",
+                "month_year": "2026-08",
+                "month_label": "August 2026",
+                "status": "confirmed",
+                "description": "<p>Come learn about the New York Health Act our universal healthcare bill to de-privatize how we pay for medical costs and send the extortionist insurance companies packing. No more premiums, deductibles, and co pays! No denials of care or medication and no restricted networks! There will be time Q&A and discussion.</p>",
+                "browser_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act",
+                "signup_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act",
+                "location": "14 Jefferson St.",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
@@ -588,7 +631,22 @@
           {
             "day": 3,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:5acfe794-eda8-4ee8-9b24-dce33105103f",
+                "name": "Back ground/intro to New York Health Act",
+                "date": "2026-09-03T18:30:00Z",
+                "date_formatted": "6:30 PM, Thursday September 3, 2026",
+                "month_year": "2026-09",
+                "month_label": "September 2026",
+                "status": "confirmed",
+                "description": "<p>Come learn about the New York Health Act our universal healthcare bill to de-privatize how we pay for medical costs and send the extortionist insurance companies packing. No more premiums, deductibles, and co pays! No denials of care or medication and no restricted networks! There will be time Q&A and discussion.</p>",
+                "browser_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act-2",
+                "signup_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act-2",
+                "location": "14 Jefferson St.",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
