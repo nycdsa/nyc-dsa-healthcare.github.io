@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:0974e9ff-5c0c-4294-8fa2-492b2a2f4710",
-      "name": "HealthCare WG Labor subcommittee meeting",
-      "date": "2026-07-19T12:30:00Z",
-      "date_formatted": "12:30 PM, Sunday July 19, 2026",
-      "month_year": "2026-07",
-      "month_label": "July 2026",
-      "status": "confirmed",
-      "description": "<p>Join us to discuss mapping our organizations, NYHA education, union outreach/ strategy session, and ways to support healthcare organizing campaigns throughout the city. In person participation is encouraged, but a zoom link will be shared before the meeting.</p>",
-      "browser_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
-      "signup_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
-      "location": "14 Jefferson St.",
-      "borough": "New York"
-    },
-    {
       "id": "action_network:fcccc6f3-924e-48fe-ad88-06779bb9d915",
       "name": "Dive-In to Fight for Healthcare",
       "date": "2026-07-25T14:00:00Z",
@@ -198,29 +184,14 @@
           {
             "day": 19,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:0974e9ff-5c0c-4294-8fa2-492b2a2f4710",
-                "name": "HealthCare WG Labor subcommittee meeting",
-                "date": "2026-07-19T12:30:00Z",
-                "date_formatted": "12:30 PM, Sunday July 19, 2026",
-                "month_year": "2026-07",
-                "month_label": "July 2026",
-                "status": "confirmed",
-                "description": "<p>Join us to discuss mapping our organizations, NYHA education, union outreach/ strategy session, and ways to support healthcare organizing campaigns throughout the city. In person participation is encouraged, but a zoom link will be shared before the meeting.</p>",
-                "browser_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
-                "signup_url": "https://actionnetwork.org/events/healthcare-wg-labor-subcommittee-meeting",
-                "location": "14 Jefferson St.",
-                "borough": "New York"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 20,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 21,
