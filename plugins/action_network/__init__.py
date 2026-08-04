@@ -120,7 +120,7 @@ def _load_manual_events():
         if not date_str:
             continue
         try:
-            # Accept naive local datetimes and treat as Eastern (UTC-4 approx)
+            # Accept date-only (YYYY-MM-DD) or full ISO datetime
             dt = datetime.fromisoformat(date_str)
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=timezone.utc)
@@ -130,10 +130,16 @@ def _load_manual_events():
         if dt < today_start:
             continue
 
-        date_formatted = dt.strftime("%-I:%M %p, %A %B %-d, %Y")
+        # Build human-readable date/time string
+        day_label = dt.strftime("%A, %B %-d, %Y")
+        start_time = raw.get("start_time", "")
         end_time = raw.get("end_time", "")
-        if end_time:
-            date_formatted += f" – {end_time}"
+        if start_time and end_time:
+            date_formatted = f"{start_time} – {end_time}, {day_label}"
+        elif start_time:
+            date_formatted = f"{start_time}, {day_label}"
+        else:
+            date_formatted = day_label
 
         events.append({
             "id": f"manual-{date_str}-{raw.get('name','')}",
