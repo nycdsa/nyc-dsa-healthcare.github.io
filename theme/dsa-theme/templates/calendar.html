@@ -127,6 +127,104 @@
   }
   .no-events p { font-size: 1.1rem; margin-bottom: 1rem; }
 
+  /* ── Manual event pill (button styled like pill) ── */
+  .cal-event-pill--manual {
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    background: var(--ink);
+  }
+  .cal-event-pill--manual:hover { background: var(--red); }
+
+  /* ── Event detail modal ── */
+  .event-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .event-modal-overlay.open { display: flex; }
+  .event-modal {
+    background: var(--cream, #faf8f4);
+    border: 3px solid var(--ink, #1a1a1a);
+    max-width: 520px;
+    width: 100%;
+    padding: 36px 40px 32px;
+    position: relative;
+  }
+  .event-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--ink, #1a1a1a);
+    line-height: 1;
+  }
+  .event-modal-tag {
+    font-family: var(--sans, sans-serif);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--red, #c0392b);
+    margin-bottom: 10px;
+  }
+  .event-modal-title {
+    font-family: var(--serif, serif);
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--ink, #1a1a1a);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .event-modal-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .event-modal-meta-row {
+    font-family: var(--sans, sans-serif);
+    font-size: 13px;
+    color: var(--ink-mid, #3b3838);
+    display: flex;
+    gap: 10px;
+  }
+  .event-modal-meta-label {
+    font-weight: 700;
+    min-width: 70px;
+    flex-shrink: 0;
+  }
+  .event-modal-desc {
+    font-family: var(--body-serif, serif);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-mid, #3b3838);
+    margin-bottom: 24px;
+    border-top: 1px solid var(--cream-dark, #e0ddd8);
+    padding-top: 18px;
+  }
+  .event-modal-contact {
+    background: var(--ink, #1a1a1a);
+    padding: 16px 20px;
+    font-family: var(--sans, sans-serif);
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+  }
+  .event-modal-contact a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
   /* ── Responsive: collapse grid on small screens ── */
   @media (max-width: 640px) {
     .cal-grid { grid-template-columns: repeat(7, minmax(2.5rem, 1fr)); }
@@ -182,11 +280,21 @@
               <div class="cal-cell{% if cell.is_today %} today{% endif %}" role="gridcell">
                 <div class="cal-day-num">{{ cell.day }}</div>
                 {% for event in cell.events %}
+                  {% if event.is_manual %}
+                  <button class="cal-event-pill cal-event-pill--manual"
+                     title="{{ event.name }}"
+                     onclick="showEventModal(this)"
+                     data-name="{{ event.name }}"
+                     data-date="{{ event.date_formatted }}"
+                     data-location="{{ event.location }}"
+                     data-desc="{{ event.description | e }}">{{ event.name }}</button>
+                  {% else %}
                   <a class="cal-event-pill"
                      href="{{ event.signup_url }}"
                      title="{{ event.name }}"
                      target="_blank"
                      rel="noopener">{{ event.name }}</a>
+                  {% endif %}
                 {% endfor %}
               </div>
             {% else %}
@@ -218,4 +326,47 @@
 </section>
 
 {% endif %}
+
+<!-- Event detail modal (for manually-added events) -->
+<div class="event-modal-overlay" id="eventModalOverlay" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+  <div class="event-modal">
+    <button class="event-modal-close" onclick="closeEventModal()" aria-label="Close">&times;</button>
+    <div class="event-modal-tag">HCWG Event</div>
+    <div class="event-modal-title" id="eventModalTitle"></div>
+    <div class="event-modal-meta">
+      <div class="event-modal-meta-row"><span class="event-modal-meta-label">When</span><span id="eventModalDate"></span></div>
+      <div class="event-modal-meta-row" id="eventModalLocationRow"><span class="event-modal-meta-label">Where</span><span id="eventModalLocation"></span></div>
+    </div>
+    <div class="event-modal-desc" id="eventModalDesc"></div>
+    <div class="event-modal-contact">
+      Questions? Reach out to the working group at <a href="mailto:healthcare@socialists.nyc">healthcare@socialists.nyc</a>
+    </div>
+  </div>
+</div>
+
+{% block scripts %}
+<script>
+  function showEventModal(btn) {
+    document.getElementById('eventModalTitle').textContent    = btn.dataset.name;
+    document.getElementById('eventModalDate').textContent     = btn.dataset.date;
+    document.getElementById('eventModalDesc').textContent     = btn.dataset.desc;
+    var loc = btn.dataset.location;
+    document.getElementById('eventModalLocation').textContent = loc;
+    document.getElementById('eventModalLocationRow').style.display = loc ? '' : 'none';
+    document.getElementById('eventModalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeEventModal() {
+    document.getElementById('eventModalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('eventModalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeEventModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeEventModal();
+  });
+</script>
+{% endblock %}
+
 {% endblock %}

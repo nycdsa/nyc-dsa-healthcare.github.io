@@ -20,6 +20,7 @@ BASE_URL = "https://actionnetwork.org/api/v2"
 # Path to the committed events cache, relative to repo root
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CACHE_PATH = os.path.join(_REPO_ROOT, "content", "events_cache.json")
+MANUAL_EVENTS_PATH = os.path.join(_REPO_ROOT, "content", "data", "manual_events.json")
 
 
 def _parse_dt(date_str):
@@ -99,6 +100,57 @@ def fetch_events(api_key):
         and _parse_dt(e["date"]) >= today_start
     ]
     events.sort(key=lambda e: e["date"])
+    return events
+
+
+def _load_manual_events():
+    """Load manually authored events from content/data/manual_events.json."""
+    try:
+        with open(MANUAL_EVENTS_PATH) as f:
+            raw_list = json.load(f)
+    except Exception:
+        return []
+
+    now = datetime.now(timezone.utc)
+    today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    events = []
+
+    for raw in raw_list:
+        date_str = raw.get("date", "")
+        if not date_str:
+            continue
+        try:
+            # Accept naive local datetimes and treat as Eastern (UTC-4 approx)
+            dt = datetime.fromisoformat(date_str)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+
+        if dt < today_start:
+            continue
+
+        date_formatted = dt.strftime("%-I:%M %p, %A %B %-d, %Y")
+        end_time = raw.get("end_time", "")
+        if end_time:
+            date_formatted += f" – {end_time}"
+
+        events.append({
+            "id": f"manual-{date_str}-{raw.get('name','')}",
+            "name": raw.get("name", ""),
+            "date": date_str,
+            "date_formatted": date_formatted,
+            "month_year": dt.strftime("%Y-%m"),
+            "month_label": dt.strftime("%B %Y"),
+            "status": "confirmed",
+            "description": raw.get("description", ""),
+            "browser_url": "",
+            "signup_url": "",
+            "location": raw.get("location", ""),
+            "borough": "",
+            "is_manual": True,
+        })
+
     return events
 
 
@@ -183,16 +235,21 @@ def add_events_to_context(pelican):
         # API key available — fetch live (GitHub Actions build)
         try:
             events = fetch_events(api_key)
-            calendar = _build_calendar(events)
             print(f"action_network plugin: fetched {len(events)} upcoming events from API")
         except Exception as exc:
             print(f"action_network plugin: ERROR fetching from API — {exc}, falling back to cache")
-            events, calendar = _load_from_cache()
+            events, _ = _load_from_cache()
     else:
         # No API key — read from committed cache (Cloudflare Pages build)
-        events, calendar = _load_from_cache()
+        events, _ = _load_from_cache()
 
-    pelican.settings["ACTION_NETWORK_EVENTS"] = events
+    manual = _load_manual_events()
+    print(f"action_network plugin: loaded {len(manual)} manual events")
+
+    all_events = sorted(events + manual, key=lambda e: e["date"])
+    calendar = _build_calendar(all_events)
+
+    pelican.settings["ACTION_NETWORK_EVENTS"] = all_events
     pelican.settings["ACTION_NETWORK_CALENDAR"] = calendar
 
 
