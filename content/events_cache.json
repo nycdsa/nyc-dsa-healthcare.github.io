@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:5d28fa00-2935-461d-93d6-a359f1b2b1f4",
-      "name": "New York Health Act 101",
-      "date": "2026-08-07T18:30:00Z",
-      "date_formatted": "6:30 PM, Friday August 7, 2026",
-      "month_year": "2026-08",
-      "month_label": "August 2026",
-      "status": "confirmed",
-      "description": "<p>Come learn about the New York Health Act, a bill to de-privatize healthcare and send the extortionist insurance companies packing. No more premiums, deductibles, and co pays! No denials of care or medication and no restricted networks! </p><p>Please read this <a href=\"https://docs.google.com/document/d/1uIN6dwAjvNr8n50u9AcFl1Hk_DnBwDRf/edit?usp=sharing&ouid=100754013011184138895&rtpof=true&sd=true\">short explainer of the New York Health Act</a> before the session</p><p><a href=\"https://vimeo.com/1043508873?fl=pl&fe=sh\">Please watch this fun video featuring Zohran Mamdani and Jabari Brisport explaining why the New York Health Act has not passed.</a></p><p>By the end of this session, you will be able to speak with your family, coworkers, union or fellow DSA branch members about why now is the time to pass the New York Health Act.</p>",
-      "browser_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act",
-      "signup_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act",
-      "location": "14 Jefferson St.",
-      "borough": "New York"
-    },
-    {
       "id": "action_network:fff407eb-d3cf-47b0-9f43-bafe371ed928",
       "name": "Strategy Retreat - NYHA Priority Campaign",
       "date": "2026-08-15T10:00:00Z",
@@ -126,29 +112,14 @@
           {
             "day": 7,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:5d28fa00-2935-461d-93d6-a359f1b2b1f4",
-                "name": "New York Health Act 101",
-                "date": "2026-08-07T18:30:00Z",
-                "date_formatted": "6:30 PM, Friday August 7, 2026",
-                "month_year": "2026-08",
-                "month_label": "August 2026",
-                "status": "confirmed",
-                "description": "<p>Come learn about the New York Health Act, a bill to de-privatize healthcare and send the extortionist insurance companies packing. No more premiums, deductibles, and co pays! No denials of care or medication and no restricted networks! </p><p>Please read this <a href=\"https://docs.google.com/document/d/1uIN6dwAjvNr8n50u9AcFl1Hk_DnBwDRf/edit?usp=sharing&ouid=100754013011184138895&rtpof=true&sd=true\">short explainer of the New York Health Act</a> before the session</p><p><a href=\"https://vimeo.com/1043508873?fl=pl&fe=sh\">Please watch this fun video featuring Zohran Mamdani and Jabari Brisport explaining why the New York Health Act has not passed.</a></p><p>By the end of this session, you will be able to speak with your family, coworkers, union or fellow DSA branch members about why now is the time to pass the New York Health Act.</p>",
-                "browser_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act",
-                "signup_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act",
-                "location": "14 Jefferson St.",
-                "borough": "New York"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 8,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           }
         ],
         [
