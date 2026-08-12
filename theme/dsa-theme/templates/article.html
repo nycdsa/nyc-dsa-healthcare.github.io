@@ -92,7 +92,7 @@
       {% endif %}
     </div>
     <h1>{{ article.title }}</h1>
-    {% if article.summary %}
+    {% if article.metadata.get('summary') %}
     <p class="article-header-deck">{{ article.summary | striptags }}</p>
     {% endif %}
     <div class="article-meta">
