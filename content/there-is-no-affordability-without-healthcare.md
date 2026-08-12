@@ -3,7 +3,6 @@ Date: 2026-08-12
 Author: David Alexis
 Category: Patient Story
 Slug: there-is-no-affordability-without-healthcare
-Summary: David Alexis, HCWG member and Physicians for a National Health Program member, writes about his wife's fight to keep her home care — and why New York's affordability agenda cannot succeed without the New York Health Act.
 
 <p class="article-author-bio">David Alexis is a member of New York City DSA's Healthcare Working Group and Physicians for a National Health Program.</p>
 
