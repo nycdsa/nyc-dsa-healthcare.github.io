@@ -4,8 +4,10 @@ Author: David Alexis
 Category: Patient Story
 Slug: there-is-no-affordability-without-healthcare
 
-<img src="{static}/images/david-alexis.jpg" alt="David Alexis" class="article-author-photo">
+<div class="article-author-block">
 <p class="article-author-bio">David Alexis is a member of New York City DSA's Healthcare Working Group and Physicians for a National Health Program.</p>
+<img src="{static}/images/david-alexis.jpg" alt="David Alexis" class="article-author-photo">
+</div>
 
 My wife is being asked if she deserves her own home health care. Under the Trump Administration's proposed rule on "medical frailty," millions more people in the U.S. will soon face the same question.
 
