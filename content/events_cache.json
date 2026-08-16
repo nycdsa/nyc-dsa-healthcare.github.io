@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:fff407eb-d3cf-47b0-9f43-bafe371ed928",
-      "name": "Strategy Retreat - NYHA Priority Campaign",
-      "date": "2026-08-15T10:00:00Z",
-      "date_formatted": "10:00 AM, Saturday August 15, 2026",
-      "month_year": "2026-08",
-      "month_label": "August 2026",
-      "status": "confirmed",
-      "description": "<p>The purpose of this strategy session is to finalize a NYC DSA Citywide Priority Campaign proposal to win the New York Health Act in 2027, to bring to your comrades, branches and the next DSA convention in Nov 2026.</p><p>We will start with a power-mapping exercise, agreeing on short/medium/long term goals then break out into field, communications, research/education, electoral, labor subgroups.</p><p>Please familiarize yourself with the New York Health Act by reading <a href=\"https://www.pnhpnymetro.org/nyha_resources\">resources from Physicians for a National Health Program</a>, attending <a href=\"https://actionnetwork.org/events/back-groundintro-to-new-york-health-act\">our next NYHA 101</a> or reaching out to the OC or fellow members of our working group for a 1:1 (join our WhatsApp community if you haven't already).</p><p>This strategy session will not be a space to debate the finer points of the bill, but rather to plan how our ascendant socialist organization will win this transformative health and labor legislation that will materially affect every person in New York, and be the first domino to fall for an Improved Medicare for All.</p><p><br></p>",
-      "browser_url": "https://actionnetwork.org/events/strategy-retreat-nyha-priority-campaign",
-      "signup_url": "https://actionnetwork.org/events/strategy-retreat-nyha-priority-campaign",
-      "location": "14 Jefferson St",
-      "borough": "New York"
-    },
-    {
       "id": "action_network:5acfe794-eda8-4ee8-9b24-dce33105103f",
       "name": "New York Health Act 101",
       "date": "2026-09-03T18:30:00Z",
@@ -162,23 +148,8 @@
           {
             "day": 15,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:fff407eb-d3cf-47b0-9f43-bafe371ed928",
-                "name": "Strategy Retreat - NYHA Priority Campaign",
-                "date": "2026-08-15T10:00:00Z",
-                "date_formatted": "10:00 AM, Saturday August 15, 2026",
-                "month_year": "2026-08",
-                "month_label": "August 2026",
-                "status": "confirmed",
-                "description": "<p>The purpose of this strategy session is to finalize a NYC DSA Citywide Priority Campaign proposal to win the New York Health Act in 2027, to bring to your comrades, branches and the next DSA convention in Nov 2026.</p><p>We will start with a power-mapping exercise, agreeing on short/medium/long term goals then break out into field, communications, research/education, electoral, labor subgroups.</p><p>Please familiarize yourself with the New York Health Act by reading <a href=\"https://www.pnhpnymetro.org/nyha_resources\">resources from Physicians for a National Health Program</a>, attending <a href=\"https://actionnetwork.org/events/back-groundintro-to-new-york-health-act\">our next NYHA 101</a> or reaching out to the OC or fellow members of our working group for a 1:1 (join our WhatsApp community if you haven't already).</p><p>This strategy session will not be a space to debate the finer points of the bill, but rather to plan how our ascendant socialist organization will win this transformative health and labor legislation that will materially affect every person in New York, and be the first domino to fall for an Improved Medicare for All.</p><p><br></p>",
-                "browser_url": "https://actionnetwork.org/events/strategy-retreat-nyha-priority-campaign",
-                "signup_url": "https://actionnetwork.org/events/strategy-retreat-nyha-priority-campaign",
-                "location": "14 Jefferson St",
-                "borough": "New York"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           }
         ],
         [
@@ -186,7 +157,7 @@
             "day": 16,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 17,
