@@ -13,6 +13,20 @@
       "signup_url": "https://actionnetwork.org/events/back-groundintro-to-new-york-health-act-2",
       "location": "14 Jefferson St.",
       "borough": "New York"
+    },
+    {
+      "id": "action_network:41def52b-365a-4bc1-aba5-c21414011213",
+      "name": "Daniel's Day",
+      "date": "2026-09-19T10:00:00Z",
+      "date_formatted": "10:00 AM, Saturday September 19, 2026",
+      "month_year": "2026-09",
+      "month_label": "September 2026",
+      "status": "confirmed",
+      "description": "<p>Resource fair for mental health and wellness in memory of Daniel Prude who was killed by police in a mental health distress call.</p>",
+      "browser_url": "https://actionnetwork.org/events/daniels-day",
+      "signup_url": "https://actionnetwork.org/events/daniels-day",
+      "location": "41-15 104th St",
+      "borough": "Queens"
     }
   ],
   "calendar": [
@@ -201,13 +215,13 @@
             "day": 23,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 24,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 25,
@@ -433,7 +447,22 @@
           {
             "day": 19,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:41def52b-365a-4bc1-aba5-c21414011213",
+                "name": "Daniel's Day",
+                "date": "2026-09-19T10:00:00Z",
+                "date_formatted": "10:00 AM, Saturday September 19, 2026",
+                "month_year": "2026-09",
+                "month_label": "September 2026",
+                "status": "confirmed",
+                "description": "<p>Resource fair for mental health and wellness in memory of Daniel Prude who was killed by police in a mental health distress call.</p>",
+                "browser_url": "https://actionnetwork.org/events/daniels-day",
+                "signup_url": "https://actionnetwork.org/events/daniels-day",
+                "location": "41-15 104th St",
+                "borough": "Queens"
+              }
+            ],
             "is_today": false
           }
         ],
