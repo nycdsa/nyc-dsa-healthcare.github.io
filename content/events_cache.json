@@ -15,6 +15,20 @@
       "borough": "New York"
     },
     {
+      "id": "action_network:26cecdb6-dfd2-44e8-a67f-7bf96e2896eb",
+      "name": "New York Health Act canvass at labor day rally and march",
+      "date": "2026-09-08T16:30:00Z",
+      "date_formatted": "4:30 PM, Tuesday September 8, 2026",
+      "month_year": "2026-09",
+      "month_label": "September 2026",
+      "status": "confirmed",
+      "description": "<p>Join the NYC DSA healthcare working group 4th annual canvass labor day canvass. We will celebrate with rank and file union members and ask them to lead the way, or work with us, to bring universal health care to New York State and finally get healthcare off the bargaining table so we go after better wages. &nbsp;At 7:30 after the official Central Labor Council event, we invite sisters and brothers to a debrief and discussion of next steps at a location TBD. Once again, thanks to the working people of New York for making this celebration honoring organized labor possible. Canvass training for new comrades or veterans alike Aug. 31st: bit.ly/26Labor</p>",
+      "browser_url": "https://actionnetwork.org/events/new-york-health-act-canvass-at-labor-day-rally-and-march",
+      "signup_url": "https://actionnetwork.org/events/new-york-health-act-canvass-at-labor-day-rally-and-march",
+      "location": "135 Broadway",
+      "borough": "New York"
+    },
+    {
       "id": "action_network:41def52b-365a-4bc1-aba5-c21414011213",
       "name": "Daniel's Day",
       "date": "2026-09-19T10:00:00Z",
@@ -379,7 +393,22 @@
           {
             "day": 8,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:26cecdb6-dfd2-44e8-a67f-7bf96e2896eb",
+                "name": "New York Health Act canvass at labor day rally and march",
+                "date": "2026-09-08T16:30:00Z",
+                "date_formatted": "4:30 PM, Tuesday September 8, 2026",
+                "month_year": "2026-09",
+                "month_label": "September 2026",
+                "status": "confirmed",
+                "description": "<p>Join the NYC DSA healthcare working group 4th annual canvass labor day canvass. We will celebrate with rank and file union members and ask them to lead the way, or work with us, to bring universal health care to New York State and finally get healthcare off the bargaining table so we go after better wages. &nbsp;At 7:30 after the official Central Labor Council event, we invite sisters and brothers to a debrief and discussion of next steps at a location TBD. Once again, thanks to the working people of New York for making this celebration honoring organized labor possible. Canvass training for new comrades or veterans alike Aug. 31st: bit.ly/26Labor</p>",
+                "browser_url": "https://actionnetwork.org/events/new-york-health-act-canvass-at-labor-day-rally-and-march",
+                "signup_url": "https://actionnetwork.org/events/new-york-health-act-canvass-at-labor-day-rally-and-march",
+                "location": "135 Broadway",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
