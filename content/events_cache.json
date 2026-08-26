@@ -43,6 +43,20 @@
       "borough": "New York"
     },
     {
+      "id": "action_network:047e34ee-18f8-4d2f-829a-1ce01c033fd2",
+      "name": "NYC DSA healthcare working group present a NYHA 101 featuring senator Gustavo Rivera",
+      "date": "2026-09-17T06:30:00Z",
+      "date_formatted": "6:30 AM, Thursday September 17, 2026",
+      "month_year": "2026-09",
+      "month_label": "September 2026",
+      "status": "confirmed",
+      "description": "<p>Join us if you are new to organizing for, or just want to know your way around basic talking points, for the New York Health Act. Our incomparable head of the NYS senate health committee, Gustavo Rivera will give a background and update on the legislative fight in Albany to pass statewide Medicare for All bill. We will have a QA and discussion at the end of our presentation.</p>",
+      "browser_url": "https://actionnetwork.org/events/nyc-dsa-healthcare-working-group-present-a-nyha-101-featuring-senator-gustavo-rivera",
+      "signup_url": "https://actionnetwork.org/events/nyc-dsa-healthcare-working-group-present-a-nyha-101-featuring-senator-gustavo-rivera",
+      "location": "250 Bedford Park Blvd W",
+      "borough": "Bronx"
+    },
+    {
       "id": "action_network:41def52b-365a-4bc1-aba5-c21414011213",
       "name": "Daniel's Day",
       "date": "2026-09-19T10:00:00Z",
@@ -493,7 +507,22 @@
           {
             "day": 17,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:047e34ee-18f8-4d2f-829a-1ce01c033fd2",
+                "name": "NYC DSA healthcare working group present a NYHA 101 featuring senator Gustavo Rivera",
+                "date": "2026-09-17T06:30:00Z",
+                "date_formatted": "6:30 AM, Thursday September 17, 2026",
+                "month_year": "2026-09",
+                "month_label": "September 2026",
+                "status": "confirmed",
+                "description": "<p>Join us if you are new to organizing for, or just want to know your way around basic talking points, for the New York Health Act. Our incomparable head of the NYS senate health committee, Gustavo Rivera will give a background and update on the legislative fight in Albany to pass statewide Medicare for All bill. We will have a QA and discussion at the end of our presentation.</p>",
+                "browser_url": "https://actionnetwork.org/events/nyc-dsa-healthcare-working-group-present-a-nyha-101-featuring-senator-gustavo-rivera",
+                "signup_url": "https://actionnetwork.org/events/nyc-dsa-healthcare-working-group-present-a-nyha-101-featuring-senator-gustavo-rivera",
+                "location": "250 Bedford Park Blvd W",
+                "borough": "Bronx"
+              }
+            ],
             "is_today": false
           },
           {
