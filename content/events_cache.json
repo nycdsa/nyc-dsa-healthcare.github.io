@@ -1,6 +1,20 @@
 {
   "events": [
     {
+      "id": "action_network:4d3da9db-4e6d-4099-b37d-3c99e1d87e83",
+      "name": "Health Justice Potluck Picnic",
+      "date": "2026-08-30T14:00:00Z",
+      "date_formatted": "2:00 PM, Sunday August 30, 2026",
+      "month_year": "2026-08",
+      "month_label": "August 2026",
+      "status": "confirmed",
+      "description": "<p>Join comrades and friends from various organizations fighting for health justice through the New York Health Act for a potluck social!</p>",
+      "browser_url": "https://actionnetwork.org/events/health-justice-potluck-picnic",
+      "signup_url": "https://actionnetwork.org/events/health-justice-potluck-picnic",
+      "location": "1802 E 65th St",
+      "borough": "New York"
+    },
+    {
       "id": "action_network:5acfe794-eda8-4ee8-9b24-dce33105103f",
       "name": "New York Health Act 101",
       "date": "2026-09-03T18:30:00Z",
@@ -241,13 +255,13 @@
             "day": 25,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 26,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 27,
@@ -272,7 +286,22 @@
           {
             "day": 30,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:4d3da9db-4e6d-4099-b37d-3c99e1d87e83",
+                "name": "Health Justice Potluck Picnic",
+                "date": "2026-08-30T14:00:00Z",
+                "date_formatted": "2:00 PM, Sunday August 30, 2026",
+                "month_year": "2026-08",
+                "month_label": "August 2026",
+                "status": "confirmed",
+                "description": "<p>Join comrades and friends from various organizations fighting for health justice through the New York Health Act for a potluck social!</p>",
+                "browser_url": "https://actionnetwork.org/events/health-justice-potluck-picnic",
+                "signup_url": "https://actionnetwork.org/events/health-justice-potluck-picnic",
+                "location": "1802 E 65th St",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
