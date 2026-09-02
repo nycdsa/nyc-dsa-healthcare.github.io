@@ -29,6 +29,20 @@
       "borough": "New York"
     },
     {
+      "id": "action_network:a44846ed-4b34-4456-99a4-45b686181cd7",
+      "name": "Healthcare WG: Communications Committee Meeting and Working Session",
+      "date": "2026-09-13T13:00:00Z",
+      "date_formatted": "1:00 PM, Sunday September 13, 2026",
+      "month_year": "2026-09",
+      "month_label": "September 2026",
+      "status": "confirmed",
+      "description": "<p>Join us in person for a communications meeting and working session where we'll first go over the latest in the working group and the communications channel. Then we'll split out into sub-committees to do a working session. </p><p>More people than ever are coming into the single payer movement, whether its through the New York Health Act (NY state based single payer) or Medicare for All. What is needed is to build on that momentum through fun and creative communications strategies to combat the misinformation spread by the health insurance industry. </p><p>Please come join us if you have any interest in developing content for social media (shooting/editing videos, graphics development, social media strategy), developing graphics, zines, and merch, writing blog posts about the healthcare system and/or your own patient stories, or just have thoughts and ideas about how we communicate about healthcare, health justice, and the current state of the healthcare system, please come join!</p>\r\n<p><strong>What we'll cover (we will send a more thorough agenda prior to the meeting):</strong></p>\r\n<ul>\r\n<li><strong>Comms updates and operations walkthrough: </strong>we'll present updates from the last 2 months as well as the HCWG Comms operations doc so everyone understands how we work, who owns what, and the process for each channel. We will send this out beforehand so everyone has a chance to go over it prior to the meeting.</li>\r\n<li><strong>Sub-committee breakouts: <strong></strong></strong>we'll break out into working groups for each sub-committee, which will include social media, design/merch, and blog</li></ul>",
+      "browser_url": "https://actionnetwork.org/events/healthcare-wg-communications-committee-meeting-and-working-session",
+      "signup_url": "https://actionnetwork.org/events/healthcare-wg-communications-committee-meeting-and-working-session",
+      "location": "85 Broad St",
+      "borough": "New York"
+    },
+    {
       "id": "action_network:047e34ee-18f8-4d2f-829a-1ce01c033fd2",
       "name": "Healthcare Working Group Presents: NYHA 101 featuring Senator Gustavo Rivera",
       "date": "2026-09-17T18:30:00Z",
@@ -184,7 +198,22 @@
           {
             "day": 13,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:a44846ed-4b34-4456-99a4-45b686181cd7",
+                "name": "Healthcare WG: Communications Committee Meeting and Working Session",
+                "date": "2026-09-13T13:00:00Z",
+                "date_formatted": "1:00 PM, Sunday September 13, 2026",
+                "month_year": "2026-09",
+                "month_label": "September 2026",
+                "status": "confirmed",
+                "description": "<p>Join us in person for a communications meeting and working session where we'll first go over the latest in the working group and the communications channel. Then we'll split out into sub-committees to do a working session. </p><p>More people than ever are coming into the single payer movement, whether its through the New York Health Act (NY state based single payer) or Medicare for All. What is needed is to build on that momentum through fun and creative communications strategies to combat the misinformation spread by the health insurance industry. </p><p>Please come join us if you have any interest in developing content for social media (shooting/editing videos, graphics development, social media strategy), developing graphics, zines, and merch, writing blog posts about the healthcare system and/or your own patient stories, or just have thoughts and ideas about how we communicate about healthcare, health justice, and the current state of the healthcare system, please come join!</p>\r\n<p><strong>What we'll cover (we will send a more thorough agenda prior to the meeting):</strong></p>\r\n<ul>\r\n<li><strong>Comms updates and operations walkthrough: </strong>we'll present updates from the last 2 months as well as the HCWG Comms operations doc so everyone understands how we work, who owns what, and the process for each channel. We will send this out beforehand so everyone has a chance to go over it prior to the meeting.</li>\r\n<li><strong>Sub-committee breakouts: <strong></strong></strong>we'll break out into working groups for each sub-committee, which will include social media, design/merch, and blog</li></ul>",
+                "browser_url": "https://actionnetwork.org/events/healthcare-wg-communications-committee-meeting-and-working-session",
+                "signup_url": "https://actionnetwork.org/events/healthcare-wg-communications-committee-meeting-and-working-session",
+                "location": "85 Broad St",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
