@@ -7,7 +7,7 @@ SITEURL = ""
 
 PATH = "content"
 
-STATIC_PATHS = ["images"]
+STATIC_PATHS = ["images", "data"]
 
 TIMEZONE = "America/New_York"
 
@@ -39,7 +39,7 @@ THEME = "theme/dsa-theme"
 
 # Plugins
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["action_network"]
+PLUGINS = ["action_network", "donations"]
 
 # Donate link — used in nav and index page donate strip
 DONATE_URL = "https://chuffed.org/project/nyc-dsa-healthcare"

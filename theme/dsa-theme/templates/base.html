@@ -66,10 +66,11 @@
     <ul class="nav-drawer-links">
       <li><a href="{{ SITEURL }}/">Home</a></li>
       <li><a href="{{ SITEURL }}/pages/ny-health-act.html">The NY Health Act</a></li>
+      <li><a href="{{ SITEURL }}/healthcare_donations_tracker.html">Donations Tracker</a></li>
       <li><a href="{{ SITEURL }}/pages/calendar.html">Events</a></li>
       <li><a href="{{ SITEURL }}/blog.html">Blog</a></li>
       {% for p in pages %}
-      {% if p.title not in ['NY Health Act', 'The Case for Single Payer', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis', 'Mutual Aid'] %}
+      {% if p.title not in ['NY Health Act', 'The Case for Single Payer', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis', 'Mutual Aid', 'The Extraction Tracker', 'Healthcare Donations Tracker'] %}
       <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
       {% endif %}
       {% endfor %}
@@ -94,7 +95,7 @@
       <a href="{{ SITEURL }}/pages/calendar.html">Events</a>
       <a href="{{ SITEURL }}/blog.html">Blog</a>
       {% for p in pages %}
-      {% if p.title not in ['NY Health Act', 'The Case for Single Payer', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis', 'Mutual Aid'] %}
+      {% if p.title not in ['NY Health Act', 'The Case for Single Payer', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis', 'Mutual Aid', 'The Extraction Tracker', 'Healthcare Donations Tracker'] %}
       <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
       {% endif %}
       {% endfor %}
