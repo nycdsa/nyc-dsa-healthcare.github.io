@@ -141,7 +141,7 @@
             "day": 11,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 12,
@@ -162,7 +162,7 @@
                 "borough": ""
               }
             ],
-            "is_today": false
+            "is_today": true
           }
         ],
         [
