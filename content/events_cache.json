@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:4a6b0326-2600-4ea3-a431-ab2084efb0bc",
-      "name": "NYHA Resolution Office Hours",
-      "date": "2026-09-12T10:00:00Z",
-      "date_formatted": "10:00 AM, Saturday September 12, 2026",
-      "month_year": "2026-09",
-      "month_label": "September 2026",
-      "status": "confirmed",
-      "description": "<p>Please join us to discuss the NYHA priority campaign resolution with the authors of the convention proposal. We want to incorporate as much feedback as possible from the members and submit a finalized version of this proposal on Sunday 9/13. </p>",
-      "browser_url": "https://actionnetwork.org/events/nyha-proposal-feedback-session",
-      "signup_url": "https://actionnetwork.org/events/nyha-proposal-feedback-session",
-      "location": "Virtual Event",
-      "borough": ""
-    },
-    {
       "id": "action_network:a44846ed-4b34-4456-99a4-45b686181cd7",
       "name": "Healthcare WG: Communications Committee Meeting and Working Session",
       "date": "2026-09-13T13:00:00Z",
@@ -146,23 +132,8 @@
           {
             "day": 12,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:4a6b0326-2600-4ea3-a431-ab2084efb0bc",
-                "name": "NYHA Resolution Office Hours",
-                "date": "2026-09-12T10:00:00Z",
-                "date_formatted": "10:00 AM, Saturday September 12, 2026",
-                "month_year": "2026-09",
-                "month_label": "September 2026",
-                "status": "confirmed",
-                "description": "<p>Please join us to discuss the NYHA priority campaign resolution with the authors of the convention proposal. We want to incorporate as much feedback as possible from the members and submit a finalized version of this proposal on Sunday 9/13. </p>",
-                "browser_url": "https://actionnetwork.org/events/nyha-proposal-feedback-session",
-                "signup_url": "https://actionnetwork.org/events/nyha-proposal-feedback-session",
-                "location": "Virtual Event",
-                "borough": ""
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           }
         ],
         [
@@ -185,7 +156,7 @@
                 "borough": "New York"
               }
             ],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 14,
