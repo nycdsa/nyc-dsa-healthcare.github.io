@@ -1,0 +1,54 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: content/images
+public_folder: /images
+
+collections:
+  - name: posts
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: content
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    summary: "{{title}} — {{date}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: The headline of the post.
+
+      - label: Date
+        name: date
+        widget: date
+        format: "YYYY-MM-DD"
+        hint: Publication date (shown on the post and used for ordering).
+
+      - label: Author
+        name: author
+        widget: string
+        default: NYC DSA Healthcare Working Group Organizing Committee
+        hint: Full author name as it will appear on the post.
+
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - From the OC
+          - Patient Story
+          - News & Analysis
+        hint: Categories appear as a tag on the post.
+
+      - label: Summary
+        name: summary
+        widget: text
+        required: false
+        hint: "Optional: a short deck shown under the headline. Leave blank to show no deck."
+
+      - label: Body
+        name: body
+        widget: markdown
+        hint: The full article text. Use the toolbar to add links, bold, images, etc.

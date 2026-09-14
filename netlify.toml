@@ -2,5 +2,5 @@
 # Publishing the admin folder lets invite/recovery email links resolve correctly
 # at chimerical-speculoos-cc77d5.netlify.app without requiring a full site build.
 [build]
-  publish = "content/admin"
+  publish = "netlify-cms"
   command = ""
