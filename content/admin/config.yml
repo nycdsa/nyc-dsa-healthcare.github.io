@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: nyc-dsa-healthcare/nyc-dsa-healthcare.github.io
+  name: git-gateway
   branch: main
-  # Replace YOUR_WORKER_URL with the Cloudflare Worker URL after deploying it
-  base_url: https://YOUR_WORKER_URL.workers.dev
 
 media_folder: content/images
 public_folder: /images
