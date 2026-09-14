@@ -19,7 +19,7 @@ CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 DELETE_OUTPUT_DIRECTORY = True
 
 # Sitemap
-PLUGINS = ["action_network", "sitemap"]
+PLUGINS = ["action_network", "donations", "yaml_metadata", "sitemap"]
 SITEMAP = {
     "format": "xml",
     "priorities": {

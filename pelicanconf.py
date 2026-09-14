@@ -9,6 +9,10 @@ PATH = "content"
 
 STATIC_PATHS = ["images", "data", "admin"]
 
+# Prevent Pelican from trying to process the CMS admin files as articles/pages
+ARTICLE_EXCLUDES = ["admin"]
+PAGE_EXCLUDES = ["admin"]
+
 TIMEZONE = "America/New_York"
 
 DEFAULT_LANG = "en"
