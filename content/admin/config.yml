@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main
+  identity_url: https://chimerical-speculoos-cc77d5.netlify.app/.netlify/identity
+  gateway_url: https://chimerical-speculoos-cc77d5.netlify.app/.netlify/git
 
 media_folder: content/images
 public_folder: /images
