@@ -27,6 +27,20 @@
       "signup_url": "https://actionnetwork.org/events/daniels-day",
       "location": "41-15 104th St",
       "borough": "Queens"
+    },
+    {
+      "id": "action_network:b471a2ba-052b-49f6-8b5b-fb2673dfc6b3",
+      "name": "Healthcare Working Group September Social ",
+      "date": "2026-09-27T13:30:00Z",
+      "date_formatted": "1:30 PM, Sunday September 27, 2026",
+      "month_year": "2026-09",
+      "month_label": "September 2026",
+      "status": "confirmed",
+      "description": "<p>Join us for a hang out in Prospect Park! Feel free to bring drinks, snacks, games and anything else. All are welcome!</p>",
+      "browser_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
+      "signup_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
+      "location": "95 Prospect Park West",
+      "borough": "Brooklyn"
     }
   ],
   "calendar": [
@@ -139,13 +153,13 @@
             "day": 15,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 16,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 17,
@@ -244,7 +258,22 @@
           {
             "day": 27,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:b471a2ba-052b-49f6-8b5b-fb2673dfc6b3",
+                "name": "Healthcare Working Group September Social ",
+                "date": "2026-09-27T13:30:00Z",
+                "date_formatted": "1:30 PM, Sunday September 27, 2026",
+                "month_year": "2026-09",
+                "month_label": "September 2026",
+                "status": "confirmed",
+                "description": "<p>Join us for a hang out in Prospect Park! Feel free to bring drinks, snacks, games and anything else. All are welcome!</p>",
+                "browser_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
+                "signup_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
+                "location": "95 Prospect Park West",
+                "borough": "Brooklyn"
+              }
+            ],
             "is_today": false
           },
           {
