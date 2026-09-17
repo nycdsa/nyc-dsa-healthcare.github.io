@@ -41,6 +41,20 @@
       "signup_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
       "location": "95 Prospect Park West",
       "borough": "Brooklyn"
+    },
+    {
+      "id": "action_network:dab321d8-c427-4449-a9ec-d315ffb138df",
+      "name": "Power Mapping for the New York Health Act",
+      "date": "2026-10-04T13:00:00Z",
+      "date_formatted": "1:00 PM, Sunday October 4, 2026",
+      "month_year": "2026-10",
+      "month_label": "October 2026",
+      "status": "confirmed",
+      "description": "<p>Join healthcare workers, union members, and organizers for an IN PERSON <strong>Power Mapping for the New York Health Act</strong> organizing session! </p><p><span></span></p><p>Together, we\u2019ll map our unions, workplaces, and existing relationships to better understand where we have power, where we need to build it, and how we can coordinate NYHA organizing across unions and workplaces throughout the city.</p><p>Come ready to map, strategize, and identify concrete next steps for building an organized labor movement for universal healthcare in New York!</p><p><strong>The event will take place in NYC. The exact location and additional event details will be sent to registered attendees before the event. Please keep an eye on your email for updates.</strong><br></p>",
+      "browser_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
+      "signup_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
+      "location": "TBD",
+      "borough": "TBD"
     }
   ],
   "calendar": [
@@ -159,7 +173,7 @@
             "day": 16,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 17,
@@ -180,7 +194,7 @@
                 "borough": "Bronx"
               }
             ],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 18,
@@ -367,7 +381,22 @@
           {
             "day": 4,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:dab321d8-c427-4449-a9ec-d315ffb138df",
+                "name": "Power Mapping for the New York Health Act",
+                "date": "2026-10-04T13:00:00Z",
+                "date_formatted": "1:00 PM, Sunday October 4, 2026",
+                "month_year": "2026-10",
+                "month_label": "October 2026",
+                "status": "confirmed",
+                "description": "<p>Join healthcare workers, union members, and organizers for an IN PERSON <strong>Power Mapping for the New York Health Act</strong> organizing session! </p><p><span></span></p><p>Together, we\u2019ll map our unions, workplaces, and existing relationships to better understand where we have power, where we need to build it, and how we can coordinate NYHA organizing across unions and workplaces throughout the city.</p><p>Come ready to map, strategize, and identify concrete next steps for building an organized labor movement for universal healthcare in New York!</p><p><strong>The event will take place in NYC. The exact location and additional event details will be sent to registered attendees before the event. Please keep an eye on your email for updates.</strong><br></p>",
+                "browser_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
+                "signup_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
+                "location": "TBD",
+                "borough": "TBD"
+              }
+            ],
             "is_today": false
           },
           {
