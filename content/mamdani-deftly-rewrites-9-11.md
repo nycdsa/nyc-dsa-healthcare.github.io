@@ -1,7 +1,7 @@
 Title: Mamdani deftly rewrites 9/11—but misses an opportunity
 Date: 2026-09-18
 Author: Tim Frasca
-Category: From the OC
+Category: News Reaction
 Slug: mamdani-deftly-rewrites-9-11
 
 Our agile mayor showed once again that he's far too shrewd a politician to be taken by surprise when the bigoted wackos tried to bait him over attending the 9/11 commemorations. Arising from the crypt, chief ghoul Rudy Giuliani demanded Mamdani stay away because he was just like the 9/11 attackers but just hides it better. All Muslims, said RG, want to "dominate us" because of their "extremist religious education." Imagine anyone daring to say that about Orthodox Jewish billionaires.
