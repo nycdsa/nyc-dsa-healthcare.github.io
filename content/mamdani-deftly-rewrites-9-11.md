@@ -26,4 +26,4 @@ Let's hope he does better next time.
 
 ---
 
-*All opinions are Tim's own. Beyond Diagnosis is focused on amplifying voices across the left on all topics of healthcare. The Working Group has a wide array of members with a variety of experiences with our draconian healthcare system. Please reach out to the Working Group if there is a topic in healthcare you'd like to write about.*
+*All opinions are of Tim's own. Beyond Diagnosis is focused on amplifying voices across the left on all topics of healthcare. Please reach out to the Working Group if there is a topic in healthcare you'd like to write about.*
