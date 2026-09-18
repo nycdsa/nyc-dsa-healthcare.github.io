@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:047e34ee-18f8-4d2f-829a-1ce01c033fd2",
-      "name": "Healthcare Working Group Presents: NYHA 101 featuring Senator Gustavo Rivera",
-      "date": "2026-09-17T18:30:00Z",
-      "date_formatted": "6:30 PM, Thursday September 17, 2026",
-      "month_year": "2026-09",
-      "month_label": "September 2026",
-      "status": "confirmed",
-      "description": "<p>Whether you\u2019re new to organizing around the New York Health Act or simply want to brush up on the basics, join us at NYHA 101 in the Bronx. Our incomparable Chair of the NYS Senate Health Committee, Senator Gustavo Rivera, will provide an overview of the New York Health Act, including its history, current legislative landscape, and the ongoing fight in Albany to establish statewide Medicare for All. We\u2019ll wrap up with a Q&A and open discussion, so come with your questions!</p><p><em>Please enter and exit through Gate 5: </em><a href=\"https://maps.app.goo.gl/PKxeiNkpAnLFFbBV6\"><em>https://maps.app.goo.gl/PKxeiNkpAnLFFbBV6</em></a><br><br>Not able to come to The Bronx this evening? Register via this link for a virtual option. <br><a href=\"https://us02web.zoom.us/meeting/register/DK3f48eiT7OIa53_iWZQ-w#/registration\">https://us02web.zoom.us/meeting/register/DK3f48eiT7OIa53_iWZQ-w#/registration</a><br><span></span></p><div><em><br></em></div><br>",
-      "browser_url": "https://actionnetwork.org/events/nyc-dsa-healthcare-working-group-present-a-nyha-101-featuring-senator-gustavo-rivera",
-      "signup_url": "https://actionnetwork.org/events/nyc-dsa-healthcare-working-group-present-a-nyha-101-featuring-senator-gustavo-rivera",
-      "location": "250 Bedford Park Blvd W.  Please enter and exit through Gate 5",
-      "borough": "Bronx"
-    },
-    {
       "id": "action_network:41def52b-365a-4bc1-aba5-c21414011213",
       "name": "Daniel's Day",
       "date": "2026-09-19T10:00:00Z",
@@ -178,29 +164,14 @@
           {
             "day": 17,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:047e34ee-18f8-4d2f-829a-1ce01c033fd2",
-                "name": "Healthcare Working Group Presents: NYHA 101 featuring Senator Gustavo Rivera",
-                "date": "2026-09-17T18:30:00Z",
-                "date_formatted": "6:30 PM, Thursday September 17, 2026",
-                "month_year": "2026-09",
-                "month_label": "September 2026",
-                "status": "confirmed",
-                "description": "<p>Whether you\u2019re new to organizing around the New York Health Act or simply want to brush up on the basics, join us at NYHA 101 in the Bronx. Our incomparable Chair of the NYS Senate Health Committee, Senator Gustavo Rivera, will provide an overview of the New York Health Act, including its history, current legislative landscape, and the ongoing fight in Albany to establish statewide Medicare for All. We\u2019ll wrap up with a Q&A and open discussion, so come with your questions!</p><p><em>Please enter and exit through Gate 5: </em><a href=\"https://maps.app.goo.gl/PKxeiNkpAnLFFbBV6\"><em>https://maps.app.goo.gl/PKxeiNkpAnLFFbBV6</em></a><br><br>Not able to come to The Bronx this evening? Register via this link for a virtual option. <br><a href=\"https://us02web.zoom.us/meeting/register/DK3f48eiT7OIa53_iWZQ-w#/registration\">https://us02web.zoom.us/meeting/register/DK3f48eiT7OIa53_iWZQ-w#/registration</a><br><span></span></p><div><em><br></em></div><br>",
-                "browser_url": "https://actionnetwork.org/events/nyc-dsa-healthcare-working-group-present-a-nyha-101-featuring-senator-gustavo-rivera",
-                "signup_url": "https://actionnetwork.org/events/nyc-dsa-healthcare-working-group-present-a-nyha-101-featuring-senator-gustavo-rivera",
-                "location": "250 Bedford Park Blvd W.  Please enter and exit through Gate 5",
-                "borough": "Bronx"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 18,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 19,
