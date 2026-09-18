@@ -40,6 +40,7 @@ collections:
           - From the OC
           - Patient Story
           - News & Analysis
+          - News Reaction
         hint: Categories appear as a tag on the post.
 
       - label: Summary
