@@ -22,11 +22,11 @@
       "month_year": "2026-10",
       "month_label": "October 2026",
       "status": "confirmed",
-      "description": "<p>Join healthcare workers, union members, and organizers for an IN PERSON <strong>Power Mapping for the New York Health Act</strong> organizing session! </p><p><span></span></p><p>Together, we\u2019ll map our unions, workplaces, and existing relationships to better understand where we have power, where we need to build it, and how we can coordinate NYHA organizing across unions and workplaces throughout the city.</p><p>Come ready to map, strategize, and identify concrete next steps for building an organized labor movement for universal healthcare in New York!</p><p><strong>The event will take place in NYC. The exact location and additional event details will be sent to registered attendees before the event. Please keep an eye on your email for updates.</strong><br></p>",
+      "description": "<p>Join healthcare workers, union members, and organizers for an IN PERSON <strong>Power Mapping for the New York Health Act</strong> organizing session! </p><p><span></span></p><p>Together, we\u2019ll map our unions, workplaces, and existing relationships to better understand where we have power, where we need to build it, and how we can coordinate NYHA organizing across unions and workplaces throughout the city.</p><p>Come ready to map, strategize, and identify concrete next steps for building an organized labor movement for universal healthcare in New York!</p><p><strong>Due to the nature of this work, this event is in person only.</strong><br></p>",
       "browser_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
       "signup_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
-      "location": "TBD",
-      "borough": "TBD"
+      "location": "315 W 35th St",
+      "borough": "New York "
     },
     {
       "id": "action_network:3380aec2-1f88-4a53-b9a4-da4f9379ea4e",
@@ -191,13 +191,13 @@
             "day": 21,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 22,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 23,
@@ -346,11 +346,11 @@
                 "month_year": "2026-10",
                 "month_label": "October 2026",
                 "status": "confirmed",
-                "description": "<p>Join healthcare workers, union members, and organizers for an IN PERSON <strong>Power Mapping for the New York Health Act</strong> organizing session! </p><p><span></span></p><p>Together, we\u2019ll map our unions, workplaces, and existing relationships to better understand where we have power, where we need to build it, and how we can coordinate NYHA organizing across unions and workplaces throughout the city.</p><p>Come ready to map, strategize, and identify concrete next steps for building an organized labor movement for universal healthcare in New York!</p><p><strong>The event will take place in NYC. The exact location and additional event details will be sent to registered attendees before the event. Please keep an eye on your email for updates.</strong><br></p>",
+                "description": "<p>Join healthcare workers, union members, and organizers for an IN PERSON <strong>Power Mapping for the New York Health Act</strong> organizing session! </p><p><span></span></p><p>Together, we\u2019ll map our unions, workplaces, and existing relationships to better understand where we have power, where we need to build it, and how we can coordinate NYHA organizing across unions and workplaces throughout the city.</p><p>Come ready to map, strategize, and identify concrete next steps for building an organized labor movement for universal healthcare in New York!</p><p><strong>Due to the nature of this work, this event is in person only.</strong><br></p>",
                 "browser_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
                 "signup_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
-                "location": "TBD",
-                "borough": "TBD"
+                "location": "315 W 35th St",
+                "borough": "New York "
               }
             ],
             "is_today": false
