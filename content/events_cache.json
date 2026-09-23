@@ -41,6 +41,20 @@
       "signup_url": "https://actionnetwork.org/events/art-build-for-nyha",
       "location": "215 w 23rd st",
       "borough": "New York"
+    },
+    {
+      "id": "action_network:b6372da0-334e-422b-8183-c00f7903628c",
+      "name": "DSA flexes muscle for NYHA presser",
+      "date": "2026-10-17T10:00:00Z",
+      "date_formatted": "10:00 AM, Saturday October 17, 2026",
+      "month_year": "2026-10",
+      "month_label": "October 2026",
+      "status": "confirmed",
+      "description": "<p>This will be a press conference condemning the worst of the capitalists, the private health insurance companies, and presenting the New York Health Act as the alternative </p><p>This will be a Hochul impersonation in which there may be a beautiful shift toward putting people over profits.</p><p>This will be the DSA run club in the spirit of all New Yorkers running for healthcare, running for our lives, and running towards a brighter future.</p><p>This will be media getting an answer to the question what else do socialists want for New York right now, and dear governor Hochul impersonator, which side are you on?</p>",
+      "browser_url": "https://actionnetwork.org/events/dsa-flexes-muscle-for-nyha-presser",
+      "signup_url": "https://actionnetwork.org/events/dsa-flexes-muscle-for-nyha-presser",
+      "location": "919 3rd Ave (entry on E 55th btwn 2nd & 3rd)",
+      "borough": "New York"
     }
   ],
   "calendar": [
@@ -447,7 +461,22 @@
           {
             "day": 17,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:b6372da0-334e-422b-8183-c00f7903628c",
+                "name": "DSA flexes muscle for NYHA presser",
+                "date": "2026-10-17T10:00:00Z",
+                "date_formatted": "10:00 AM, Saturday October 17, 2026",
+                "month_year": "2026-10",
+                "month_label": "October 2026",
+                "status": "confirmed",
+                "description": "<p>This will be a press conference condemning the worst of the capitalists, the private health insurance companies, and presenting the New York Health Act as the alternative </p><p>This will be a Hochul impersonation in which there may be a beautiful shift toward putting people over profits.</p><p>This will be the DSA run club in the spirit of all New Yorkers running for healthcare, running for our lives, and running towards a brighter future.</p><p>This will be media getting an answer to the question what else do socialists want for New York right now, and dear governor Hochul impersonator, which side are you on?</p>",
+                "browser_url": "https://actionnetwork.org/events/dsa-flexes-muscle-for-nyha-presser",
+                "signup_url": "https://actionnetwork.org/events/dsa-flexes-muscle-for-nyha-presser",
+                "location": "919 3rd Ave (entry on E 55th btwn 2nd & 3rd)",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           }
         ],
