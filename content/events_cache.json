@@ -16,13 +16,13 @@
     },
     {
       "id": "action_network:dab321d8-c427-4449-a9ec-d315ffb138df",
-      "name": "Power Mapping for the New York Health Act",
+      "name": "NYHA LABOR POWER MAPPING",
       "date": "2026-10-04T13:00:00Z",
       "date_formatted": "1:00 PM, Sunday October 4, 2026",
       "month_year": "2026-10",
       "month_label": "October 2026",
       "status": "confirmed",
-      "description": "<p>Join healthcare workers, union members, and organizers for an IN PERSON <strong>Power Mapping for the New York Health Act</strong> organizing session! </p><p><span></span></p><p>Together, we\u2019ll map our unions, workplaces, and existing relationships to better understand where we have power, where we need to build it, and how we can coordinate NYHA organizing across unions and workplaces throughout the city.</p><p>Come ready to map, strategize, and identify concrete next steps for building an organized labor movement for universal healthcare in New York!</p><p><strong>Due to the nature of this work, this event is in person only.</strong><br></p>",
+      "description": "<div><strong>Join us Sunday, October 4th for NYHA Labor Power Mapping!</strong></div><div><br></div><div>We\u2019re bringing together NYC union members and advocates to learn and practice power mapping! We\u2019ll look at our unions / workplaces, identify existing relationships, and identify where we already have relationships or where we need to build them.</div><div><br></div><div>We\u2019ll be working through our actual unions and workplaces, <strong>so please bring a laptop!</strong></div><div><br></div><div>\ud83d\udcc5 Sunday, October 4</div><div>\u23f0 1\u20133 PM</div><div>\ud83d\udccd DSA Midtown, 315 W 35th St</div><div>\ud83d\udcbb Bring your laptop</div><div><br></div><div>Due to the nature of this work, this session is in person only</div>",
       "browser_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
       "signup_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
       "location": "315 W 35th St",
@@ -197,13 +197,13 @@
             "day": 22,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 23,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 24,
@@ -340,13 +340,13 @@
             "events": [
               {
                 "id": "action_network:dab321d8-c427-4449-a9ec-d315ffb138df",
-                "name": "Power Mapping for the New York Health Act",
+                "name": "NYHA LABOR POWER MAPPING",
                 "date": "2026-10-04T13:00:00Z",
                 "date_formatted": "1:00 PM, Sunday October 4, 2026",
                 "month_year": "2026-10",
                 "month_label": "October 2026",
                 "status": "confirmed",
-                "description": "<p>Join healthcare workers, union members, and organizers for an IN PERSON <strong>Power Mapping for the New York Health Act</strong> organizing session! </p><p><span></span></p><p>Together, we\u2019ll map our unions, workplaces, and existing relationships to better understand where we have power, where we need to build it, and how we can coordinate NYHA organizing across unions and workplaces throughout the city.</p><p>Come ready to map, strategize, and identify concrete next steps for building an organized labor movement for universal healthcare in New York!</p><p><strong>Due to the nature of this work, this event is in person only.</strong><br></p>",
+                "description": "<div><strong>Join us Sunday, October 4th for NYHA Labor Power Mapping!</strong></div><div><br></div><div>We\u2019re bringing together NYC union members and advocates to learn and practice power mapping! We\u2019ll look at our unions / workplaces, identify existing relationships, and identify where we already have relationships or where we need to build them.</div><div><br></div><div>We\u2019ll be working through our actual unions and workplaces, <strong>so please bring a laptop!</strong></div><div><br></div><div>\ud83d\udcc5 Sunday, October 4</div><div>\u23f0 1\u20133 PM</div><div>\ud83d\udccd DSA Midtown, 315 W 35th St</div><div>\ud83d\udcbb Bring your laptop</div><div><br></div><div>Due to the nature of this work, this session is in person only</div>",
                 "browser_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
                 "signup_url": "https://actionnetwork.org/events/power-mapping-for-the-new-york-health-act",
                 "location": "315 W 35th St",
