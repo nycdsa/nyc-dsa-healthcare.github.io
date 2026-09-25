@@ -30,7 +30,7 @@
     },
     {
       "id": "action_network:3380aec2-1f88-4a53-b9a4-da4f9379ea4e",
-      "name": "Art Build for NYHA ",
+      "name": "Art Build for New York Health Act ",
       "date": "2026-10-05T17:00:00Z",
       "date_formatted": "5:00 PM, Monday October 5, 2026",
       "month_year": "2026-10",
@@ -389,7 +389,7 @@
             "events": [
               {
                 "id": "action_network:3380aec2-1f88-4a53-b9a4-da4f9379ea4e",
-                "name": "Art Build for NYHA ",
+                "name": "Art Build for New York Health Act ",
                 "date": "2026-10-05T17:00:00Z",
                 "date_formatted": "5:00 PM, Monday October 5, 2026",
                 "month_year": "2026-10",
