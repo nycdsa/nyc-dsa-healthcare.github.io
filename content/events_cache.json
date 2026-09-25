@@ -55,6 +55,20 @@
       "signup_url": "https://actionnetwork.org/events/dsa-flexes-muscle-for-nyha-presser",
       "location": "919 3rd Ave (entry on E 55th btwn 2nd & 3rd)",
       "borough": "New York"
+    },
+    {
+      "id": "action_network:dd1ba448-c0f0-4530-ac4c-7f8b6f77e185",
+      "name": "ZOOM NYHA 101",
+      "date": "2026-10-22T19:00:00Z",
+      "date_formatted": "7:00 PM, Thursday October 22, 2026",
+      "month_year": "2026-10",
+      "month_label": "October 2026",
+      "status": "confirmed",
+      "description": "<p>Sign on to learn about the New York Health Act (NYHA) and how you can help us win comprehensive healthcare for all New Yorkers in 2027!</p>",
+      "browser_url": "https://actionnetwork.org/events/zoom-nyha-101",
+      "signup_url": "https://actionnetwork.org/events/zoom-nyha-101",
+      "location": "Virtual Event",
+      "borough": ""
     }
   ],
   "calendar": [
@@ -223,13 +237,13 @@
             "day": 24,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 25,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 26,
@@ -508,7 +522,22 @@
           {
             "day": 22,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:dd1ba448-c0f0-4530-ac4c-7f8b6f77e185",
+                "name": "ZOOM NYHA 101",
+                "date": "2026-10-22T19:00:00Z",
+                "date_formatted": "7:00 PM, Thursday October 22, 2026",
+                "month_year": "2026-10",
+                "month_label": "October 2026",
+                "status": "confirmed",
+                "description": "<p>Sign on to learn about the New York Health Act (NYHA) and how you can help us win comprehensive healthcare for all New Yorkers in 2027!</p>",
+                "browser_url": "https://actionnetwork.org/events/zoom-nyha-101",
+                "signup_url": "https://actionnetwork.org/events/zoom-nyha-101",
+                "location": "Virtual Event",
+                "borough": ""
+              }
+            ],
             "is_today": false
           },
           {
