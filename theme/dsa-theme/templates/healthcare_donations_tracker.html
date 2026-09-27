@@ -8,7 +8,7 @@
 <div class="hdt-stripe">
   <div class="hdt-hero2">
     <div>
-      <h1 class="hdt-head">NY lawmakers have taken <span class="num" id="hero-num">—</span> from <span id="hero-phrase">the healthcare industry</span></h1>
+      <h1 class="hdt-head">NY lawmakers and party committees have taken <span class="num" id="hero-num">—</span> from <span id="hero-phrase">the healthcare industry</span></h1>
       <p class="hdt-lede">New York's lawmakers accept millions from the very corporations, professional associations, and special interest groups that are actively blocking the passing of single payer bills like the New York Health Act and Medicare for All. Use this tool to track the healthcare industry and hold our elected officials accountable.</p>
     </div>
     <div class="hdt-donorbox" id="hero-box"></div>
@@ -58,12 +58,24 @@
 <!-- DIRECTORY -->
 <section class="hdt-section" id="directory">
   <div class="hdt-inner">
+    <div class="hdt-update">
+      <details class="hdt-update-details">
+        <summary><span class="hdt-update-tag">New</span> Sunday, September 27, 2026 tool updates</summary>
+        <ul class="hdt-update-list">
+          <li><strong>Party committees added (major change).</strong> We now track healthcare-industry money to the Democratic and Republican <strong>state, county, Senate, and Assembly campaign committees</strong>. Because state law lets these committees accept nearly unlimited contributions, corporations and industry PACs funnel most of their political money through them rather than giving to individual candidates, who face strict limits. Capturing that flow makes the overall total jump sharply (~$9 million to ~$31 million).</li>
+          <li><strong>Unions are now separate.</strong> Union donations are shown as their own set of contributors with their own total, and are not counted in the healthcare-industry figure. The unions we track: SEIU, CWA, NYSNA, DC37, UFT, and Doctors Council.</li>
+          <li><strong>Healthcare share added.</strong> Each recipient now shows what percentage of all the money they raised comes from the healthcare industry.</li>
+        </ul>
+      </details>
+    </div>
     <details class="hdt-explainer" open>
       <summary>About this Tool</summary>
       <div class="hdt-explainer-body">
-        <p>This tool shows which healthcare industry actors fund New York's legislators. We group subsidiaries, executives, and PACs under their parent companies, because large corporations and special interests give through many channels at once. Grouping them reveals the full reach of a single entity's giving. For example, we found that the health insurer Centene gives the bulk of its donations through its health plans, spread across 40+ different entities.</p>
-        <p>We deliberately exclude groups that openly support single payer, such as the New York State Nurses Association (NYSNA). Every contributor shown is neutral, of unknown position, or explicitly opposed to single payer. We also filter out most unions, showing only those with a record of opposing the New York Health Act (currently DC37 and the UFT). Not every donation shown here is bad, but the public deserves the full picture of how much the industry pours into our politics.</p>
-        <p>This tool is new and probably has some small mistakes. If you spot something verifiably wrong, email us at <a href="mailto:healthcare@socialists.nyc">healthcare@socialists.nyc</a> and we'll fix it as soon as possible. We welcome feedback on how it works and ideas to make it better, and we plan to update it monthly to keep the data current.</p>
+        <p>This tool shows which healthcare industry actors fund New York's legislators and party committees. Large corporations and special interests give through many channels at once, so we group subsidiaries, executives, and PACs under their parent companies to reveal the full reach of a single entity's giving. Centene, for example, routes the bulk of its donations through its health plans, spread across 40+ different entities.</p>
+        <p>It also tracks money given to the Republican and Democratic county, state, Senate, and Assembly committees. Much of the healthcare industry's money flows here because contributions to these committees are nearly unlimited, which makes them an attractive channel for corporations and industry PACs.</p>
+        <p>Union donations are shown as a separate total that does <em>not</em> count toward the overall healthcare industry figure (click "Unions" in the sector dropdown to see it). Rather than report on all union giving, of which there is far more not shown, we include only unions connected to healthcare through the workers they represent. Union giving is harder to read than direct contributions from healthcare corporations and industry groups, because unions give to legislators for many reasons, whereas a corporation's or PAC's donation is a more direct expression of its specific healthcare interests. For that reason, we keep these union contributions in their own toggle and total.</p>
+        <p>Among the non-union contributors, we deliberately exclude some healthcare-related groups that openly support single payer. Everyone shown is neutral, of unknown position, or explicitly opposed to single payer. Not every donation here is bad, but the public deserves the full picture of how much the industry pours into our politics.</p>
+        <p>This tool is new and probably has some small mistakes. If you spot something verifiably wrong, email us at <a href="mailto:healthcare@socialists.nyc">healthcare@socialists.nyc</a> and we'll fix it quickly. We welcome feedback and ideas to make it better, and we plan to update it monthly to keep the data current.</p>
         <p>We built this for organizers, journalists, researchers, and the public to see who funds their legislators. We want to see the day our legislators take no money from large healthcare entities, especially those actively blocking the path to single payer.</p>
         <p>At a minimum, we ask every legislator to refuse money from health insurers, pharmaceutical companies, and New York's largest and wealthiest hospitals and health systems. These institutions are the most opposed to single payer and stand to lose the most if we win. Taking their money is a direct attack on the fight for a just healthcare system.</p>
       </div>
@@ -72,6 +84,7 @@
       <div class="hdt-toggle">
         <button id="tg-rec" class="on" data-mode="recipients">Recipients</button>
         <button id="tg-con" data-mode="contributors">Contributors</button>
+        <button id="tg-uni" data-mode="unions">Union contributions</button>
       </div>
       <div class="hdt-tools">
         <span class="hdt-count" id="hdt-count"></span>
@@ -115,12 +128,25 @@
   function sheetPhoto(name,withPhoto){ const s=slug(name);
     const img=withPhoto?`<img src="images/legislators/${s}.jpg" alt="" onerror="if(this.dataset.p){this.remove();}else{this.dataset.p=1;this.src='images/legislators/${s}.png';}">`:'';
     return `<div class="hdt-sheet-photo"><span class="ini">${initials(name)}</span>${img}</div>`; }
-  const OFFICE={governor:'GOV',state_senate:'SEN',assembly:'ASM'};
-  const OFFICEL={governor:'Governor',state_senate:'State Senate',assembly:'Assembly'};
+  const OFFICE={governor:'GOV',state_senate:'SEN',assembly:'ASM',party_committee:'PARTY CMTE'};
+  const OFFICEL={governor:'Governor',state_senate:'State Senate',assembly:'Assembly',party_committee:'Party committee'};
+  // Statewide committees: the leader who controls the committee (shown on the card).
+  const CONTROLLERS={
+    "Democratic Senate Campaign Committee (DSCC)":"Andrea Stewart-Cousins",
+    "Democratic Assembly Campaign Committee (DACC)":"Carl Heastie",
+    "New York State Democratic Committee":"Kathy Hochul",
+    "Republican Senate Campaign Committee (RSCC)":"Rob Ortt",
+    "Republican Assembly Campaign Committee (RACC)":"Will Barclay",
+    "New York Republican State Committee":"Ed Cox",
+  };
   let LAB={};
 
   function place(c){
     const office=OFFICEL[c.position]||'';
+    if(c.position==='party_committee'){
+      const ctrl=CONTROLLERS[c.candidate_name];
+      return (c.region||office)+(ctrl?' · Controlled by '+ctrl:'');
+    }
     if(c.position==='governor') return c.region||office;
     const dnum=c.district ? office+' District '+c.district : '';
     if(dnum && c.region) return dnum+' · '+c.region;
@@ -130,7 +156,8 @@
   function statusTag(s){
     const m={incumbent:['inc','Incumbent'], current_candidate:['cand','Current candidate'],
              candidate:['cand','Current candidate'],
-             former_legislator:['fleg','Former legislator'], former_candidate:['fcand','Former candidate']};
+             former_legislator:['fleg','Former legislator'], former_candidate:['fcand','Former candidate'],
+             party_committee:['pcom','Party committee']};
     const x=m[s]; return x?`<span class="hdt-tag status ${x[0]}">${x[1]}</span>`:'';
   }
   function nyhaBlock(c){
@@ -155,7 +182,8 @@
   const FILT={from:'',to:'',sector:'',branch:'',status:'',party:'',donor:'',lawmaker:''};
   const BRANCHES=[{v:'assembly',l:'Assembly'},{v:'state_senate',l:'State Senate'},{v:'governor',l:'Governor'}];
   const STATUSES=[{v:'incumbent',l:'Incumbent'},{v:'current_candidate',l:'Current candidate'},
-                  {v:'former_legislator',l:'Former legislator'},{v:'former_candidate',l:'Former candidate'}];
+                  {v:'former_legislator',l:'Former legislator'},{v:'former_candidate',l:'Former candidate'},
+                  {v:'party_committee',l:'Party committee'}];
   const escH=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const escA=s=>escH(s).replace(/"/g,'&quot;');
   function updateFade(el){
@@ -192,12 +220,18 @@
     other_healthcare_related:'other healthcare-related donors',
   };
   let CUR=null, donorSector={}, candOffice={}, candStatus={}, candParty={}, PARTIES=[], donorNames=new Set(), candNames=new Set();
+  // Union money is a separate dataset (D.union.rows) that is never counted in the
+  // healthcare total. We view it when the Union toggle is active, OR when "Union"
+  // is picked in the sector dropdown (an in-place lavender overlay).
+  function usingUnion(){ return MODE==='unions' || FILT.sector==='union'; }
+  function pageRows(){ return usingUnion() ? ((D.union&&D.union.rows)||[]) : D.rows; }
   function activeFilter(){ return !!(FILT.from||FILT.to||FILT.sector||FILT.branch||FILT.status||FILT.party||FILT.donor||FILT.lawmaker); }
   function inRange(d){ return (!FILT.from||d>=FILT.from) && (!FILT.to||d<=FILT.to); }
   function computeAgg(){
+    const uni=usingUnion();
     const byCand={},byDonor={},mTot={},mDonor={}; let total=0,rowsN=0;
-    for(const r of D.rows){
-      if(FILT.sector && r.s!==FILT.sector) continue;
+    for(const r of pageRows()){
+      if(!uni && FILT.sector && r.s!==FILT.sector) continue;   // sector n/a for union rows
       if(FILT.branch && candOffice[r.c]!==FILT.branch) continue;
       if(FILT.status && candStatus[r.c]!==FILT.status) continue;
       if(FILT.party && candParty[r.c]!==FILT.party) continue;
@@ -217,11 +251,13 @@
   // range, so the month axis stays stable and a clicked/dragged range highlights
   // the selection rather than collapsing the chart to it.
   function timelineData(){
-    const pass=r=>!( (FILT.sector&&r.s!==FILT.sector) || (FILT.branch&&candOffice[r.c]!==FILT.branch)
+    const uni=usingUnion();
+    const pass=r=>!( (!uni&&FILT.sector&&r.s!==FILT.sector) || (FILT.branch&&candOffice[r.c]!==FILT.branch)
       || (FILT.status&&candStatus[r.c]!==FILT.status) || (FILT.party&&candParty[r.c]!==FILT.party)
       || (FILT.donor&&r.n!==FILT.donor) || (FILT.lawmaker&&r.c!==FILT.lawmaker) );
+    const src=pageRows();
     const mTot={}, mDonor={};
-    for(const r of D.rows){ if(!pass(r)) continue;
+    for(const r of src){ if(!pass(r)) continue;
       const m=r.d.slice(0,7); mTot[m]=(mTot[m]||0)+r.a;
       (mDonor[m]||(mDonor[m]={}))[r.n]=(mDonor[m][r.n]||0)+r.a; }
     const months=Object.keys(mTot).sort();
@@ -229,7 +265,7 @@
     for(const m of months){ let tn='',ta=0; const md=mDonor[m];
       for(const n in md) if(md[n]>ta){ta=md[n];tn=n;} topD[m]={n:tn,a:ta}; }
     const rec={};
-    for(const r of D.rows){ if(!pass(r)) continue;
+    for(const r of src){ if(!pass(r)) continue;
       const m=r.d.slice(0,7); if(topD[m]&&r.n===topD[m].n){ (rec[m]||(rec[m]={}))[r.c]=(rec[m][r.c]||0)+r.a; } }
     return months.map(m=>{ const t=topD[m]; let recip='',ma=0; if(rec[m]) for(const c in rec[m]) if(rec[m][c]>ma){ma=rec[m][c];recip=c;}
       return {month:m, amount:mTot[m], top: t.n?{name:t.n,amount:t.a,sector:donorSector[t.n]||'',recipient:recip}:null}; });
@@ -239,7 +275,8 @@
     // Sector + Legislative Branch dropdowns are identical on both toggles.
     const s=$('fb-sector');
     s.innerHTML=['<option value="">All sectors</option>'].concat(
-      Object.keys(D.summary.by_sector||{}).map(k=>`<option value="${k}">${LAB[k]||k}</option>`)).join('');
+      Object.keys(D.summary.by_sector||{}).map(k=>`<option value="${k}">${LAB[k]||k}</option>`),
+      ['<option value="union">Unions (shown separately)</option>']).join('');
     s.value=FILT.sector;
     const b=$('fb-branch');
     b.innerHTML=['<option value="">All branches</option>'].concat(
@@ -275,11 +312,15 @@
   }
   function applyFilter(){
     computeAgg();
+    const uni=usingUnion();
     const active=activeFilter();
     $('fb-reset').hidden=!active;
     $('hdt-filterbar').classList.toggle('filtering',active);
+    document.querySelector('.hdt-stripe').classList.toggle('union', uni);
+    $('fb-sector').classList.toggle('union-opt', FILT.sector==='union');
     $('hero-num').textContent=full(CUR.total);
-    $('hero-phrase').textContent=(FILT.sector&&SECTOR_PHRASE[FILT.sector])||'the healthcare industry';
+    $('hero-phrase').textContent=uni ? 'unions (shown separately)'
+      : ((FILT.sector&&SECTOR_PHRASE[FILT.sector])||'the healthcare industry');
     renderDonorBox(); timeline(timelineData()); grid();
   }
 
@@ -291,14 +332,16 @@
     buildFilterBar(); applyFilter();
   }
   function renderDonorBox(){
-    const sec=FILT.sector;
+    const sec=FILT.sector, uni=usingUnion();
     const top=Object.entries(CUR.byDonor).map(([name,amount])=>({name,amount,sector:donorSector[name]||''}))
       .filter(x=>x.amount>0).sort((a,b)=>b.amount-a.amount).slice(0,6);
     const dr=(FILT.from||FILT.to)?((FILT.from||'…')+'–'+(FILT.to||'…'))
       :(D.meta.date_window?D.meta.date_window.start.slice(0,4)+'–'+D.meta.date_window.end.slice(0,4):'');
-    const cap=['to '+CUR.nleg+' legislators', dr].filter(Boolean).join(' · ');
+    const cap=['to '+CUR.nleg+' recipients', dr].filter(Boolean).join(' · ');
     const mx=Math.max(1,...top.map(d=>d.amount));
-    $('db-top').innerHTML=`<div class="lbl">Total from ${sec?(SECTOR_PHRASE[sec]||LAB[sec]||sec):'healthcare &amp; insurance industry'}</div>
+    const lbl = uni ? 'Total from unions <span class="hdt-sep-note">(separate — not counted in the healthcare total)</span>'
+                    : 'Total from '+(sec?(SECTOR_PHRASE[sec]||LAB[sec]||sec):'healthcare &amp; insurance industry');
+    $('db-top').innerHTML=`<div class="lbl">${lbl}</div>
       <div class="big">${full(CUR.total)}</div>
       <div class="cap">${cap}</div>`;
     $('db-hd').textContent='Biggest Donors';
@@ -355,20 +398,21 @@
   }
 
   // ---------- CARD GRID ----------
-  function cardRecipient(c,amt,mx){
+  function cardRecipient(c,amt,mx,uni){
     return `<div class="hdt-card" data-key="${encodeURIComponent(c.candidate_name)}">
-      <div class="hdt-card-top">${avatar(c.candidate_name)}
-        <div><div class="hdt-tags"><span class="hdt-tag chamber">${OFFICE[c.position]||''}</span>${partyTag(c.party)}${statusTag(c.status)}</div>
+      <div class="hdt-card-top">${c.position==='party_committee'?'':avatar(c.candidate_name)}
+        <div><div class="hdt-tags">${c.position!=='party_committee'?`<span class="hdt-tag chamber">${OFFICE[c.position]||''}</span>`:''}${partyTag(c.party)}${statusTag(c.status)}</div>
           <div class="hdt-card-name">${c.candidate_name}</div>
           <div class="hdt-card-place"><span>${place(c)||'&nbsp;'}</span>${c.tenure?`<span class="hdt-tenure">${c.tenure}</span>`:''}</div></div></div>
       <div class="hdt-card-bot"><div class="hdt-card-amt">${money(amt)}</div>
-        <div class="hdt-card-cap">from healthcare industry</div>
+        <div class="hdt-card-cap">${uni?'from unions':'from healthcare industry'}</div>
         <div class="hdt-card-track"><div class="hdt-card-fill" style="width:${(amt/mx*100).toFixed(0)}%"></div></div></div></div>`;
   }
-  function cardContributor(d,amt,mx){
+  function cardContributor(d,amt,mx,uni){
+    const tag = uni ? 'UNION' : (LAB[d.sector]||d.sector||'').toUpperCase();
     return `<div class="hdt-card" data-key="${encodeURIComponent(d.name)}">
       <div class="hdt-card-top">
-        <div><div class="hdt-tags"><span class="hdt-tag chamber" style="background:var(--ink)">${(LAB[d.sector]||d.sector||'').toUpperCase()}</span></div>
+        <div><div class="hdt-tags"><span class="hdt-tag chamber" style="background:${uni?'var(--lav)':'var(--ink)'}">${tag}</span></div>
           <div class="hdt-card-name">${d.name}</div><div class="hdt-card-place">${d.n_gifts} gifts</div></div></div>
       <div class="hdt-card-bot"><div class="hdt-card-amt">${money(amt)}</div>
         <div class="hdt-card-cap">to NY campaigns</div>
@@ -377,7 +421,10 @@
   function grid(){
     const q=($('hdt-search').value||'').toLowerCase().trim();
     const sort=$('hdt-sort').value;
-    let items = MODE==='recipients' ? D.candidates.slice() : D.donors.slice();
+    const uni=usingUnion();
+    const showDonors = MODE!=='recipients';   // contributors + unions show donor cards
+    let items = MODE==='recipients' ? D.candidates.slice()
+              : (uni ? (((D.union&&D.union.donors)||[]).slice()) : D.donors.slice());
     const nameOf=x=>MODE==='recipients'?x.candidate_name:x.name;
     const amtOf=x=>MODE==='recipients'?(CUR.byCand[x.candidate_name]||0):(CUR.byDonor[x.name]||0);
     const active=activeFilter();
@@ -386,11 +433,14 @@
     if(sort==='az') items.sort((a,b)=>nameOf(a).localeCompare(nameOf(b)));
     else if(sort==='amtasc') items.sort((a,b)=>amtOf(a)-amtOf(b));
     else items.sort((a,b)=>amtOf(b)-amtOf(a));
-    $('hdt-count').textContent=items.length+' '+(MODE==='recipients'?'legislator':'donor')+(items.length===1?'':'s');
+    const noun = MODE==='recipients' ? 'recipient' : (uni?'union':'donor');
+    $('hdt-count').textContent=items.length+' '+noun+(items.length===1?'':'s');
+    $('hdt-grid').classList.toggle('union', uni);
     const mx=Math.max(1,...items.map(amtOf));
     $('hdt-empty').style.display=items.length?'none':'block';
-    $('hdt-grid').innerHTML=items.slice(0,300).map(x=>MODE==='recipients'?cardRecipient(x,amtOf(x),mx):cardContributor(x,amtOf(x),mx)).join('');
-    $('hdt-grid').querySelectorAll('.hdt-card').forEach(el=>el.addEventListener('click',()=>openModal(decodeURIComponent(el.dataset.key))));
+    $('hdt-grid').innerHTML=items.slice(0,300).map(x=>MODE==='recipients'?cardRecipient(x,amtOf(x),mx,uni):cardContributor(x,amtOf(x),mx,uni)).join('');
+    const openMode = MODE==='recipients' ? 'recipients' : (uni ? 'unions' : 'contributors');
+    $('hdt-grid').querySelectorAll('.hdt-card').forEach(el=>el.addEventListener('click',()=>openModal(decodeURIComponent(el.dataset.key), openMode)));
   }
 
   // ---------- MODAL ----------
@@ -405,6 +455,25 @@
       <div class="hdt-bar-label">${LAB[k]||k}</div>
       <div class="hdt-bar-track"><div class="hdt-bar-fill" style="width:${(v/mx*100).toFixed(0)}%"></div></div>
       <div class="hdt-bar-val">${money(v)}</div></div>`; }).join(''); }
+  // Sector bars (counted) plus, below a divider, this legislator's union money in
+  // lavender — a separate cash amount NOT included in the healthcare total.
+  function secUnionBars(bySec, byUnion){
+    const secE=Object.entries(bySec||{}).sort((a,b)=>b[1]-a[1]);
+    const uniE=Object.entries(byUnion||{}).sort((a,b)=>b[1]-a[1]);
+    const mx=Math.max(1,...secE.map(x=>x[1]),...uniE.map(x=>x[1]));
+    const sec=secE.map(([k,v])=>{ const on=MFILT.sector===k;
+      return `<div class="hdt-bar-row hdt-secrow${on?' sel':''}" data-secfilter="${escA(k)}" title="Filter by ${escH(LAB[k]||k)}">
+      <div class="hdt-bar-label">${LAB[k]||k}</div>
+      <div class="hdt-bar-track"><div class="hdt-bar-fill" style="width:${(v/mx*100).toFixed(0)}%"></div></div>
+      <div class="hdt-bar-val">${money(v)}</div></div>`; }).join('') || '<p class="hdt-sub">—</p>';
+    if(!uniE.length) return sec;
+    const uniTot=uniE.reduce((a,b)=>a+b[1],0);
+    const uni=uniE.map(([k,v])=>
+      `<div class="hdt-bar-row hdt-unionrow"><div class="hdt-bar-label">${k}</div>
+      <div class="hdt-bar-track"><div class="hdt-bar-fill" style="width:${(v/mx*100).toFixed(0)}%"></div></div>
+      <div class="hdt-bar-val">${money(v)}</div></div>`).join('');
+    return sec + `<div class="hdt-union-divider"><span>Union money · ${money(uniTot)} · not counted in the total above</span></div>` + uni;
+  }
   function miniTL(quarterly,tlab){ const data=quarterly||[]; if(!data.length)return'<p class="hdt-sub">No timeline data.</p>';
     const W=560,H=120,pad={t:8,r:6,b:20,l:46}; const mx=Math.max(...data.map(d=>d.amount));
     const bw=(W-pad.l-pad.r)/data.length; let h='';
@@ -445,11 +514,13 @@
   // Each modal has its own date-range + sector filter (inherits the page filter
   // on open) and recomputes its contents from the row-level data.
   let MODAL=null; const MFILT={from:'',to:'',sector:'',branch:'',status:'',party:'',donor:'',lawmaker:''};
+  // Row source for the open modal: union donors read the separate union dataset.
+  function modalRows(){ return MODAL.mode==='unions' ? ((D.union&&D.union.rows)||[]) : D.rows; }
   function entityCounterparties(){
     // names on the "other side" for this modal's entity (donors for a legislator,
     // legislators for a donor), so the picker lists only relevant options.
     const isRec=MODAL.mode==='recipients', s=new Set();
-    for(const r of D.rows){ if(isRec){ if(r.c===MODAL.key) s.add(r.n); } else if(r.n===MODAL.key) s.add(r.c); }
+    for(const r of modalRows()){ if(isRec){ if(r.c===MODAL.key) s.add(r.n); } else if(r.n===MODAL.key) s.add(r.c); }
     return [...s].sort();
   }
   function qtrOf(d){ return d.slice(0,4)+'Q'+(Math.floor((+d.slice(5,7)-1)/3)+1); }
@@ -460,7 +531,7 @@
   // This modal's entity rows honoring every MFILT axis EXCEPT the named one
   // ('sector' keeps every sector clickable; 'date' keeps the whole timeline axis).
   function entityRowsExcept(skip){
-    return D.rows.filter(r=>{
+    return modalRows().filter(r=>{
       if(MODAL.mode==='recipients'){ if(r.c!==MODAL.key) return false; } else if(r.n!==MODAL.key) return false;
       if(skip!=='sector' && MFILT.sector && r.s!==MFILT.sector) return false;
       if(MFILT.branch && candOffice[r.c]!==MFILT.branch) return false;
@@ -473,7 +544,7 @@
       return true; });
   }
   function rowsForEntity(){
-    return D.rows.filter(r=>{
+    return modalRows().filter(r=>{
       if(MODAL.mode==='recipients'){ if(r.c!==MODAL.key) return false; } else if(r.n!==MODAL.key) return false;
       if(MFILT.sector && r.s!==MFILT.sector) return false;
       if(MFILT.branch && candOffice[r.c]!==MFILT.branch) return false;
@@ -487,7 +558,7 @@
   }
   function modalFilterBar(){
     const dw=D.meta.date_window||{};
-    const opts = MODAL.mode==='contributors'
+    const opts = MODAL.mode!=='recipients'
       ? ['<option value="">All branches</option>'].concat(BRANCHES.map(b=>`<option value="${b.v}"${MFILT.branch===b.v?' selected':''}>${b.l}</option>`)).join('')
       : ['<option value="">All sectors</option>'].concat(Object.keys(D.summary.by_sector||{}).map(k=>`<option value="${k}"${MFILT.sector===k?' selected':''}>${LAB[k]||k}</option>`)).join('');
     // Both card types now use click-to-filter on their lists, so the entity
@@ -513,8 +584,26 @@
     // the sector/date filters already in allRows).
     const selRows = sel ? allRows.filter(r=> r.n===sel.v) : allRows;
     let total=0; for(const r of selRows) total+=r.a;
+    // Healthcare as a share of ALL money raised — recomputed for the selected date
+    // span using the recipient's all-source monthly totals (denominator).
+    let denomAll=c.total_all||0;
+    if(MFILT.from||MFILT.to){
+      const fm=MFILT.from?MFILT.from.slice(0,7):'0000-00', tm=MFILT.to?MFILT.to.slice(0,7):'9999-99';
+      denomAll=0; for(const m in (c.all_by_month||{})) if(m>=fm&&m<=tm) denomAll+=c.all_by_month[m];
+    }
+    const hcNumer = allRows.reduce((s,r)=>s+r.a,0);  // healthcare (+sector) in range; donor-sel doesn't change the share
+    const pctAll = denomAll>0 ? Math.min(100, Math.round(hcNumer/denomAll*100)) : null;
     // Money by sector ignores the sector filter so every sector stays clickable.
     const bySec={}; for(const r of entityRowsExcept('sector')) bySec[r.s]=(bySec[r.s]||0)+r.a;
+    // Union money for this legislator (separate dataset, NOT counted in the total).
+    // Honors the date filter; shown as its own lavender block below the sectors.
+    const byUnion={};
+    for(const r of ((D.union&&D.union.rows)||[])){
+      if(r.c!==c.candidate_name) continue;
+      if(MFILT.from && r.d<MFILT.from) continue;
+      if(MFILT.to && r.d>MFILT.to) continue;
+      byUnion[r.n]=(byUnion[r.n]||0)+r.a;
+    }
     // Timeline ignores the date filter (stable month axis) but honors the sector
     // filter and the clicked donor; the selected quarter is highlighted.
     const tlRows=entityRowsExcept('date').filter(r=> !sel || r.n===sel.v);
@@ -530,22 +619,24 @@
         <div class="hdt-dd-amt">${money(d.amount)}</div></div>`; }).join('')||'<p class="hdt-sub">No donations in this range.</p>';
     const selChip = selChipHTML(sel);
     return `<div class="hdt-sheet-bar"><span>Created by NYC-DSA Healthcare Working Group</span><button data-close>×</button></div>
-      <div class="hdt-sheet-top">
-        ${sheetPhoto(c.candidate_name,true)}
+      <div class="hdt-sheet-top${c.position==='party_committee'?' hdt-sheet-top-nophoto':''}">
+        ${c.position==='party_committee'?'':sheetPhoto(c.candidate_name,true)}
         <div class="hdt-sheet-info">
-          <div class="hdt-tags"><span class="hdt-tag chamber">${OFFICEL[c.position]||''}</span>${partyTag(c.party)}${statusTag(c.status)}</div>
+          <div class="hdt-tags">${c.position!=='party_committee'?`<span class="hdt-tag chamber">${OFFICEL[c.position]||''}</span>`:''}${partyTag(c.party)}${statusTag(c.status)}</div>
           <div class="hdt-sheet-name">${c.candidate_name}</div>
           <div class="hdt-sheet-place">${place(c)||''}${c.tenure?`<span class="hdt-sheet-tenure">${place(c)?' · ':''}${c.tenure}</span>`:''}</div>${nyhaBlock(c)}
           ${modalFilterBar()}
         </div>
       </div>
       <div class="hdt-sheet-total"><div class="lbl">Total received from healthcare &amp; insurance industry${sel?' · '+escH(sel.v):''}</div><div class="big">${full(total)}</div></div>
+      ${(pctAll!==null)?`<div class="hdt-sheet-pct"><b>${pctAll}%</b> of all money to ${escH(c.candidate_name)}${(MFILT.from||MFILT.to)?' in this period':''} is from the healthcare industry</div>`:''}
       <div class="hdt-sheet-body">
+        ${c.party_note?`<p class="hdt-partynote">${escH(c.party_note)}</p>`:''}
         ${committeesBlock(c)}
         <h4>Top healthcare industry donors</h4>
         ${selChip}
         <div class="hdt-scrolllist">${listHTML}</div>
-        <h4>Money by sector</h4><div class="hdt-secbars">${secBars(bySec)||'<p class="hdt-sub">—</p>'}</div>
+        <h4>Money by sector</h4><div class="hdt-secbars">${secUnionBars(bySec,byUnion)}</div>
         <h4>Over time</h4>${miniTL(quarterly,'Biggest donor')}
         <div class="hdt-share"><button data-copy>⧉ Copy link</button><button data-close>Close</button></div>
       </div>`;
@@ -558,7 +649,7 @@
       <ul class="hdt-profile">${bullets}</ul>
       <p class="hdt-profile-ai">Compiled with AI assistance and reviewed by a human. This still may contain errors.</p>`;
   }
-  function contributorSheet(d){
+  function contributorSheet(d, uni){
     const allRows=rowsForEntity();
     // Recipients list (always full) + whether this donor has multiple components.
     const byCand={}, compAll={};
@@ -593,20 +684,21 @@
         <div><div class="hdt-dd-name">${escH(it.label)}</div><div class="hdt-dd-bar" style="width:${(it.amount/mx*100).toFixed(0)}%"></div></div>
         <div class="hdt-dd-amt">${money(it.amount)}</div></div>`; }).join('')||'<p class="hdt-sub">No donations for this selection.</p>';
     const tabsHTML = hasComps
-      ? `<div class="hdt-tabs2"><button class="hdt-tab2${tab==='recipients'?' on':''}" data-tab="recipients">Top recipients</button><button class="hdt-tab2${tab==='components'?' on':''}" data-tab="components">Executives, subsidiaries &amp; PACs</button></div>`
+      ? `<div class="hdt-tabs2"><button class="hdt-tab2${tab==='recipients'?' on':''}" data-tab="recipients">Top recipients</button><button class="hdt-tab2${tab==='components'?' on':''}" data-tab="components">${uni?'List of PACs and Locals':'Executives, subsidiaries &amp; PACs'}</button></div>`
       : `<h4>Top recipients</h4>`;
     // Recipient narrowing — only shown on the components tab, just below the tabs.
     const recipFilter = (tab==='components')
       ? `<div class="hdt-comp-filter"><span class="hdt-fb-lbl">Recipient</span><select id="comp-recip"><option value="">All recipients</option>${recs.map(r=>`<option value="${escA(r.label)}"${compRecip===r.label?' selected':''}>${escH(r.label)} — ${money(r.amount)}</option>`).join('')}</select></div>`
       : '';
     const selChip = selChipHTML(sel);
-    const totLbl = `Total given to NY State campaigns${compRecip?' · to '+escH(compRecip):''}${sel?' · '+escH(sel.v):''}`;
+    const totLbl = `${uni?'Total union giving to NY State campaigns':'Total given to NY State campaigns'}${compRecip?' · to '+escH(compRecip):''}${sel?' · '+escH(sel.v):''}`;
+    const headTag = uni ? 'UNION' : (LAB[d.sector]||d.sector||'').toUpperCase();
     return `<div class="hdt-sheet-bar"><span>Created by NYC-DSA Healthcare Working Group</span><button data-close>×</button></div>
       <div class="hdt-sheet-top hdt-sheet-top-nophoto">
         <div class="hdt-sheet-info">
-          <div class="hdt-tags"><span class="hdt-tag chamber" style="background:var(--ink)">${(LAB[d.sector]||d.sector||'').toUpperCase()}</span></div>
+          <div class="hdt-tags"><span class="hdt-tag chamber" style="background:${uni?'var(--lav)':'var(--ink)'}">${headTag}</span></div>
           <div class="hdt-sheet-name">${d.name}</div>
-          <div class="hdt-sheet-place">${allRows.length} contributions</div>
+          <div class="hdt-sheet-place">${allRows.length} contributions${uni?' · not counted in the healthcare total':''}</div>
           ${modalFilterBar()}
         </div>
       </div>
@@ -622,15 +714,17 @@
   }
   function renderSheet(){
     const el=$('hdt-sheet');
+    el.classList.toggle('union', MODAL.mode==='unions');
     if(MODAL.mode==='recipients'){ const c=D.candidates.find(x=>x.candidate_name===MODAL.key); if(!c)return; el.innerHTML=recipientSheet(c); }
+    else if(MODAL.mode==='unions'){ const d=((D.union&&D.union.donors)||[]).find(x=>x.name===MODAL.key); if(!d)return; el.innerHTML=contributorSheet(d, true); }
     else { const d=D.donors.find(x=>x.name===MODAL.key); if(!d)return; el.innerHTML=contributorSheet(d); }
     wireMiniTL(el);
     const q=id=>el.querySelector('#'+id);
     if(q('mf-from')) q('mf-from').onchange=()=>{ MFILT.from=q('mf-from').value; renderSheet(); };
     if(q('mf-to')) q('mf-to').onchange=()=>{ MFILT.to=q('mf-to').value; renderSheet(); };
-    if(q('mf-sector')) q('mf-sector').onchange=()=>{ if(MODAL.mode==='contributors') MFILT.branch=q('mf-sector').value; else MFILT.sector=q('mf-sector').value; renderSheet(); };
+    if(q('mf-sector')) q('mf-sector').onchange=()=>{ if(MODAL.mode!=='recipients') MFILT.branch=q('mf-sector').value; else MFILT.sector=q('mf-sector').value; renderSheet(); };
     if(q('mf-entity')) q('mf-entity').onchange=()=>{ const v=q('mf-entity').value.trim(); const ok=entityCounterparties().includes(v);
-      if(MODAL.mode==='contributors') MFILT.lawmaker=ok?v:''; else MFILT.donor=ok?v:''; renderSheet(); };
+      if(MODAL.mode!=='recipients') MFILT.lawmaker=ok?v:''; else MFILT.donor=ok?v:''; renderSheet(); };
     if(q('mf-reset')) q('mf-reset').onclick=()=>{ MFILT.from='';MFILT.to='';MFILT.sector='';MFILT.branch='';MFILT.status='';MFILT.party='';MFILT.donor='';MFILT.lawmaker=''; renderSheet(); };
     el.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{ MODAL.tab=b.dataset.tab; MODAL.sel=null; MODAL.compRecip=''; renderSheet(); });
     { const cr=el.querySelector('#comp-recip'); if(cr) cr.onchange=()=>{ MODAL.compRecip=cr.value; MODAL.sel=null; renderSheet(); }; }
@@ -645,27 +739,34 @@
     el.querySelectorAll('[data-close]').forEach(b=>b.onclick=closeModal);
     const cp=el.querySelector('[data-copy]'); if(cp) cp.onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(location.href);cp.textContent='✓ Copied';setTimeout(()=>cp.textContent='⧉ Copy link',1500);};
   }
-  function openModal(key){
-    const mode=MODE;
+  function openModal(key, mode){
+    mode = mode || MODE;
     if(mode==='recipients'){ if(!D.candidates.find(x=>x.candidate_name===key)) return; }
+    else if(mode==='unions'){ if(!((D.union&&D.union.donors)||[]).find(x=>x.name===key)) return; }
     else if(!D.donors.find(x=>x.name===key)) return;
     MODAL={key,mode,tab:'recipients',sel:null,compRecip:''};
-    MFILT.from=FILT.from; MFILT.to=FILT.to; MFILT.sector=FILT.sector; MFILT.branch=FILT.branch;
+    MFILT.from=FILT.from; MFILT.to=FILT.to; MFILT.branch=FILT.branch;
     MFILT.status=FILT.status; MFILT.party=FILT.party;
+    MFILT.sector = mode==='unions' ? '' : FILT.sector;   // sector n/a inside a union sheet
     MFILT.donor=FILT.donor; MFILT.lawmaker=FILT.lawmaker;  // inherit page filter
     renderSheet();
     $('hdt-modal').classList.add('on'); document.body.style.overflow='hidden';
-    location.hash=(mode==='recipients'?'r=':'c=')+encodeURIComponent(key);
+    location.hash=(mode==='recipients'?'r=':mode==='unions'?'u=':'c=')+encodeURIComponent(key);
   }
   function closeModal(){ $('hdt-modal').classList.remove('on'); document.body.style.overflow=''; history.replaceState(null,'',location.pathname); }
   $('hdt-modal').addEventListener('click',e=>{ if(e.target===$('hdt-modal')) closeModal(); });
   document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
 
-  function setMode(m){ MODE=m; $('tg-rec').classList.toggle('on',m==='recipients'); $('tg-con').classList.toggle('on',m==='contributors');
-    $('hdt-search').placeholder=m==='recipients'?'Search a legislator…':'Search a donor…';
+  function setMode(m){ MODE=m;
+    $('tg-rec').classList.toggle('on',m==='recipients'); $('tg-con').classList.toggle('on',m==='contributors');
+    $('tg-uni').classList.toggle('on',m==='unions');
+    $('hdt-search').placeholder=m==='recipients'?'Search a legislator…':m==='unions'?'Search a union…':'Search a donor…';
     FILT.donor=''; FILT.lawmaker='';
+    // Union mode is its own dataset; clear any sector filter (n/a) on entry/exit.
+    if(m==='unions') FILT.sector=''; else if(FILT.sector==='union') FILT.sector='';
     fillFilters(); applyFilter(); }
   $('tg-rec').onclick=()=>setMode('recipients'); $('tg-con').onclick=()=>setMode('contributors');
+  $('tg-uni').onclick=()=>setMode('unions');
   $('hdt-search').addEventListener('input',grid); $('hdt-sort').addEventListener('change',grid);
 
   function method(){ const m=D.meta,dw=m.date_window?`${m.date_window.start} to ${m.date_window.end}`:'';
@@ -678,6 +779,7 @@
 
   function deeplink(){ const h=location.hash.slice(1); if(!h)return;
     if(h.startsWith('c=')){ setMode('contributors'); openModal(decodeURIComponent(h.slice(2))); }
+    else if(h.startsWith('u=')){ setMode('unions'); openModal(decodeURIComponent(h.slice(2)),'unions'); }
     else if(h.startsWith('r=')){ openModal(decodeURIComponent(h.slice(2))); } }
 
   fetch('data/healthcare_donations.json?v='+Date.now()).then(r=>r.json()).then(data=>{
