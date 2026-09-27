@@ -249,7 +249,7 @@
             "day": 26,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           }
         ],
         [
@@ -272,7 +272,7 @@
                 "borough": "Brooklyn"
               }
             ],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 28,
