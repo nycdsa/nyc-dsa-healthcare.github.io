@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:b471a2ba-052b-49f6-8b5b-fb2673dfc6b3",
-      "name": "Healthcare Working Group September Social ",
-      "date": "2026-09-27T13:30:00Z",
-      "date_formatted": "1:30 PM, Sunday September 27, 2026",
-      "month_year": "2026-09",
-      "month_label": "September 2026",
-      "status": "confirmed",
-      "description": "<p><img src=\"https://can2-prod.s3.amazonaws.com/uploads/data/001/163/810/original/orange_yellow_modern_announcement_flyer_1.png\" alt=\"\" title=\"\">Join us for a hang out at Oceans 8 for a few rounds of pool, ping pong, bowling and air hockey! All are welcome.</p>",
-      "browser_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
-      "signup_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
-      "location": "304 Flatbush Ave",
-      "borough": "Brooklyn"
-    },
-    {
       "id": "action_network:dab321d8-c427-4449-a9ec-d315ffb138df",
       "name": "NYHA LABOR POWER MAPPING",
       "date": "2026-10-04T13:00:00Z",
@@ -256,29 +242,14 @@
           {
             "day": 27,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:b471a2ba-052b-49f6-8b5b-fb2673dfc6b3",
-                "name": "Healthcare Working Group September Social ",
-                "date": "2026-09-27T13:30:00Z",
-                "date_formatted": "1:30 PM, Sunday September 27, 2026",
-                "month_year": "2026-09",
-                "month_label": "September 2026",
-                "status": "confirmed",
-                "description": "<p><img src=\"https://can2-prod.s3.amazonaws.com/uploads/data/001/163/810/original/orange_yellow_modern_announcement_flyer_1.png\" alt=\"\" title=\"\">Join us for a hang out at Oceans 8 for a few rounds of pool, ping pong, bowling and air hockey! All are welcome.</p>",
-                "browser_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
-                "signup_url": "https://actionnetwork.org/events/healthcare-working-group-september-social",
-                "location": "304 Flatbush Ave",
-                "borough": "Brooklyn"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 28,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 29,
