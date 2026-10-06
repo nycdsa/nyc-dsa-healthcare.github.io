@@ -1,6 +1,20 @@
 {
   "events": [
     {
+      "id": "action_network:03cb5cba-e13b-4eaf-8a31-2cd336ad69c6",
+      "name": "Art Build for NYHA 2: return of the squeegee",
+      "date": "2026-10-11T15:00:00Z",
+      "date_formatted": "3:00 PM, Sunday October 11, 2026",
+      "month_year": "2026-10",
+      "month_label": "October 2026",
+      "status": "confirmed",
+      "description": "<p>Screen printing and banner printing, experience a plus but not necessary. Snacks and beverage provided.</p>",
+      "browser_url": "https://actionnetwork.org/events/art-build-for-nyha-2-return-of-the-squeegee",
+      "signup_url": "https://actionnetwork.org/events/art-build-for-nyha-2-return-of-the-squeegee",
+      "location": "215 w 23rd st",
+      "borough": "New York"
+    },
+    {
       "id": "action_network:b6372da0-334e-422b-8183-c00f7903628c",
       "name": "NYHA presser @ Hochul office",
       "date": "2026-10-17T10:00:00Z",
@@ -126,7 +140,22 @@
           {
             "day": 11,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:03cb5cba-e13b-4eaf-8a31-2cd336ad69c6",
+                "name": "Art Build for NYHA 2: return of the squeegee",
+                "date": "2026-10-11T15:00:00Z",
+                "date_formatted": "3:00 PM, Sunday October 11, 2026",
+                "month_year": "2026-10",
+                "month_label": "October 2026",
+                "status": "confirmed",
+                "description": "<p>Screen printing and banner printing, experience a plus but not necessary. Snacks and beverage provided.</p>",
+                "browser_url": "https://actionnetwork.org/events/art-build-for-nyha-2-return-of-the-squeegee",
+                "signup_url": "https://actionnetwork.org/events/art-build-for-nyha-2-return-of-the-squeegee",
+                "location": "215 w 23rd st",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
