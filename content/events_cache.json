@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:3380aec2-1f88-4a53-b9a4-da4f9379ea4e",
-      "name": "Art Build for New York Health Act ",
-      "date": "2026-10-05T17:00:00Z",
-      "date_formatted": "5:00 PM, Monday October 5, 2026",
-      "month_year": "2026-10",
-      "month_label": "October 2026",
-      "status": "confirmed",
-      "description": "<p>We plan on screen printing pulling squeegee,  drying printed material, painting banners with brush work and maybe stencil,, and sewing bike bibbs, and perhaps printing posters as well</p><p>The correct address will be sent upon RSVP </p>",
-      "browser_url": "https://actionnetwork.org/events/art-build-for-nyha",
-      "signup_url": "https://actionnetwork.org/events/art-build-for-nyha",
-      "location": "215 w 23rd st",
-      "borough": "New York"
-    },
-    {
       "id": "action_network:b6372da0-334e-422b-8183-c00f7903628c",
       "name": "NYHA presser @ Hochul office",
       "date": "2026-10-17T10:00:00Z",
@@ -102,29 +88,14 @@
           {
             "day": 5,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:3380aec2-1f88-4a53-b9a4-da4f9379ea4e",
-                "name": "Art Build for New York Health Act ",
-                "date": "2026-10-05T17:00:00Z",
-                "date_formatted": "5:00 PM, Monday October 5, 2026",
-                "month_year": "2026-10",
-                "month_label": "October 2026",
-                "status": "confirmed",
-                "description": "<p>We plan on screen printing pulling squeegee,  drying printed material, painting banners with brush work and maybe stencil,, and sewing bike bibbs, and perhaps printing posters as well</p><p>The correct address will be sent upon RSVP </p>",
-                "browser_url": "https://actionnetwork.org/events/art-build-for-nyha",
-                "signup_url": "https://actionnetwork.org/events/art-build-for-nyha",
-                "location": "215 w 23rd st",
-                "borough": "New York"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 6,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 7,
