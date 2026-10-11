@@ -133,7 +133,7 @@
             "day": 10,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           }
         ],
         [
@@ -156,7 +156,7 @@
                 "borough": "New York"
               }
             ],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 12,
