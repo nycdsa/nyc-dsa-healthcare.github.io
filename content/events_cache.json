@@ -15,6 +15,20 @@
       "borough": "New York"
     },
     {
+      "id": "action_network:1b24b11a-4db4-4b71-8fb5-9004f3abd157",
+      "name": "NYC HCWG General Meeting",
+      "date": "2026-10-18T14:00:00Z",
+      "date_formatted": "2:00 PM, Sunday October 18, 2026",
+      "month_year": "2026-10",
+      "month_label": "October 2026",
+      "status": "confirmed",
+      "description": "<p>Special meeting!</p><p><span></span>Come join the Healthcare Working Group's October general meeting as we get ready for city wide convention next month! (Spooky vibes, costumes, and healthcare horror stories welcome.) </p>",
+      "browser_url": "https://actionnetwork.org/events/nyc-hcwg-general-meeting",
+      "signup_url": "https://actionnetwork.org/events/nyc-hcwg-general-meeting",
+      "location": "315 West 35th. 10th Floor",
+      "borough": "New York"
+    },
+    {
       "id": "action_network:dd1ba448-c0f0-4530-ac4c-7f8b6f77e185",
       "name": "ZOOM NYHA 101",
       "date": "2026-10-22T19:00:00Z",
@@ -185,7 +199,22 @@
           {
             "day": 18,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:1b24b11a-4db4-4b71-8fb5-9004f3abd157",
+                "name": "NYC HCWG General Meeting",
+                "date": "2026-10-18T14:00:00Z",
+                "date_formatted": "2:00 PM, Sunday October 18, 2026",
+                "month_year": "2026-10",
+                "month_label": "October 2026",
+                "status": "confirmed",
+                "description": "<p>Special meeting!</p><p><span></span>Come join the Healthcare Working Group's October general meeting as we get ready for city wide convention next month! (Spooky vibes, costumes, and healthcare horror stories welcome.) </p>",
+                "browser_url": "https://actionnetwork.org/events/nyc-hcwg-general-meeting",
+                "signup_url": "https://actionnetwork.org/events/nyc-hcwg-general-meeting",
+                "location": "315 West 35th. 10th Floor",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
