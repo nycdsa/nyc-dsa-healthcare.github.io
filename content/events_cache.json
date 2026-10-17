@@ -55,6 +55,20 @@
       "signup_url": "https://actionnetwork.org/events/zoom-nyha-101",
       "location": "Virtual Event",
       "borough": ""
+    },
+    {
+      "id": "action_network:6dbcfaa2-53b4-42cd-ba2f-c8a899c9cc38",
+      "name": "Healthcare Working Group Halloween Social ",
+      "date": "2026-10-31T14:00:00Z",
+      "date_formatted": "2:00 PM, Saturday October 31, 2026",
+      "month_year": "2026-10",
+      "month_label": "October 2026",
+      "status": "confirmed",
+      "description": "<p>Join us for a hang out at The Gutter LES for some drinks and bowling!</p>",
+      "browser_url": "https://actionnetwork.org/events/healthcare-working-group-halloween-social",
+      "signup_url": "https://actionnetwork.org/events/healthcare-working-group-halloween-social",
+      "location": "77 Essex St",
+      "borough": "New York"
     }
   ],
   "calendar": [
@@ -338,7 +352,22 @@
           {
             "day": 31,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:6dbcfaa2-53b4-42cd-ba2f-c8a899c9cc38",
+                "name": "Healthcare Working Group Halloween Social ",
+                "date": "2026-10-31T14:00:00Z",
+                "date_formatted": "2:00 PM, Saturday October 31, 2026",
+                "month_year": "2026-10",
+                "month_label": "October 2026",
+                "status": "confirmed",
+                "description": "<p>Join us for a hang out at The Gutter LES for some drinks and bowling!</p>",
+                "browser_url": "https://actionnetwork.org/events/healthcare-working-group-halloween-social",
+                "signup_url": "https://actionnetwork.org/events/healthcare-working-group-halloween-social",
+                "location": "77 Essex St",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           }
         ]
