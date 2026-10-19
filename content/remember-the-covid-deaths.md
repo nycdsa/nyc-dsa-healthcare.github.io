@@ -23,7 +23,7 @@ Working class New Yorkers will join the democratic socialists for a bold demand:
 
 I heard echoes of the 7pm clapping for health workers in June's DSA primary victories. We care about our neighbors; we can and will build a better world. It's time to put healthcare back on the affordability agenda where it belongs.
 
-*Damien Archbold is a physician at Elmhurst Hospital in Queens.*
+*Damien Archbold is one of the two co-chairs for the NYC-DSA Healthcare Working Group and is a physician at Elmhurst Hospital in Queens.*
 
 ---
 
