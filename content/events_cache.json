@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:1b24b11a-4db4-4b71-8fb5-9004f3abd157",
-      "name": "NYC HCWG General Meeting",
-      "date": "2026-10-18T14:00:00Z",
-      "date_formatted": "2:00 PM, Sunday October 18, 2026",
-      "month_year": "2026-10",
-      "month_label": "October 2026",
-      "status": "confirmed",
-      "description": "<p>Special meeting!</p><p><span></span>Come join the Healthcare Working Group's October general meeting as we get ready for city wide convention next month! (Spooky vibes, costumes, and healthcare horror stories welcome.) </p><p><br></p><p>Agenda: </p><p>Teach-in on Healthcare For All Resolution</p><p>Branch break-out groups</p>",
-      "browser_url": "https://actionnetwork.org/events/nyc-hcwg-general-meeting",
-      "signup_url": "https://actionnetwork.org/events/nyc-hcwg-general-meeting",
-      "location": "315 West 35th. 10th Floor",
-      "borough": "New York"
-    },
-    {
       "id": "action_network:0a6826dc-e013-4a4b-9d19-cb2aa10ee674",
       "name": "The Pathway to Free Healthcare: Reading Group Attendance",
       "date": "2026-10-19T18:30:00Z",
@@ -198,23 +184,8 @@
           {
             "day": 18,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:1b24b11a-4db4-4b71-8fb5-9004f3abd157",
-                "name": "NYC HCWG General Meeting",
-                "date": "2026-10-18T14:00:00Z",
-                "date_formatted": "2:00 PM, Sunday October 18, 2026",
-                "month_year": "2026-10",
-                "month_label": "October 2026",
-                "status": "confirmed",
-                "description": "<p>Special meeting!</p><p><span></span>Come join the Healthcare Working Group's October general meeting as we get ready for city wide convention next month! (Spooky vibes, costumes, and healthcare horror stories welcome.) </p><p><br></p><p>Agenda: </p><p>Teach-in on Healthcare For All Resolution</p><p>Branch break-out groups</p>",
-                "browser_url": "https://actionnetwork.org/events/nyc-hcwg-general-meeting",
-                "signup_url": "https://actionnetwork.org/events/nyc-hcwg-general-meeting",
-                "location": "315 West 35th. 10th Floor",
-                "borough": "New York"
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 19,
@@ -235,7 +206,7 @@
                 "borough": ""
               }
             ],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 20,
