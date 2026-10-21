@@ -9,7 +9,7 @@
   <div class="hdt-hero2">
     <div>
       <h1 class="hdt-head">NY lawmakers and party committees have taken <span class="num" id="hero-num">—</span> from <span id="hero-phrase">the healthcare industry</span></h1>
-      <p class="hdt-lede">New York's lawmakers accept millions from the very corporations, professional associations, and special interest groups that are actively blocking the passing of single payer bills like the New York Health Act and Medicare for All. Use this tool to track the healthcare industry and hold our elected officials accountable.</p>
+      <p class="hdt-lede">New York's lawmakers accept millions from the very corporations, professional associations, and special interest groups that are actively blocking the passing of single payer bills like the <a class="hdt-lede-link" href="{{ SITEURL }}/pages/ny-health-act.html">New York Health Act</a> and Medicare for All. Use this tool to track the healthcare industry and hold our elected officials accountable.</p>
     </div>
     <div class="hdt-donorbox" id="hero-box"></div>
   </div>
@@ -68,7 +68,7 @@
         </ul>
       </details>
     </div>
-    <details class="hdt-explainer" open>
+    <details class="hdt-explainer">
       <summary>About this Tool</summary>
       <div class="hdt-explainer-body">
         <p>This tool shows which healthcare industry actors fund New York's legislators and party committees. Large corporations and special interests give through many channels at once, so we group subsidiaries, executives, and PACs under their parent companies to reveal the full reach of a single entity's giving. Centene, for example, routes the bulk of its donations through its health plans, spread across 40+ different entities.</p>
@@ -206,6 +206,12 @@
   // Grammatically-correct headline phrase per sector: "…have taken $X from ___".
   const SECTOR_PHRASE={
     health_insurer:'healthcare insurers',
+    large_hospital_health_system:'large hospitals and health systems',
+    other_hospitals:'other hospitals',
+    provider_group:'provider groups',
+    home_care:'home care agencies',
+    hospice:'hospices',
+    nursing_home_rehab:'nursing homes and rehab centers',
     hospital_health_system_provider:'hospitals, health systems, and provider groups',
     post_acute_long_term_care:'post-acute and long-term care providers',
     adult_day_care:'adult day care operators',
