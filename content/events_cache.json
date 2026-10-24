@@ -13,6 +13,20 @@
       "signup_url": "https://actionnetwork.org/events/healthcare-working-group-halloween-social",
       "location": "77 Essex St",
       "borough": "New York"
+    },
+    {
+      "id": "action_network:98121530-ccd5-455f-9e15-316f17d124fb",
+      "name": "Healthcare Working Group Coffee with Comrades",
+      "date": "2026-11-08T10:00:00Z",
+      "date_formatted": "10:00 AM, Sunday November 8, 2026",
+      "month_year": "2026-11",
+      "month_label": "November 2026",
+      "status": "confirmed",
+      "description": "<p>Can't afford health insurance? Unsure what to do about the mess of US healthcare?</p><p><strong>Join the NYC DSA healthcare working group for a casual chat and a coffee in Queens!</strong></p><p>This will be an informal small group gathering where we can get to know each other, discuss the US healthcare system and the work we do in DSA to win Healthcare for All. Discuss the upcoming DSA convention and our working group's resolution to prioritize the New York Health Act in 2027 and win universal healthcare in NY.</p><p><span></span>There will be a mix of experienced and new members, all are welcome to join, even if you\u2019re not a member of DSA yet. Come and go as you please.</p><p>A healthcare working group onboarder will be there to help answer any questions you may have about our work, or DSA in general!</p>",
+      "browser_url": "https://actionnetwork.org/events/healthcare-working-group-coffee-with-comrades",
+      "signup_url": "https://actionnetwork.org/events/healthcare-working-group-coffee-with-comrades",
+      "location": "32-09 Crescent St",
+      "borough": "Queens"
     }
   ],
   "calendar": [
@@ -309,7 +323,22 @@
           {
             "day": 8,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:98121530-ccd5-455f-9e15-316f17d124fb",
+                "name": "Healthcare Working Group Coffee with Comrades",
+                "date": "2026-11-08T10:00:00Z",
+                "date_formatted": "10:00 AM, Sunday November 8, 2026",
+                "month_year": "2026-11",
+                "month_label": "November 2026",
+                "status": "confirmed",
+                "description": "<p>Can't afford health insurance? Unsure what to do about the mess of US healthcare?</p><p><strong>Join the NYC DSA healthcare working group for a casual chat and a coffee in Queens!</strong></p><p>This will be an informal small group gathering where we can get to know each other, discuss the US healthcare system and the work we do in DSA to win Healthcare for All. Discuss the upcoming DSA convention and our working group's resolution to prioritize the New York Health Act in 2027 and win universal healthcare in NY.</p><p><span></span>There will be a mix of experienced and new members, all are welcome to join, even if you\u2019re not a member of DSA yet. Come and go as you please.</p><p>A healthcare working group onboarder will be there to help answer any questions you may have about our work, or DSA in general!</p>",
+                "browser_url": "https://actionnetwork.org/events/healthcare-working-group-coffee-with-comrades",
+                "signup_url": "https://actionnetwork.org/events/healthcare-working-group-coffee-with-comrades",
+                "location": "32-09 Crescent St",
+                "borough": "Queens"
+              }
+            ],
             "is_today": false
           },
           {
