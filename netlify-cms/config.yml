@@ -41,6 +41,7 @@ collections:
           - Patient Story
           - News & Analysis
           - News Reaction
+          - NYC-DSA 2026 Citywide Convention
         hint: Categories appear as a tag on the post.
 
       - label: Summary

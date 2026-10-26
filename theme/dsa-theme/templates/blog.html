@@ -54,6 +54,21 @@
   .post-card-body p{font-family:var(--body-serif);font-size:13px;color:var(--ink-mid);line-height:1.6;margin-bottom:14px;flex:1;}
   .post-card-meta{font-family:var(--sans);font-size:10px;color:var(--ink-light);letter-spacing:0.06em;border-top:1px solid var(--cream-mid);padding-top:10px;margin-top:auto;display:flex;gap:12px;}
 
+  .series{background:var(--cream-mid);border:2px solid var(--ink);border-top:6px solid var(--red);padding:24px 24px 26px;margin-bottom:32px;}
+  .series-eyebrow{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-bottom:6px;}
+  .series-title{font-family:var(--serif);font-size:clamp(20px,2.4vw,26px);font-weight:900;color:var(--ink);line-height:1.15;margin-bottom:8px;letter-spacing:-0.01em;}
+  .series-desc{font-family:var(--body-serif);font-size:14px;color:var(--ink-mid);line-height:1.6;margin-bottom:20px;max-width:620px;}
+  .series-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .series-card{border:2px solid var(--ink);background:var(--white);box-shadow:3px 3px 0 var(--ink);padding:16px 16px 14px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.1s,box-shadow 0.1s;}
+  a.series-card:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink);}
+  .series-part{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+  .series-card h3{font-family:var(--serif);font-size:16px;font-weight:900;color:var(--ink);line-height:1.25;margin-bottom:10px;letter-spacing:-0.01em;}
+  .series-card-author{font-family:var(--sans);font-size:10px;color:var(--ink-light);letter-spacing:0.04em;line-height:1.5;margin-bottom:12px;}
+  .series-card-foot{margin-top:auto;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);border-top:1px solid var(--cream-mid);padding-top:10px;}
+  .series-card.upcoming{background:transparent;border-style:dashed;border-color:var(--ink-light);box-shadow:none;}
+  .series-card.upcoming .series-part,.series-card.upcoming h3{color:var(--ink-light);}
+  .series-card.upcoming .series-card-foot{color:var(--ink-light);border-top-color:var(--cream-dark);text-transform:none;letter-spacing:0.02em;font-style:italic;font-weight:600;}
+
   .sidebar{position:sticky;top:88px;display:flex;flex-direction:column;gap:28px;}
   .sidebar-label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:14px;}
   .sidebar-cta{background:var(--ink);padding:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink-mid);}
@@ -73,6 +88,8 @@
     .blog-body{grid-template-columns:1fr;padding:32px 20px 60px;gap:40px;}
     .sidebar{position:static;}
     .post-grid{grid-template-columns:1fr;}
+    .series{padding:20px 18px 22px;}
+    .series-grid{grid-template-columns:1fr;}
     .post-featured-body{padding:20px 20px 18px;}
   }
 </style>
@@ -89,6 +106,35 @@
 
 <div class="blog-body">
   <main>
+
+    {% if BLOG_SERIES %}
+    <!-- FEATURED SERIES -->
+    <section class="series">
+      <div class="series-eyebrow">Featured Series</div>
+      <h2 class="series-title">{{ BLOG_SERIES.title }}</h2>
+      {% if BLOG_SERIES.description %}<p class="series-desc">{{ BLOG_SERIES.description }}</p>{% endif %}
+      <div class="series-grid">
+        {% for part in BLOG_SERIES.parts %}
+        {% set post = articles | selectattr('slug', 'equalto', part.slug) | first if part.slug else None %}
+        {% if post %}
+        <a class="series-card" href="{{ SITEURL }}/{{ post.url }}">
+          <div class="series-part">Part {{ loop.index }}</div>
+          <h3>{{ post.title }}</h3>
+          <div class="series-card-author">{{ post.author }}</div>
+          <div class="series-card-foot">Read →</div>
+        </a>
+        {% else %}
+        <div class="series-card upcoming">
+          <div class="series-part">Part {{ loop.index }}</div>
+          <h3>{{ part.title }}</h3>
+          {% if part.author %}<div class="series-card-author">{{ part.author }}</div>{% endif %}
+          <div class="series-card-foot">{{ part.note or 'Coming soon' }}</div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
 
     <!-- TOPIC FILTER -->
     <div class="blog-filter">
