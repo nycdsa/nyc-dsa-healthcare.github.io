@@ -27,6 +27,20 @@
       "signup_url": "https://actionnetwork.org/events/healthcare-working-group-coffee-with-comrades",
       "location": "32-09 Crescent St",
       "borough": "Queens"
+    },
+    {
+      "id": "action_network:3ad94bae-a33e-48ef-8402-371a046d3dd8",
+      "name": "Statewide NY Health Act Town Hall",
+      "date": "2026-11-10T18:30:00Z",
+      "date_formatted": "6:30 PM, Tuesday November 10, 2026",
+      "month_year": "2026-11",
+      "month_label": "November 2026",
+      "status": "confirmed",
+      "description": "<div>Healthcare for All Statewide Town Hall!</div><div><br></div><div>Healthcare bills and barriers are too high! Join healthcare workers, union members, and community advocates for a statewide town hall on the New York Health Act and what universal healthcare could mean for you and your family.</div><div><br></div><div>\ud83d\udcc5 Tuesday, November 10 | 6:30\u20138:30 PM</div><div>\ud83d\udccd 1199SEIU Headquarters, 498 7th Ave, NYC</div><div><br></div><div>Come learn about the New York Health Act, ask questions, and connect with others organizing for healthcare for all New Yorkers!</div><div><br></div><div>Everyone is welcome! Please share widely.</div><div><br></div><div>To join us via Zoom please complete the Registration Form, You will receive the Zoom details once you have Registered</div>",
+      "browser_url": "https://actionnetwork.org/events/statewide-ny-health-act-town-hall",
+      "signup_url": "https://actionnetwork.org/events/statewide-ny-health-act-town-hall",
+      "location": "498 7th Ave. ",
+      "borough": "New York"
     }
   ],
   "calendar": [
@@ -350,7 +364,22 @@
           {
             "day": 10,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:3ad94bae-a33e-48ef-8402-371a046d3dd8",
+                "name": "Statewide NY Health Act Town Hall",
+                "date": "2026-11-10T18:30:00Z",
+                "date_formatted": "6:30 PM, Tuesday November 10, 2026",
+                "month_year": "2026-11",
+                "month_label": "November 2026",
+                "status": "confirmed",
+                "description": "<div>Healthcare for All Statewide Town Hall!</div><div><br></div><div>Healthcare bills and barriers are too high! Join healthcare workers, union members, and community advocates for a statewide town hall on the New York Health Act and what universal healthcare could mean for you and your family.</div><div><br></div><div>\ud83d\udcc5 Tuesday, November 10 | 6:30\u20138:30 PM</div><div>\ud83d\udccd 1199SEIU Headquarters, 498 7th Ave, NYC</div><div><br></div><div>Come learn about the New York Health Act, ask questions, and connect with others organizing for healthcare for all New Yorkers!</div><div><br></div><div>Everyone is welcome! Please share widely.</div><div><br></div><div>To join us via Zoom please complete the Registration Form, You will receive the Zoom details once you have Registered</div>",
+                "browser_url": "https://actionnetwork.org/events/statewide-ny-health-act-town-hall",
+                "signup_url": "https://actionnetwork.org/events/statewide-ny-health-act-town-hall",
+                "location": "498 7th Ave. ",
+                "borough": "New York"
+              }
+            ],
             "is_today": false
           },
           {
