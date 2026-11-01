@@ -27,6 +27,20 @@
       "signup_url": "https://actionnetwork.org/events/statewide-ny-health-act-town-hall",
       "location": "498 7th Ave. ",
       "borough": "New York"
+    },
+    {
+      "id": "action_network:6ec3216c-5ac6-4da9-9feb-20e186263310",
+      "name": "2.0 NYHA LABOR POWER MAPPING",
+      "date": "2026-11-22T11:30:00Z",
+      "date_formatted": "11:30 AM, Sunday November 22, 2026",
+      "month_year": "2026-11",
+      "month_label": "November 2026",
+      "status": "confirmed",
+      "description": "<div><strong>Join us Sunday, November 22 for our second NYHA Labor Power Mapping!</strong></div><div><br></div><div>We\u2019re bringing together NYC union members and advocates to learn and practice power mapping! We\u2019ll look at our unions / workplaces, identify existing relationships, and identify where we already have relationships or where we need to build them.</div><div><br></div><div>We\u2019ll be working through our actual unions and workplaces, <strong>so please bring a laptop!</strong></div><div><br></div><div>\ud83d\udcc5 Sunday, Nov 22</div><div>\u23f0 11:30AM\u20131 PM</div><div>\ud83d\udccd DSA Midtown, 315 W 35th St</div><div>\ud83d\udcbb Bring your laptop</div><div><br></div><div>Due to the nature of this work, this session is in person only</div>",
+      "browser_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
+      "signup_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
+      "location": "315 W 35th St",
+      "borough": "New York "
     }
   ],
   "calendar": [
@@ -200,7 +214,22 @@
           {
             "day": 22,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:6ec3216c-5ac6-4da9-9feb-20e186263310",
+                "name": "2.0 NYHA LABOR POWER MAPPING",
+                "date": "2026-11-22T11:30:00Z",
+                "date_formatted": "11:30 AM, Sunday November 22, 2026",
+                "month_year": "2026-11",
+                "month_label": "November 2026",
+                "status": "confirmed",
+                "description": "<div><strong>Join us Sunday, November 22 for our second NYHA Labor Power Mapping!</strong></div><div><br></div><div>We\u2019re bringing together NYC union members and advocates to learn and practice power mapping! We\u2019ll look at our unions / workplaces, identify existing relationships, and identify where we already have relationships or where we need to build them.</div><div><br></div><div>We\u2019ll be working through our actual unions and workplaces, <strong>so please bring a laptop!</strong></div><div><br></div><div>\ud83d\udcc5 Sunday, Nov 22</div><div>\u23f0 11:30AM\u20131 PM</div><div>\ud83d\udccd DSA Midtown, 315 W 35th St</div><div>\ud83d\udcbb Bring your laptop</div><div><br></div><div>Due to the nature of this work, this session is in person only</div>",
+                "browser_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
+                "signup_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
+                "location": "315 W 35th St",
+                "borough": "New York "
+              }
+            ],
             "is_today": false
           },
           {
