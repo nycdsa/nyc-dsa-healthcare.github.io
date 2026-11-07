@@ -36,7 +36,7 @@
       "month_year": "2026-11",
       "month_label": "November 2026",
       "status": "confirmed",
-      "description": "<p> Get plugged into the healthcare working group at our November General Meeting</p><p>Agenda:</p><p>1) Healthcare for All resolution debrief and next steps</p><p>2) Community Solidarity Committee work connecting people to health coverage</p><p>3) Healthcare Ripoff Town Hall slides, training the trainers</p>",
+      "description": "<p> Get plugged into the healthcare working group at our November General Meeting</p><p>Agenda:</p><p>1) Healthcare for All resolution debrief and next steps</p><p>2) planning HCWG project connecting people to health coverage</p><p>3) Healthcare Ripoff Town Hall slides, training the trainers</p>",
       "browser_url": "https://actionnetwork.org/events/healthcare-working-group-november-general-meeting-3",
       "signup_url": "https://actionnetwork.org/events/healthcare-working-group-november-general-meeting-3",
       "location": "315 West 35th Street",
@@ -97,13 +97,13 @@
             "day": 6,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 7,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           }
         ],
         [
@@ -229,7 +229,7 @@
                 "month_year": "2026-11",
                 "month_label": "November 2026",
                 "status": "confirmed",
-                "description": "<p> Get plugged into the healthcare working group at our November General Meeting</p><p>Agenda:</p><p>1) Healthcare for All resolution debrief and next steps</p><p>2) Community Solidarity Committee work connecting people to health coverage</p><p>3) Healthcare Ripoff Town Hall slides, training the trainers</p>",
+                "description": "<p> Get plugged into the healthcare working group at our November General Meeting</p><p>Agenda:</p><p>1) Healthcare for All resolution debrief and next steps</p><p>2) planning HCWG project connecting people to health coverage</p><p>3) Healthcare Ripoff Town Hall slides, training the trainers</p>",
                 "browser_url": "https://actionnetwork.org/events/healthcare-working-group-november-general-meeting-3",
                 "signup_url": "https://actionnetwork.org/events/healthcare-working-group-november-general-meeting-3",
                 "location": "315 West 35th Street",
