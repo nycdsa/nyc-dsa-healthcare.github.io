@@ -1,6 +1,20 @@
 {
   "events": [
     {
+      "id": "action_network:81bd18dc-32fe-4d6f-a3a3-40049ae884b0",
+      "name": "HCWG Communications Committee Meeting",
+      "date": "2026-11-18T19:00:00Z",
+      "date_formatted": "7:00 PM, Wednesday November 18, 2026",
+      "month_year": "2026-11",
+      "month_label": "November 2026",
+      "status": "confirmed",
+      "description": "<p>Join the Communications Committee to get plugged in to upcoming projects, offer your skills via design, filmmaking, video editing, and more. </p>",
+      "browser_url": "https://actionnetwork.org/events/hcwg-communications-committee-meeting",
+      "signup_url": "https://actionnetwork.org/events/hcwg-communications-committee-meeting",
+      "location": "Virtual Event",
+      "borough": ""
+    },
+    {
       "id": "action_network:0e6f6e9a-99d4-4a97-a3da-f359fc911727",
       "name": "Healthcare Working Group November General Meeting",
       "date": "2026-11-21T10:30:00Z",
@@ -144,7 +158,22 @@
           {
             "day": 18,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:81bd18dc-32fe-4d6f-a3a3-40049ae884b0",
+                "name": "HCWG Communications Committee Meeting",
+                "date": "2026-11-18T19:00:00Z",
+                "date_formatted": "7:00 PM, Wednesday November 18, 2026",
+                "month_year": "2026-11",
+                "month_label": "November 2026",
+                "status": "confirmed",
+                "description": "<p>Join the Communications Committee to get plugged in to upcoming projects, offer your skills via design, filmmaking, video editing, and more. </p>",
+                "browser_url": "https://actionnetwork.org/events/hcwg-communications-committee-meeting",
+                "signup_url": "https://actionnetwork.org/events/hcwg-communications-committee-meeting",
+                "location": "Virtual Event",
+                "borough": ""
+              }
+            ],
             "is_today": false
           },
           {
