@@ -41,6 +41,20 @@
       "signup_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
       "location": "315 W 35th St",
       "borough": "New York "
+    },
+    {
+      "id": "action_network:a8ee7875-c307-4585-be31-561c67f2a52d",
+      "name": "NYHA Labor Power Mapping with Senator Gustavo Rivera!",
+      "date": "2026-12-20T01:00:00Z",
+      "date_formatted": "1:00 AM, Sunday December 20, 2026",
+      "month_year": "2026-12",
+      "month_label": "December 2026",
+      "status": "confirmed",
+      "description": "<div><strong>Join us Sunday, Dec 20 for our 3rd NYHA Labor Power Mapping with Senator Gustavo Rivera!</strong></div><div><br></div><div>We\u2019re bringing together NYC union members and advocates to learn and practice power mapping! We\u2019ll look at our unions / workplaces, identify existing relationships, and identify where we already have relationships or where we need to build them.</div><div><br></div><div>We\u2019ll be working through our actual unions and workplaces, <strong>so please bring a laptop!</strong></div><div><br></div><div>\ud83d\udcc5 Sunday, Dec 20</div><div>\u23f0 1 PM - 3PM</div><div>\ud83d\udccd DSA Midtown, 315 W 35th St</div><div>\ud83d\udcbb Bring your laptop</div><div><br></div><div>Due to the nature of this work, this session is in person only</div>",
+      "browser_url": "https://actionnetwork.org/events/nyha-labor-power-mapping-with-senator-gustavo-rivera",
+      "signup_url": "https://actionnetwork.org/events/nyha-labor-power-mapping-with-senator-gustavo-rivera",
+      "location": "315 W 35th St",
+      "borough": "New York "
     }
   ],
   "calendar": [
@@ -455,7 +469,22 @@
           {
             "day": 20,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:a8ee7875-c307-4585-be31-561c67f2a52d",
+                "name": "NYHA Labor Power Mapping with Senator Gustavo Rivera!",
+                "date": "2026-12-20T01:00:00Z",
+                "date_formatted": "1:00 AM, Sunday December 20, 2026",
+                "month_year": "2026-12",
+                "month_label": "December 2026",
+                "status": "confirmed",
+                "description": "<div><strong>Join us Sunday, Dec 20 for our 3rd NYHA Labor Power Mapping with Senator Gustavo Rivera!</strong></div><div><br></div><div>We\u2019re bringing together NYC union members and advocates to learn and practice power mapping! We\u2019ll look at our unions / workplaces, identify existing relationships, and identify where we already have relationships or where we need to build them.</div><div><br></div><div>We\u2019ll be working through our actual unions and workplaces, <strong>so please bring a laptop!</strong></div><div><br></div><div>\ud83d\udcc5 Sunday, Dec 20</div><div>\u23f0 1 PM - 3PM</div><div>\ud83d\udccd DSA Midtown, 315 W 35th St</div><div>\ud83d\udcbb Bring your laptop</div><div><br></div><div>Due to the nature of this work, this session is in person only</div>",
+                "browser_url": "https://actionnetwork.org/events/nyha-labor-power-mapping-with-senator-gustavo-rivera",
+                "signup_url": "https://actionnetwork.org/events/nyha-labor-power-mapping-with-senator-gustavo-rivera",
+                "location": "315 W 35th St",
+                "borough": "New York "
+              }
+            ],
             "is_today": false
           },
           {
