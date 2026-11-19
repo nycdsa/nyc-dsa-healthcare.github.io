@@ -29,6 +29,48 @@
       "borough": "New York "
     },
     {
+      "id": "action_network:0eb5112f-24ad-4aaf-b9ec-2bdecd278283",
+      "name": "statewide phonebank for NYHA 11/30",
+      "date": "2026-11-30T14:00:00Z",
+      "date_formatted": "2:00 PM, Monday November 30, 2026",
+      "month_year": "2026-11",
+      "month_label": "November 2026",
+      "status": "confirmed",
+      "description": "<p>We will be calling constituents to get them to call their legislators &nbsp;to demand legislators prioritize the New York Health Act in the 2027 session. Once you RSVP we will add you to the list to receive our zoom link before the calling. We will also be calling our own legislators as well as getting our statewide comrades to call theirs</p><p>Also, you have an option to call at times outside of the 2-4PM slot, if you like. Please reach out to Erl at 646 596 0228</p><p><br></p>",
+      "browser_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-1130",
+      "signup_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-1130",
+      "location": "Virtual Event",
+      "borough": ""
+    },
+    {
+      "id": "action_network:9ec9d2c0-0c8d-47cf-b1ba-8d21155f51a6",
+      "name": "statewide phonebank for NYHA Dec.1",
+      "date": "2026-12-01T12:00:00Z",
+      "date_formatted": "12:00 PM, Tuesday December 1, 2026",
+      "month_year": "2026-12",
+      "month_label": "December 2026",
+      "status": "confirmed",
+      "description": "<p>We will be calling constituents to get them to call their legislators &nbsp;to demand legislators prioritize the New York Health Act in the 2027 session. Once you RSVP we will add you to the list to receive our zoom link before the calling. We will also be calling our own legislators as well as getting our statewide comrades to call theirs</p><p>Also, you have an option to call at times outside of the 2-4PM slot, if you like. Please reach out to Erl at 646 596 0228</p>",
+      "browser_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-dec1",
+      "signup_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-dec1",
+      "location": "Virtual Event",
+      "borough": ""
+    },
+    {
+      "id": "action_network:f558831d-ab05-490a-9871-105ca5afe391",
+      "name": "Saratoga Rally/Presser/Speak Out for New York Health Act",
+      "date": "2026-12-05T12:00:00Z",
+      "date_formatted": "12:00 PM, Saturday December 5, 2026",
+      "month_year": "2026-12",
+      "month_label": "December 2026",
+      "status": "confirmed",
+      "description": "<p>This will be a visibility event on the Saturday following the  Democratic assembly retreat &nbsp;and on the eve of the senate retreat. We are demanding that legislators prioritize the New York Health Act in the upcoming session. Earlier in the week we will hold a massive statewide phone-bank for the same purpose.</p>",
+      "browser_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
+      "signup_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
+      "location": "25 East Congress Street",
+      "borough": "Saratoga Springs"
+    },
+    {
       "id": "action_network:a8ee7875-c307-4585-be31-561c67f2a52d",
       "name": "NYHA Labor Power Mapping with Senator Gustavo Rivera!",
       "date": "2026-12-20T01:00:00Z",
@@ -264,7 +306,22 @@
           {
             "day": 30,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:0eb5112f-24ad-4aaf-b9ec-2bdecd278283",
+                "name": "statewide phonebank for NYHA 11/30",
+                "date": "2026-11-30T14:00:00Z",
+                "date_formatted": "2:00 PM, Monday November 30, 2026",
+                "month_year": "2026-11",
+                "month_label": "November 2026",
+                "status": "confirmed",
+                "description": "<p>We will be calling constituents to get them to call their legislators &nbsp;to demand legislators prioritize the New York Health Act in the 2027 session. Once you RSVP we will add you to the list to receive our zoom link before the calling. We will also be calling our own legislators as well as getting our statewide comrades to call theirs</p><p>Also, you have an option to call at times outside of the 2-4PM slot, if you like. Please reach out to Erl at 646 596 0228</p><p><br></p>",
+                "browser_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-1130",
+                "signup_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-1130",
+                "location": "Virtual Event",
+                "borough": ""
+              }
+            ],
             "is_today": false
           },
           {
@@ -320,7 +377,22 @@
           {
             "day": 1,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:9ec9d2c0-0c8d-47cf-b1ba-8d21155f51a6",
+                "name": "statewide phonebank for NYHA Dec.1",
+                "date": "2026-12-01T12:00:00Z",
+                "date_formatted": "12:00 PM, Tuesday December 1, 2026",
+                "month_year": "2026-12",
+                "month_label": "December 2026",
+                "status": "confirmed",
+                "description": "<p>We will be calling constituents to get them to call their legislators &nbsp;to demand legislators prioritize the New York Health Act in the 2027 session. Once you RSVP we will add you to the list to receive our zoom link before the calling. We will also be calling our own legislators as well as getting our statewide comrades to call theirs</p><p>Also, you have an option to call at times outside of the 2-4PM slot, if you like. Please reach out to Erl at 646 596 0228</p>",
+                "browser_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-dec1",
+                "signup_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-dec1",
+                "location": "Virtual Event",
+                "borough": ""
+              }
+            ],
             "is_today": false
           },
           {
@@ -344,7 +416,22 @@
           {
             "day": 5,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:f558831d-ab05-490a-9871-105ca5afe391",
+                "name": "Saratoga Rally/Presser/Speak Out for New York Health Act",
+                "date": "2026-12-05T12:00:00Z",
+                "date_formatted": "12:00 PM, Saturday December 5, 2026",
+                "month_year": "2026-12",
+                "month_label": "December 2026",
+                "status": "confirmed",
+                "description": "<p>This will be a visibility event on the Saturday following the  Democratic assembly retreat &nbsp;and on the eve of the senate retreat. We are demanding that legislators prioritize the New York Health Act in the upcoming session. Earlier in the week we will hold a massive statewide phone-bank for the same purpose.</p>",
+                "browser_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
+                "signup_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
+                "location": "25 East Congress Street",
+                "borough": "Saratoga Springs"
+              }
+            ],
             "is_today": false
           }
         ],
