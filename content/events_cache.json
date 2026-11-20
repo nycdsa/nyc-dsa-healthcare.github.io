@@ -73,8 +73,8 @@
     {
       "id": "action_network:a8ee7875-c307-4585-be31-561c67f2a52d",
       "name": "NYHA Labor Power Mapping with Senator Gustavo Rivera!",
-      "date": "2026-12-20T01:00:00Z",
-      "date_formatted": "1:00 AM, Sunday December 20, 2026",
+      "date": "2026-12-20T13:00:00Z",
+      "date_formatted": "1:00 PM, Sunday December 20, 2026",
       "month_year": "2026-12",
       "month_label": "December 2026",
       "status": "confirmed",
@@ -207,13 +207,13 @@
             "day": 19,
             "in_month": true,
             "events": [],
-            "is_today": true
+            "is_today": false
           },
           {
             "day": 20,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 21,
@@ -531,8 +531,8 @@
               {
                 "id": "action_network:a8ee7875-c307-4585-be31-561c67f2a52d",
                 "name": "NYHA Labor Power Mapping with Senator Gustavo Rivera!",
-                "date": "2026-12-20T01:00:00Z",
-                "date_formatted": "1:00 AM, Sunday December 20, 2026",
+                "date": "2026-12-20T13:00:00Z",
+                "date_formatted": "1:00 PM, Sunday December 20, 2026",
                 "month_year": "2026-12",
                 "month_label": "December 2026",
                 "status": "confirmed",
