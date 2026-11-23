@@ -1,20 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:6ec3216c-5ac6-4da9-9feb-20e186263310",
-      "name": "2.0 NYHA LABOR POWER MAPPING",
-      "date": "2026-11-22T11:30:00Z",
-      "date_formatted": "11:30 AM, Sunday November 22, 2026",
-      "month_year": "2026-11",
-      "month_label": "November 2026",
-      "status": "confirmed",
-      "description": "<div><strong>Join us Sunday, November 22 for our second NYHA Labor Power Mapping!</strong></div><div><br></div><div>We\u2019re bringing together NYC union members and advocates to learn and practice power mapping! We\u2019ll look at our unions / workplaces, identify existing relationships, and identify where we already have relationships or where we need to build them.</div><div><br></div><div>We\u2019ll be working through our actual unions and workplaces, <strong>so please bring a laptop!</strong></div><div><br></div><div>\ud83d\udcc5 Sunday, Nov 22</div><div>\u23f0 11:30AM\u20131 PM</div><div>\ud83d\udccd DSA Midtown, 315 W 35th St</div><div>\ud83d\udcbb Bring your laptop</div><div><br></div><div>Due to the nature of this work, this session is in person only</div>",
-      "browser_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
-      "signup_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
-      "location": "315 W 35th St",
-      "borough": "New York "
-    },
-    {
       "id": "action_network:d4665e5f-4c43-488e-9ba7-8b6a6113fe6a",
       "name": "The Pathway to Free Healthcare: Reading Group Attendance",
       "date": "2026-11-23T18:30:00Z",
@@ -64,7 +50,7 @@
       "month_year": "2026-12",
       "month_label": "December 2026",
       "status": "confirmed",
-      "description": "<p>This will be a visibility event on the Saturday following the  Democratic assembly retreat &nbsp;and on the eve of the senate retreat. We are demanding that legislators prioritize the New York Health Act in the upcoming session. Earlier in the week we will hold a massive statewide phone-bank for the same purpose.</p>",
+      "description": "<p>This will be a visibility event on the Saturday following the  Democratic assembly retreat &nbsp;and on the eve of the senate retreat. We are demanding that legislators prioritize the New York Health Act in the upcoming session. Earlier in the week we will hold a massive statewide phone-bank for the same purpose.  <br>To reserve a seat on the bus and get more info about transportation please fill out this form:<br>https://docs.google.com/forms/d/e/1FAIpQLSdmc-L4ZBhmDGqdvl0sgdvDWqoKVDNHl5HT9UvNXn6J0ERmQQ/viewform?usp=sharing&ouid=116693530792807551209</p><div>7am NYC: Bus boards in NYC at 40 East Union Square (between 16 & 17 sts)</div><div>Carpool meetup times vary from across the state, keep an eye on your email for info.</div><div>12/Noon to 2PM: Rally in Saratoga!</div><div><br></div><p><br></p>",
       "browser_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
       "signup_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
       "location": "25 East Congress Street",
@@ -226,23 +212,8 @@
           {
             "day": 22,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:6ec3216c-5ac6-4da9-9feb-20e186263310",
-                "name": "2.0 NYHA LABOR POWER MAPPING",
-                "date": "2026-11-22T11:30:00Z",
-                "date_formatted": "11:30 AM, Sunday November 22, 2026",
-                "month_year": "2026-11",
-                "month_label": "November 2026",
-                "status": "confirmed",
-                "description": "<div><strong>Join us Sunday, November 22 for our second NYHA Labor Power Mapping!</strong></div><div><br></div><div>We\u2019re bringing together NYC union members and advocates to learn and practice power mapping! We\u2019ll look at our unions / workplaces, identify existing relationships, and identify where we already have relationships or where we need to build them.</div><div><br></div><div>We\u2019ll be working through our actual unions and workplaces, <strong>so please bring a laptop!</strong></div><div><br></div><div>\ud83d\udcc5 Sunday, Nov 22</div><div>\u23f0 11:30AM\u20131 PM</div><div>\ud83d\udccd DSA Midtown, 315 W 35th St</div><div>\ud83d\udcbb Bring your laptop</div><div><br></div><div>Due to the nature of this work, this session is in person only</div>",
-                "browser_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
-                "signup_url": "https://actionnetwork.org/events/20-nyha-labor-power-mapping",
-                "location": "315 W 35th St",
-                "borough": "New York "
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 23,
@@ -263,7 +234,7 @@
                 "borough": ""
               }
             ],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 24,
@@ -425,7 +396,7 @@
                 "month_year": "2026-12",
                 "month_label": "December 2026",
                 "status": "confirmed",
-                "description": "<p>This will be a visibility event on the Saturday following the  Democratic assembly retreat &nbsp;and on the eve of the senate retreat. We are demanding that legislators prioritize the New York Health Act in the upcoming session. Earlier in the week we will hold a massive statewide phone-bank for the same purpose.</p>",
+                "description": "<p>This will be a visibility event on the Saturday following the  Democratic assembly retreat &nbsp;and on the eve of the senate retreat. We are demanding that legislators prioritize the New York Health Act in the upcoming session. Earlier in the week we will hold a massive statewide phone-bank for the same purpose.  <br>To reserve a seat on the bus and get more info about transportation please fill out this form:<br>https://docs.google.com/forms/d/e/1FAIpQLSdmc-L4ZBhmDGqdvl0sgdvDWqoKVDNHl5HT9UvNXn6J0ERmQQ/viewform?usp=sharing&ouid=116693530792807551209</p><div>7am NYC: Bus boards in NYC at 40 East Union Square (between 16 & 17 sts)</div><div>Carpool meetup times vary from across the state, keep an eye on your email for info.</div><div>12/Noon to 2PM: Rally in Saratoga!</div><div><br></div><p><br></p>",
                 "browser_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
                 "signup_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
                 "location": "25 East Congress Street",
