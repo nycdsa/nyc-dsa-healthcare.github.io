@@ -1,48 +1,6 @@
 {
   "events": [
     {
-      "id": "action_network:d4665e5f-4c43-488e-9ba7-8b6a6113fe6a",
-      "name": "The Pathway to Free Healthcare: Reading Group Attendance",
-      "date": "2026-11-23T18:30:00Z",
-      "date_formatted": "6:30 PM, Monday November 23, 2026",
-      "month_year": "2026-11",
-      "month_label": "November 2026",
-      "status": "confirmed",
-      "description": "<p>Please submit this form to mark your attendance at the first meeting of the Healthcare Working Group Reading Group: The Path to Free Healthcare!<br><strong>To sign up for the first time, please RSVP here and contact Education Coordinator Celia Wright at celiawright10@gmail.com.</strong></p>",
-      "browser_url": "https://actionnetwork.org/events/the-pathway-to-free-healthcare-reading-group-attendance-2",
-      "signup_url": "https://actionnetwork.org/events/the-pathway-to-free-healthcare-reading-group-attendance-2",
-      "location": "Virtual Event",
-      "borough": ""
-    },
-    {
-      "id": "action_network:0eb5112f-24ad-4aaf-b9ec-2bdecd278283",
-      "name": "statewide phonebank for NYHA 11/30",
-      "date": "2026-11-30T14:00:00Z",
-      "date_formatted": "2:00 PM, Monday November 30, 2026",
-      "month_year": "2026-11",
-      "month_label": "November 2026",
-      "status": "confirmed",
-      "description": "<p>We will be calling constituents to get them to call their legislators &nbsp;to demand legislators prioritize the New York Health Act in the 2027 session. Once you RSVP we will add you to the list to receive our zoom link before the calling. We will also be calling our own legislators as well as getting our statewide comrades to call theirs</p><p>Also, you have an option to call at times outside of the 2-4PM slot, if you like. Please reach out to Erl at 646 596 0228</p><p><br></p>",
-      "browser_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-1130",
-      "signup_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-1130",
-      "location": "Virtual Event",
-      "borough": ""
-    },
-    {
-      "id": "action_network:9ec9d2c0-0c8d-47cf-b1ba-8d21155f51a6",
-      "name": "statewide phonebank for NYHA Dec.1",
-      "date": "2026-12-01T12:00:00Z",
-      "date_formatted": "12:00 PM, Tuesday December 1, 2026",
-      "month_year": "2026-12",
-      "month_label": "December 2026",
-      "status": "confirmed",
-      "description": "<p>We will be calling constituents to get them to call their legislators &nbsp;to demand legislators prioritize the New York Health Act in the 2027 session. Once you RSVP we will add you to the list to receive our zoom link before the calling. We will also be calling our own legislators as well as getting our statewide comrades to call theirs</p><p>Also, you have an option to call at times outside of the 2-4PM slot, if you like. Please reach out to Erl at 646 596 0228</p>",
-      "browser_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-dec1",
-      "signup_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-dec1",
-      "location": "Virtual Event",
-      "borough": ""
-    },
-    {
       "id": "action_network:f558831d-ab05-490a-9871-105ca5afe391",
       "name": "Saratoga Rally/Presser/Speak Out for New York Health Act",
       "date": "2026-12-05T12:00:00Z",
@@ -55,6 +13,20 @@
       "signup_url": "https://actionnetwork.org/events/saratoga-rallypresserspeak-out-for-new-york-health-act",
       "location": "25 East Congress Street",
       "borough": "Saratoga Springs"
+    },
+    {
+      "id": "action_network:c3a7d954-9d22-46df-9326-fb68e89cdc7b",
+      "name": "Healthcare Working Group General Meeting ",
+      "date": "2026-12-17T18:30:00Z",
+      "date_formatted": "6:30 PM, Thursday December 17, 2026",
+      "month_year": "2026-12",
+      "month_label": "December 2026",
+      "status": "confirmed",
+      "description": "<p>This will be virtual more info coming soon</p>",
+      "browser_url": "https://actionnetwork.org/events/healthcare-working-group-general-meeting-11",
+      "signup_url": "https://actionnetwork.org/events/healthcare-working-group-general-meeting-11",
+      "location": "1191 Bedford Ave",
+      "borough": "Brooklyn"
     },
     {
       "id": "action_network:a8ee7875-c307-4585-be31-561c67f2a52d",
@@ -218,29 +190,14 @@
           {
             "day": 23,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:d4665e5f-4c43-488e-9ba7-8b6a6113fe6a",
-                "name": "The Pathway to Free Healthcare: Reading Group Attendance",
-                "date": "2026-11-23T18:30:00Z",
-                "date_formatted": "6:30 PM, Monday November 23, 2026",
-                "month_year": "2026-11",
-                "month_label": "November 2026",
-                "status": "confirmed",
-                "description": "<p>Please submit this form to mark your attendance at the first meeting of the Healthcare Working Group Reading Group: The Path to Free Healthcare!<br><strong>To sign up for the first time, please RSVP here and contact Education Coordinator Celia Wright at celiawright10@gmail.com.</strong></p>",
-                "browser_url": "https://actionnetwork.org/events/the-pathway-to-free-healthcare-reading-group-attendance-2",
-                "signup_url": "https://actionnetwork.org/events/the-pathway-to-free-healthcare-reading-group-attendance-2",
-                "location": "Virtual Event",
-                "borough": ""
-              }
-            ],
-            "is_today": true
+            "events": [],
+            "is_today": false
           },
           {
             "day": 24,
             "in_month": true,
             "events": [],
-            "is_today": false
+            "is_today": true
           },
           {
             "day": 25,
@@ -277,22 +234,7 @@
           {
             "day": 30,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:0eb5112f-24ad-4aaf-b9ec-2bdecd278283",
-                "name": "statewide phonebank for NYHA 11/30",
-                "date": "2026-11-30T14:00:00Z",
-                "date_formatted": "2:00 PM, Monday November 30, 2026",
-                "month_year": "2026-11",
-                "month_label": "November 2026",
-                "status": "confirmed",
-                "description": "<p>We will be calling constituents to get them to call their legislators &nbsp;to demand legislators prioritize the New York Health Act in the 2027 session. Once you RSVP we will add you to the list to receive our zoom link before the calling. We will also be calling our own legislators as well as getting our statewide comrades to call theirs</p><p>Also, you have an option to call at times outside of the 2-4PM slot, if you like. Please reach out to Erl at 646 596 0228</p><p><br></p>",
-                "browser_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-1130",
-                "signup_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-1130",
-                "location": "Virtual Event",
-                "borough": ""
-              }
-            ],
+            "events": [],
             "is_today": false
           },
           {
@@ -348,22 +290,7 @@
           {
             "day": 1,
             "in_month": true,
-            "events": [
-              {
-                "id": "action_network:9ec9d2c0-0c8d-47cf-b1ba-8d21155f51a6",
-                "name": "statewide phonebank for NYHA Dec.1",
-                "date": "2026-12-01T12:00:00Z",
-                "date_formatted": "12:00 PM, Tuesday December 1, 2026",
-                "month_year": "2026-12",
-                "month_label": "December 2026",
-                "status": "confirmed",
-                "description": "<p>We will be calling constituents to get them to call their legislators &nbsp;to demand legislators prioritize the New York Health Act in the 2027 session. Once you RSVP we will add you to the list to receive our zoom link before the calling. We will also be calling our own legislators as well as getting our statewide comrades to call theirs</p><p>Also, you have an option to call at times outside of the 2-4PM slot, if you like. Please reach out to Erl at 646 596 0228</p>",
-                "browser_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-dec1",
-                "signup_url": "https://actionnetwork.org/events/statewide-phonebank-for-nyha-dec1",
-                "location": "Virtual Event",
-                "borough": ""
-              }
-            ],
+            "events": [],
             "is_today": false
           },
           {
@@ -478,7 +405,22 @@
           {
             "day": 17,
             "in_month": true,
-            "events": [],
+            "events": [
+              {
+                "id": "action_network:c3a7d954-9d22-46df-9326-fb68e89cdc7b",
+                "name": "Healthcare Working Group General Meeting ",
+                "date": "2026-12-17T18:30:00Z",
+                "date_formatted": "6:30 PM, Thursday December 17, 2026",
+                "month_year": "2026-12",
+                "month_label": "December 2026",
+                "status": "confirmed",
+                "description": "<p>This will be virtual more info coming soon</p>",
+                "browser_url": "https://actionnetwork.org/events/healthcare-working-group-general-meeting-11",
+                "signup_url": "https://actionnetwork.org/events/healthcare-working-group-general-meeting-11",
+                "location": "1191 Bedford Ave",
+                "borough": "Brooklyn"
+              }
+            ],
             "is_today": false
           },
           {
